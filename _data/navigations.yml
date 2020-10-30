@@ -1,4 +1,4 @@
 - page: Home
   url: /
-- page: Author
-  url: /authors/editme/
+- page: 关于我
+  url: /aboutme
