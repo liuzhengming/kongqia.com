@@ -1,1 +1,39 @@
-theme: jekyll-theme-cayman
+
+# Basic site information.
+# TODO: You can change it to your information.
+
+name: Put your title here
+description: and site description.
+meta_description: Meta description here!
+
+logo: false
+navigation: true
+paginate: 15
+
+
+# Less important changes below. (Code-highlighting, markdown)
+
+highlighter: rouge
+markdown: kramdown
+
+
+# Feed!
+
+feed:
+  path: feed.xml
+
+
+# However, pagination is important.
+
+gems: [jekyll-paginate, rouge]
+
+
+# This is for author page generation.
+
+collections:
+  authors: {output: true, permalink: '/authors/:path/'}
+defaults:
+- scope: {path: '', type: authors}
+  values: {layout: author}
+
+
