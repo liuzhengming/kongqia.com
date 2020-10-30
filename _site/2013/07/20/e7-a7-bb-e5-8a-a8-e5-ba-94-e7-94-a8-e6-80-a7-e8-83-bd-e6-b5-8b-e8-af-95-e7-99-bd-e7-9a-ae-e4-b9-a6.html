@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>移动应用性能测试白皮书</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">移动应用性能测试白皮书</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-07-20">20 July 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h3 id="前言"><strong>前言</strong></h3>
+
+<p>下文中说的手机测试范围不包含短信和电话功能，而是指用于通信功能之外的其他应用。如今手机已经成为大多数人的日常必需品。手机的使用量逐年增加，运行在手机上的应用也层出不穷。除了处理通常的电话和短信之外，人们也开始用手机来拓展业务，联络亲友，扩展职业圈，玩游戏，打广告，买卖商品。手机和其他移动平台的重要性不容小觑，各大商家已经开始着手开发手机版的产品，抢占这块重要的细分市场。当今时代，手机软件和网站已经成为人们从事商业活动，提高雇员业绩和接触目标市场的主要途径。</p>
+
+<p>以下统计数据显示在这个智能化的时代手机应用的重要性：</p>
+
+<ul>
+  <li>截止2011年底，全球共有87%的人口（60亿）拥有手机，其中10亿拥有智能手机</li>
+  <li>22%手机用户每个月至少用手机上网一次</li>
+  <li>34%的美国用户和28%欧洲用户在手机上使用超过一种移动应用</li>
+  <li>预计到2014年，手机上网的总量将超过电脑</li>
+  <li>尼尔森2012年的报道显示，智能手机64%的时间在运行多种应用程序</li>
+  <li>2011年，全球移动应用下载量约300亿</li>
+  <li>91%美国智能手机用户平均每天花费2.7小时访问社交应用程序，是他们平均吃饭时间的两倍，睡眠时间的三分之一</li>
+  <li>6亿Facebook用户中，三分之一用户通过手机访问，1.65亿Twitter用户中，一半的用户通过移动设备登录，而大约每天有2亿Youtube用户通过移动设备登录</li>
+</ul>
+
+<p> </p>
+
+<p>移动应用的使用量和重要性与日俱增，用户体验的要求也越来越高。与桌面程序相比，移动应用耗电小，速度慢，但手机用户却希望享受到与桌面程序同样的加载速度。</p>
+
+<p>我们在此将探讨移动应用的重要性，移动app的性能测试的难点，移动app与桌面应用的异同，移动app的种类，对移动app进行压力测试和性能调优的基本方法。</p>
+
+<h3 id="移动应用的类别">移动应用的类别</h3>
+
+<p>移动应用按架构可分成三大类。要做好性能测试的， 有必要了解各种应用的种类和内部架构。我们来分别介绍一下各类app的基本情况。</p>
+
+<p> </p>
+
+<p><img src="http://alibuybuy-img11.stor.sinaapp.com/2013/07/784d_19175602_35647.jpg" alt="" /></p>
+
+<h4 id="本地应用">本地应用</h4>
+
+<p>需要从网上商店下载并安装在特定移动设备上的可划分到这一类。这类应用由特定编程语言（例如安卓系统上用的Java和iOS系统上用的Object-C）编写，结合特定移动设备的开放API。用户将这种应用安装到移动设备上之后，无需连接到互联网就能使用。游戏应用程序和从网上商店下载的app就是很好的例子。</p>
+
+<h4 id="联网应用">联网应用</h4>
+
+<p>通过移动设备上的浏览器访问的应用叫做联网应用。这类应用是通过网络技术如HTML，JQuery和JavaScript开发的。热门社交网站，如Facebook(http://m.facebook.com)和Gmail(http://m.gmail.com)等都专门开发了基于移动设备的联网应用，倍受移动用户亲睐。</p>
+
+<h4 id="混合应用">混合应用</h4>
+
+<p>联网应用和本地应用的结合被称作混合型应用。在这类应用里，联网应用被内嵌到本地移动应用中。用户界面像本地应用，内容却需要联网加载。安装在移动设备上的Facebook，Linkedin和Twitter应用是这类“本地界面，联网内容”的最佳典范。</p>
+
+<h3 id="提高移动应用性能的重要性">提高移动应用性能的重要性</h3>
+
+<p>随着手机使用量的增加，手机性能的重要性也日益显著。手机用户对性能期望非常高，希望手机应用能像在电脑上运行那么快。据统计：</p>
+
+<p> </p>
+
+<ul>
+  <li>71%用户希望在手机上打开网页能同电脑上一样快</li>
+  <li>5秒钟被认为是用户能忍受的最长响应时间</li>
+  <li>如果响应时间超过5秒，74%上网用户和50%移动应用用户会放弃</li>
+  <li>三分之一失望的用户会转向竞争对手的应用</li>
+</ul>
+
+<p> </p>
+
+<p>通常，手机用户会尝试两次，如果第三次依然出现同样问题，半数人再也不会使用该应用。比起桌面程序，手机应用的架构更加复杂，可用资源相对更少，提高和维持快速的响应时间比桌面程序更困难。</p>
+
+<p> </p>
+
+<h3 id="测试移动应用的挑战">测试移动应用的挑战</h3>
+
+<p>做好性能测试，从来就不是一件简单容易的事。搭建与生产环境相同的性能测试环境一直是做性能测试的第一步，也是很重要的一步。然而，由于其复杂的架构，测试手机程序和网站显得更加困难。要覆盖到不同种类（联网，本地和混合应用）、不同平台（iOS，安卓等等）和不同网络环境（Wifi，2G，3G，3G+，4G LTE）也是手机测试面临的一大难题。下面介绍一下几个手机性能测试相关的主要难题。</p>
+
+<h4 id="模拟移动网络的互联网连接">模拟移动网络的互联网连接</h4>
+
+<p>与桌面程序的高带宽相比，大多数手机用户使用的3G，3G+和4G LTE网络更慢，无线连接更差。性能测试要模拟不同手机网络的接入情况,这对性能测试人员来说并非易事。</p>
+
+<h4 id="移动设备种类繁多">移动设备种类繁多</h4>
+
+<p>市面上有成千上万手机厂商，每个手机厂商倾向于使用不同的操作系统和手机配置。而且，即便是同一个品牌的手机，也有无数的影响因素，每个手机模型都有特定的配置，比如操作系统，处理器，内存和屏幕尺寸等等。测试手机应用时，这些因素或多或少都应该被考虑到，绝对不是件轻松的事。面对这种情况，选择一中功能够用的性能测试工具变得越来越重要。</p>
+
+<h4 id="用户数量巨大">用户数量巨大</h4>
+
+<p>随着时间的推移，使用智能手机商务应用的用户会急剧增加，越来越多的用户会通过手机处理重要业务。用户数量增加，相应的网络应用也需要增加。你不仅仅要满足现有用户需要，还要适时地增加新功能，这对任何手机应用都是极其重要的。</p>
+
+<h3 id="桌面端网络应用和手机应用的差别">桌面端网络应用和手机应用的差别</h3>
+
+<p>不管是桌面端网络应用还是手机应该，性能测试的基本原理是相似的，尤其是对于手机网络应用的测试。两者使用相同的技术，你也不用为手机应用选择特别的性能测试工具。测试工具只需要具备基本的性能测试能力，测试人员基本上会用就行了。尽管如此，手机应用和桌面应用还是有如下几个本质上的区别：</p>
+
+<h4 id="客户端模式">客户端模式</h4>
+
+<p>传统网络应用运行在胖客户端上，而手机应用使用的是瘦客户端。胖客户端直接从服务器端访问应用，而不像瘦客户端那样需要将数据通过信号塔中转，因而它比瘦客户端吞吐量更大，速度更快。</p>
+
+<h4 id="网络带宽">网络带宽</h4>
+
+<p>网络带宽在性能中担当重要角色，现今的桌面端应用极大地得益于高速网络。移动网路也在带宽方面不断进步，不过任然无法与前者相提并论。大多数用户在低于3G或4G的网络下使用手机，应用的会话时间延长，用户的响应时间也响应增加，同时也消耗了更多电量。相比桌面应用，带宽是导致手机应用性能差的最大原因。</p>
+
+<h4 id="数据传送">数据传送</h4>
+
+<p>与桌面端应用强大的CS架构不同，手机数据得依靠信号塔传送到用户设备上。信号塔之间的数据传送一直以来都很慢，也使得手机应用性能变差。</p>
+
+<h4 id="设备电量">设备电量</h4>
+
+<p>网络应用可以借助桌面电脑的高速处理器和内存最大化地提高性能，然而移动设备的资源却非常有限。移动设备只能依靠有限的电池和内存资源。</p>
+
+<h4 id="操作方式">操作方式</h4>
+
+<p>不像桌面应用那样通过点击鼠标来操作，移动设备使用手指操作从而获得更好的用户体验。手指操作不如鼠标来得快。何况，设备其实需要将触摸动作翻译成点击。</p>
+
+<h4 id="数据使用">数据使用</h4>
+
+<p>在移动网路中，流量是收费的。数据缓存技术是桌面应用中提高用户体验的常用手段，但由于流量限制，此项技术在移动应用中无法实现。</p>
+
+<h4 id="性能指标">性能指标</h4>
+
+<p>由于架构不同，网络和移动应用的性能指标也有些许差别。除了常规指标如响应时间和资源利用量之外，还需要监控电池消耗、二进制大小等等。</p>
+
+<h3 id="手机性能测试基础和最佳实践">手机性能测试基础和最佳实践</h3>
+
+<h4 id="本地手机应用脚本的录制">本地手机应用脚本的录制</h4>
+
+<p>你需要一个移动设备或模拟器来录制用户在本机移动应用上的操作。为了测试应用的性能而录制用户操作，需要暂时关闭移动设备或模拟器上的其他网络流量。你需要一个额外的设备来记录手机或模拟器上的流量，而这个设备可以代替移动设备或模拟器接入互联网。如果用来录制的设备是运行在防火墙之后的，那就不可能获得从3G或4G网络里的流量记录。</p>
+
+<p>解决这个问题的方法是将移动设备设置为代理录制器。强制让数据从录制代理里通过，就可以直接用移动设备来录制用户操作。</p>
+
+<h4 id="网络手机应用脚本的录制">网络手机应用脚本的录制</h4>
+
+<p>从手机网络应用抓取用户操作与桌面网络应用相似，因为两者沿用了类似的架构。为简单起见，可以用桌面网页浏览器来录制移动网络应用的用户操作。不过，你需要修改用户请求，伪装成是来自移动设备而不是桌面电脑。浏览器插件可以修改用户代理，让请求看起来像是通过移动设备发出的。除此之外，最新的桌面网页浏览器需要支持最新的移动应用技术如HTML5等等。</p>
+
+<h4 id="混合移动应用脚本的录制">混合移动应用脚本的录制</h4>
+
+<p>就像手机网络应用一样，桌面网页浏览器也可以用来录制各种各样的混合移动应用。你可以直接浏览到该手机应用的URL地址，然后做性能测试，就像测试单纯的网络应用一样。</p>
+
+<p><img src="http://alibuybuy-img11.stor.sinaapp.com/2013/07/c9bf_19180849_47171.jpg" alt="" /></p>
+
+<p>准确评估应用程序的性能，必须识别并模拟最类似现实情况的设置。合理的负载模型是实现预期效果的关键。不同用户的互联网接入情况不尽相同（例如，Wifi，3G和4G），成功的性能测试必须覆盖所有的情况。所有流行的手机应用性能测试工具都可以模拟真实世界的各种网络连接。</p>
+
+<p>另外，根据具体的功能，模拟不同地理区域的大用户负责也很重要。好的性能测试工具像AgileLoad可以借助基于云的性能测试模拟不同地理位置的大用户负载。</p>
+
+<p>测试的执行过程是被监控的，在所有针对不同用户负载的应用程序响应被测试完之后，其结果也会对比事先定义好的服务水平协议得到全面的分析。好的性能测试工具如AgileLoad，也提供问题诊断功能，帮你找出根本原因从而快速解决。</p>
+
+<h3 id="移动应用性能优化技术">移动应用性能优化技术</h3>
+
+<p>移动应用的性能优化技术取决于特定的应用极其瓶颈特性。我们在这里分享几个通用的优化移动应用性能的技巧：</p>
+
+<p> </p>
+
+<ul>
+  <li>减少客户端到服务器的HTTP请求数量，可以缩短页面加载时间</li>
+  <li>将JavaScript和CSS打包成文件并在多个页面之间共享，也是优化性能的好办法</li>
+  <li>尽管浏览器缓存在移动应用上不那么凑效，但可以用HTML5的网页存储技术替代</li>
+  <li>使用内嵌脚本资源，链接引用会极大地延长加载时间</li>
+  <li>压缩或尽量减少界面资源，少占带宽，也能提高速度</li>
+  <li>根据屏幕尺寸裁剪图像， 不仅能减小图片大小，还能提高处理速度</li>
+</ul>
+
+<p> </p>
+
+<h3 id="总结">总结</h3>
+
+<p>移动应用日益普及，其重要性也日益增加，这已是不争的事实。优秀的用户体验将成为让用户驻足的原因之一。移动应用的性能测试原理与传统桌面应用并无二致。但是，要全面测试移动应用的性能参数，测试人员需要理解各种移动应用的架构和它们与桌面应用的根本区别，例如带宽，处理器，屏幕尺寸等等。</p>
+
+<p>来源：<a href="http://article.yeeyan.org/view/122094/370547">http://article.yeeyan.org/view/122094/370547</a></p>
+
+<hr />
+
+<p><small>© 推荐 for <a href="http://www.alibuybuy.com/">互联网的那点事</a>, 2013. |<br />
+</small></p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/15764.html">移动应用性能测试白皮书</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%99%BD%E7%9A%AE%E4%B9%A6&amp;url=/2013/07/20/e7-a7-bb-e5-8a-a8-e5-ba-94-e7-94-a8-e6-80-a7-e8-83-bd-e6-b5-8b-e8-af-95-e7-99-bd-e7-9a-ae-e4-b9-a6.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/07/20/e7-a7-bb-e5-8a-a8-e5-ba-94-e7-94-a8-e6-80-a7-e8-83-bd-e6-b5-8b-e8-af-95-e7-99-bd-e7-9a-ae-e4-b9-a6.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/07/20/e7-a7-bb-e5-8a-a8-e5-ba-94-e7-94-a8-e6-80-a7-e8-83-bd-e6-b5-8b-e8-af-95-e7-99-bd-e7-9a-ae-e4-b9-a6.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/07/21/e8-89-b2-e5-bd-a9-e5-bf-83-e7-90-86-e5-ad-a6-ef-bc-9a-e8-ae-be-e8-ae-a1-e5-b8-88-e7-9a-84-e9-80-89-e8-89-b2-e6-8c-87-e5-8d-97.html">
+        <section class="post">
+            <h2>色彩心理学：设计师的选色指南</h2>
+            <p> 
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/07/20/e7-a7-af-e5-88-86-e4-bd-93-e7-b3-bb-e8-ae-be-e8-ae-a1-e5-88-86-e6-9e-90.html">
+        <section class="post">
+            <h2>积分体系设计分析</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

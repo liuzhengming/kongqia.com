@@ -1,0 +1,19 @@
+---
+layout: post
+title: 6行代码实现文件系统
+date: 2014-09-27 23:16:48.000000000 +08:00
+---
+
+直接上代码，如下：
+
+ var express = require('express'); var serveIndex = require('serve-index'); var app = express(); app.use(serveIndex('/', {'icons': true, hidden: true})) app.use(express.static('/')); app.listen(process.env.PORT || 1337);
+
+用到express和serve-index；
+
+serve-index是主角。
+
+欣赏：[http://filesystem.jd-app.com/](http://filesystem.jd-app.com/)
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [6行代码实现文件系统](http://kongqia.com/33557.html)
+
+

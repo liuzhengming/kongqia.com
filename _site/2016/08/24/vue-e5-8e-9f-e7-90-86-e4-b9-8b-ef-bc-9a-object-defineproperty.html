@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Vue原理之： Object.defineProperty</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Vue原理之： Object.defineProperty</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-24">24 August 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>这个方法了不起啊。。vue.js和avalon.js 都是通过它实现双向绑定的。。而且Object.observe也被草案发起人撤回了。。所以defineProperty更有必要了解一下了几行代码看他怎么用</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;span class="keyword"&gt;var&lt;/span&gt; a= {}
+    Object.defineProperty(a,&lt;span class="string"&gt;"b"&lt;/span&gt;,{
+      &lt;span class="keyword"&gt;value&lt;/span&gt;:&lt;span class="number"&gt;123&lt;/span&gt;
+    })
+    console.log(a.b);&lt;span class="comment"&gt;//123&lt;/span&gt;```
+
+很简单，，它接受三个参数，而且都是必填的。。
+
+
+## 传入参数
+
+&lt;div&gt;第一个参数:目标对象
+
+第二个参数:需要定义的属性或方法的名字。
+
+第三个参数:目标属性所拥有的特性。（descriptor）
+
+前两个参数不多说了，一看代码就懂，主要看第三个参数descriptor，看看有哪些取值
+
+&lt;/div&gt;
+## descriptor
+
+&lt;div&gt;他又以下取值，我们简单认识一下，后面例子，挨个介绍，
+
+value:属性的值(不用多说了)
+
+writable:如果为false，属性的值就不能被重写,只能为只读了
+
+configurable:总开关，一旦为false，就不能再设置他的（value，writable，configurable）
+
+enumerable:是否能在for…in循环中遍历出来或在Object.keys中列举出来。
+
+get:一会细说
+
+set:一会细说
+
+&lt;/div&gt;### descriptor默认值
+
+我们再看看第一个例子
+
+</code></pre>
+</div>
+<p><span class="keyword">var</span> a= {}
+    Object.defineProperty(a,<span class="string">“b”</span>,{
+      <span class="keyword">value</span>:<span class="number">123</span>
+    })
+    console.log(a.b);<span class="comment">//123</span>```</p>
+
+<p>我们只设置了 value，别的并没有设置，但是  <strong>第一次的时候</strong> 可以简单的理解为（暂时这样理解）它会默认帮我们把writable，configurable，enumerable。都设上值，而且值还都是false。。也就是说，上面代码和下面是等价的的（  <strong>仅限于第一次设置的时候</strong> ）</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;span class="keyword"&gt;var&lt;/span&gt; a= {}
+Object.defineProperty(a,&lt;span class="string"&gt;"b"&lt;/span&gt;,{
+  &lt;span class="keyword"&gt;value&lt;/span&gt;:&lt;span class="number"&gt;123&lt;/span&gt;,
+  writable:&lt;span class="keyword"&gt;false&lt;/span&gt;,
+  enumerable:&lt;span class="keyword"&gt;false&lt;/span&gt;,
+  configurable:&lt;span class="keyword"&gt;false&lt;/span&gt;
+})
+console.log(a.b);&lt;span class="comment"&gt;//123&lt;/span&gt;```
+
+#### 以上非常重要哦。。并且以上理解对set 和 get 不起作用哦
+
+### configurable
+
+总开关，第一次设置 false 之后，，第二次什么设置也不行了，比如说
+
+</code></pre>
+</div>
+<p><span class="keyword">var</span> a= {}
+Object.defineProperty(a,<span class="string">“b”</span>,{
+  configurable:<span class="keyword">false</span>
+})
+Object.defineProperty(a,<span class="string">“b”</span>,{
+  configurable:<span class="keyword">true</span>
+})
+<span class="comment">//error: Uncaught TypeError: Cannot redefine property: b</span>```</p>
+
+<p>就会报错了。。注意上面讲的默认值。。。如果第一次不设置它会怎样。。会帮你设置为false。。所以。。第二次。再设置他会怎样？。。对喽，，会报错</p>
+
+<h3 id="writable">writable</h3>
+
+<p>如果设置为fasle，就变成只读了。。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;span class="keyword"&gt;var&lt;/span&gt; a = {}; 
+
+Object.defineProperty(o, &lt;span class="string"&gt;"b"&lt;/span&gt;, { 
+    &lt;span class="keyword"&gt;value&lt;/span&gt; : &lt;span class="number"&gt;123&lt;/span&gt;,
+    writable : &lt;span class="keyword"&gt;false&lt;/span&gt; });
+
+console.log(a.b); &lt;span class="comment"&gt;// 打印 37&lt;/span&gt;
+a.b = &lt;span class="number"&gt;25&lt;/span&gt;; &lt;span class="comment"&gt;// 没有错误抛出（在严格模式下会抛出，即使之前已经有相同的值）&lt;/span&gt;
+console.log(o.a); &lt;span class="comment"&gt;// 打印 37， 赋值不起作用。&lt;/span&gt;```
+
+### enumerable
+
+属性特性 enumerable 定义了对象的属性是否可以在 for…in 循环和 Object.keys() 中被枚举。
+
+</code></pre>
+</div>
+<p><span class="keyword">var</span> a= {}
+Object.defineProperty(a,<span class="string">“b”</span>,{
+  <span class="keyword">value</span>:<span class="number">3445</span>,
+  enumerable:<span class="keyword">true</span>
+})
+console.log(Object.keys(a));<span class="comment">// 打印[“b”]</span>```</p>
+
+<p>改为false</p>
+
+<p><code class="highlighter-rouge">
+&lt;span class="keyword"&gt;var&lt;/span&gt; a= {}
+Object.defineProperty(a,&lt;span class="string"&gt;"b"&lt;/span&gt;,{
+  &lt;span class="keyword"&gt;value&lt;/span&gt;:&lt;span class="number"&gt;3445&lt;/span&gt;,
+  enumerable:&lt;span class="keyword"&gt;false&lt;/span&gt;&lt;span class="comment"&gt;//注意咯这里改了&lt;/span&gt;
+})
+console.log(Object.keys(a));&lt;span class="comment"&gt;// 打印[]&lt;/span&gt;</code></p>
+
+<p>for…in 类似，，不赘述了</p>
+
+<h2 id="set-和-get">set 和 get</h2>
+
+<div>在 descriptor 中不能  **同时** 设置访问器 (get 和 set) 和 wriable 或 value，否则会错，就是说想用(get 和 set)，就不能用（wriable 或 value中的任何一个）
+
+set 和 get ，他俩干啥用的的，
+
+</div>
+<p><code class="highlighter-rouge">
+&lt;span class="keyword"&gt;var&lt;/span&gt; a= {}
+Object.defineProperty(a,&lt;span class="string"&gt;"b"&lt;/span&gt;,{
+  &lt;span class="keyword"&gt;set&lt;/span&gt;:function(newValue){
+    console.log(&lt;span class="string"&gt;"你要赋值给我,我的新值是"&lt;/span&gt;＋newValue)
+    },
+  &lt;span class="keyword"&gt;get&lt;/span&gt;:function(){
+    console.log(&lt;span class="string"&gt;"你取我的值"&lt;/span&gt;)
+    &lt;span class="keyword"&gt;return&lt;/span&gt;&lt;span class="number"&gt;2&lt;/span&gt;&lt;span class="comment"&gt;//注意这里，我硬编码返回2&lt;/span&gt;
+   }
+})
+a.b =&lt;span class="number"&gt;1&lt;/span&gt;&lt;span class="comment"&gt;//打印 你要赋值给我,我的新值是1&lt;/span&gt;
+console.log(a.b)    &lt;span class="comment"&gt;//打印 你取我的值&lt;/span&gt;&lt;span class="comment"&gt;//打印 2    注意这里，和我的硬编码相同的&lt;/span&gt;</code></p>
+
+<p>简单来说，， 这个 “b” 赋值 或者 取值的时候会分别触发 set 和 get 对应的函数</p>
+
+<p>这就是实现 observe的关键啊。。</p>
+
+<p>转至：http://www.tuicool.com/articles/ju26riE</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33735.html">Vue原理之： Object.defineProperty</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Vue%E5%8E%9F%E7%90%86%E4%B9%8B:%20Object.defineProperty&amp;url=/2016/08/24/vue-e5-8e-9f-e7-90-86-e4-b9-8b-ef-bc-9a-object-defineproperty.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/24/vue-e5-8e-9f-e7-90-86-e4-b9-8b-ef-bc-9a-object-defineproperty.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2016/08/24/vue-e5-8e-9f-e7-90-86-e4-b9-8b-ef-bc-9a-object-defineproperty.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2016/08/25/js-e5-88-a4-e6-96-ad-e6-95-b0-e7-bb-84-e7-9a-84-e5-87-a0-e7-a7-8d-e6-96-b9-e6-b3-95.html">
+        <section class="post">
+            <h2>js判断数组的几种方法</h2>
+            <p>
+  var arr = [1,2,3];
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2016/08/24/e5-88-9d-e5-ad-a6-e8-80-85-e5-bf-85-e9-a1-bb-e6-8e-8c-e6-8f-a1-e7-9a-84angularjs-e6-8a-80-e6-9c-af-e8-a6-81-e7-82-b9-e6-b8-85-e5-8d-95.html">
+        <section class="post">
+            <h2>初学者必须掌握的AngularJS技术要点清单</h2>
+            <p>这篇文章的主要目标是帮助初学者了解在学习AngularJS过程中，哪些东西是非常重要的，哪些东西学习的优先级较低。
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

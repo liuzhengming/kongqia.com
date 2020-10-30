@@ -1,0 +1,91 @@
+---
+layout: post
+title: Gmat使用说明——运行Gmat进行轨道仿真分析
+date: 2015-11-19 02:05:23.000000000 +08:00
+---
+
+使用Gmat建立轨道有两种方式。一种是建立mission，通过图形化界面，按步骤设定轨道参数；另一种是建立script，通过脚本设定轨道参数。
+
+**1.建立mission**
+
+通过图形化界面设置，建立mission。
+
+**1.1新建任务**
+
+打开Gmat软件后，会自动新建一个默认任务，从左侧窗口中可以浏览默认任务的内容。如图1所示，包括资源、任务和输出三个标签。资源标签展示任务相关的资源树，包括飞行器、编队、地面站、硬件、飞行途中点火、预报器、太阳系、解算、输出、接口、脚本、变量/数组/字符串、坐标系。任务标签展示任务树；任务树展示控制命令，控制任务中时间相关的事件序列。输出标签展示输出树；输出树包括Gmat所有输出，例如报告文档和图形展示。
+
+[![图片1](http://kongqia.com/wp-content/uploads/2015/11/图片11.png)](http://kongqia.com/wp-content/uploads/2015/11/图片11.png)
+
+图1 Gmat资源窗口
+
+    若想新建另一个任务，则点击菜单栏的新建任务按钮或选择文件->新建->任务来建立。
+
+**1.2设置飞行器参数**
+
+1）重命名飞行器：选择左侧窗口的资源标签，右键DefaultSC->Rename，修改为Sat，点击OK。
+
+2）设置飞行器时间：在左侧窗口资源树下，双击Sat打开属性页，选择Orbit标签；在时间格式下拉菜单，选择UTCGregorian，下方相应的时间格式变为UTCGregorian；在时间框内，输入22 Jul 2014 11:29:10.811（日期必须满足相应的填写格式要求，不然无法识别）。
+
+3）设置飞行器轨道：在状态类型下拉列表中，选择Keplerian，右侧相应的元素会发生变化。在SMA框中，输入83474.318，其余元素设定如图2。
+
+[![图片2](http://kongqia.com/wp-content/uploads/2015/11/图片2.png)](http://kongqia.com/wp-content/uploads/2015/11/图片2.png)
+
+图2 飞行器轨道设置
+
+4）点击OK。
+
+5）点击保存，产生.script文件。第一次保存时，需选择合适的路径及名称。
+
+**1.3设置预报器参数**
+
+1）重命名预报器：选择左侧窗口资源标签，右键DefaultProp->Rename，修改为LowEarthProp，点击OK。
+
+2）设置力模型：双击LowEarthProp打开属性页；在右侧重力标签区，Degree框中输入10，Order框中输入10；在大气模型下拉列表中，选择JacchiaRoberts；单击Point Masses框右侧的Select按钮，打开CelesBodySelectDialog，在左侧列表中选择Sun，使用->按钮将其添加到右侧框中，以同样方式将Lunar添加到右侧框中，点击OK关闭CelesBodySelectDialog；勾选Use Solar Radiation Pressure，设置后的效果如图3。
+
+[![图片3](http://kongqia.com/wp-content/uploads/2015/11/图片3.png)](http://kongqia.com/wp-content/uploads/2015/11/图片3.png)
+
+图3 预报器参数设置
+
+**1.4设置轨道视图**
+
+设置三维视图：在资源树下，双击DefaultOrbitView，在View Point Vector右侧的三个框中，依次输出-60000、30000及20000；在Drawing Option标签框下，取消勾选Draw XY Plane。设置后效果如图4所示。
+
+[![图片4](http://kongqia.com/wp-content/uploads/2015/11/图片4.png)](http://kongqia.com/wp-content/uploads/2015/11/图片4.png)
+
+图4 轨道视图设置
+
+**1.5设置预报命令**
+
+设置预报命令是运行任务前的最后一个步骤。
+
+1）在左侧窗口任务标签下的任务树中，双击Propagate1。
+
+2）在停止条件下，双击Sat.ElapsedSecs按钮左侧的（…）按钮，打开ParameterSelectDialog窗口。
+
+3）在Object List框中，如果Sat没有选中，则点击选中。该操作将停止条件与Sat飞行器关联起来。
+
+4）在Object Properties列表中，双击Periapsis，将其添加到右侧Selected Values列表中。
+
+设置完成后如图5所示，点击OK保存设置。
+
+[![图片5](http://kongqia.com/wp-content/uploads/2015/11/图片5.png)](http://kongqia.com/wp-content/uploads/2015/11/图片5.png)
+
+图5 设置预报命令
+
+**2.编辑脚本**
+
+    参考保存mission产生的脚本文件格式，在脚本中设置1中所述参数。
+
+**3.运行及结果分析**
+
+1）点击运行，结果如图6所示。
+
+2）在左侧窗口任务标签下的任务树中，右键点击Propagate1，选择Command Summary，可以查看Sat飞行器的结束状态数据。选择Coordinate System列表不同坐标系，可以查看不同坐标系下的数据。
+
+3）点击Start Animation按钮，查看从初始状态到结束状态的轨道预报。
+
+[![图片6](http://kongqia.com/wp-content/uploads/2015/11/图片6-595x325.png)](http://kongqia.com/wp-content/uploads/2015/11/图片6.png)图6 任务运行轨道视图
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [Gmat使用说明——运行Gmat进行轨道仿真分析](http://kongqia.com/33626.html)
+
+

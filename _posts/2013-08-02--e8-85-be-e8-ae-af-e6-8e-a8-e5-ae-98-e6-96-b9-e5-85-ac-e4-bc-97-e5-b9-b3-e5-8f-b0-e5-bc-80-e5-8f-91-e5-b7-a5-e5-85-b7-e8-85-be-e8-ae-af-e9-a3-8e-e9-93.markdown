@@ -1,0 +1,31 @@
+---
+layout: post
+title: 腾讯推官方公众平台开发工具“腾讯风铃”
+date: 2013-08-02 23:46:51.000000000 +08:00
+---
+
+腾讯推出基于微信公众平台的”腾讯风铃”产品。据悉风铃是一个快速的、可视化的无线建站工具，可在5分钟内完成微信APP网站的搭建工作。
+
+URL: [http://fl.qq.com/](http://fl.qq.com/)
+
+腾讯风铃的最大卖点就是通过各种模块的选择快速的生成属于企业或者个人自己的微信APP，随着微信5.0的到来，服务号每月只能推送一条后，企业将只能通过微网站的方式来配合自定义回复接口为用户提供服务。风铃提供了16种不同功能的模块，包括抽奖、社交、图文、留言、报名、lbs、地图、电话、视频、客服、欢迎语、兑换、调查、会员卡、优惠券等，可以说功能齐全。
+
+![damndigital_fl-qq_2013-07](http://alibuybuy-img11.stor.sinaapp.com/2013/08/c40f_damndigital_fl-qq_2013-07.jpg)
+
+![damndigital_fl-qq_2013-07_02](http://alibuybuy-img11.stor.sinaapp.com/2013/08/88c9_damndigital_fl-qq_2013-07_02.jpg "腾讯推官方公众平台开发工具“腾讯风铃”")
+
+腾讯风铃也加强企业对微信的互动运营的重视，提供了多种活动发起及抽奖方式，包括大转盘、报名、找茬、优惠券、团购等。同时，腾讯风铃打通微信和腾讯微博即企业通过优质的内容运营和腾讯微博打通，让用户可以在访问微信APP网站的时候可以分享到微博和微信群、微信朋友圈，完成社交传播。
+
+最后，腾讯风铃随着微信5.0的微信安全支付的上线，还提供了移动电商模块的功能，通过系统可以搭建属于企业或个人自己的微信电商平台，通过搭配会员卡、优惠券、抽奖等功能，完成电商企业的微信公众号的推广运营工作。
+
+来源：[http://www.damndigital.com/archives/97679](http://www.damndigital.com/archives/97679)
+
+- - - - - -
+
+<small>© 推荐 for [互联网的那点事](http://www.alibuybuy.com/). |  
+ 猛击下载：[**iPhone客户端**](https://itunes.apple.com/cn/app/hu-lian-wang-de-na-dian-shi/id670210055?mt=8) 猛击下载：[**Android客户端**](http://www.alibuybuy.com/alibuybuy.apk)  
+</small>
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [腾讯推官方公众平台开发工具“腾讯风铃”](http://kongqia.com/17555.html)
+
+

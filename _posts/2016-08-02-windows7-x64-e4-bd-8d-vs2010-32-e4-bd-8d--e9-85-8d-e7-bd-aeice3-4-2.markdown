@@ -1,0 +1,11 @@
+---
+layout: post
+title: windows7 x64位 VS2010 32位 配置ICE3.4.2
+date: 2016-08-02 18:11:35.000000000 +08:00
+---
+
+配置步骤参见http://www.it610.com/article/5227854.htm
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [windows7 x64位 VS2010 32位 配置ICE3.4.2](http://kongqia.com/33715.html)
+
+

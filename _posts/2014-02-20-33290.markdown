@@ -1,0 +1,25 @@
+---
+layout: post
+title: isotope
+date: 2014-02-20 05:30:39.000000000 +08:00
+---
+
+[![isotope](http://kongqia.com/wp-content/uploads/2014/02/isotope.png)](http://kongqia.com/wp-content/uploads/2014/02/isotope.png)
+
+引用原文的一句话：
+
+> Isotope: An exquisite jQuery plugin for magical layouts
+
+Isotope 是一个jQuery的插件，用来实现精美的动态元素布局。
+
+Isotope可以实现仅仅依靠CSS3无法实现的动态布局方式，可以动态添加，删除，排序，筛选元素。
+
+Isotope的动画引擎可以充分使用现代浏览器CSS动画中GPU硬件加速性能,。
+
+转至[http://kongqia.com/tools/isotope](http://kongqia.com/tools/isotope/index.html)了解详细。
+
+原地址：http://isotope.metafizzy.co/
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [isotope](http://kongqia.com/33290.html)
+
+

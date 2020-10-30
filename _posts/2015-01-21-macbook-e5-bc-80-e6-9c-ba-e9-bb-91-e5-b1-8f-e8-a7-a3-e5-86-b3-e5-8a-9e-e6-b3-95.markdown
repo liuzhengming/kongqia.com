@@ -1,0 +1,15 @@
+---
+layout: post
+title: MacBook开机黑屏解决办法
+date: 2015-01-21 15:29:40.000000000 +08:00
+---
+
+1. 开机时长按R+P+command+option
+
+2. 等待屏幕亮起
+
+3. 选择语言，进入下一步，且重启。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [MacBook开机黑屏解决办法](http://kongqia.com/33582.html)
+
+

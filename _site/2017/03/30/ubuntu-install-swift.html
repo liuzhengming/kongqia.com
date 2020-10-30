@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Ubuntu install Swift</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Ubuntu install Swift</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-03-30">30 March 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Swift的开发环境可以使用苹果平台（OS X）或Linux系统（Ubuntu），这里介绍在我在Ubuntu 14 server下安装Swift运行环境的过程</p>
+<h3 id="安装所需的依赖项">安装所需的依赖项</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install clang  
+sudo apt-get install clang libicu-dev  
+</code></pre>
+</div>
+<h3 id="下载最新的二进制版本swiftorg">下载最新的二进制版本（swift.org）</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>wget https://swift.org/builds/swift-2.2-release/ubuntu1404/swift-2.2-RELEASE/swift-2.2-RELEASE-ubuntu14.04.tar.gz  
+</code></pre>
+</div>
+<h3 id="导入pgp密钥到你的钥匙圈">导入PGP密钥到你的钥匙圈</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -  
+</code></pre>
+</div>
+<h3 id="验证pgp签名可选">验证PGP签名（可选）</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>gpg --keyserver hkp://pool.sks-keyservers.net --refresh-keys Swift 
+</code></pre>
+</div>
+<h3 id="解压文件">解压文件</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>tar xzf swift-2.2-RELEASE-ubuntu14.04.tar.gz 
+</code></pre>
+</div>
+<h3 id="添加swift到你的path环境变量">添加Swift到你的Path环境变量</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>vim ~/.bashrc添加export PATH=/home/aven/swift-2.2-RELEASE-ubuntu14.04/usr/bin:"${PATH}"  至最后一行
+</code></pre>
+</div>
+<p><code class="highlighter-rouge">转至http://blog.csdn.net/testcs_dn/article/details/51056949</code></p>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Ubuntu%20install%20Swift&amp;url=/2017/03/30/ubuntu-install-swift.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2017/03/30/ubuntu-install-swift.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2017/03/30/ubuntu-install-swift.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2017/04/20/welcome-to-jekyll.html">
+        <section class="post">
+            <h2>Welcome to Jekyll!</h2>
+            <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see...&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2016/11/18/vs2010-fatal-lnk-1123-e8-bd-ac-e5-88-b0coff-e6-9c-9f-e9-97-b4-e5-a4-b1-e8-b4-a5.html">
+        <section class="post">
+            <h2>vs2010 fatal lnk 1123:转到COFF期间失败</h2>
+            <p>出现这种错误解决办法：
+ 1.在属性-&gt;配置属性-&gt;清单工具-&gt;输入和输出下，将嵌入清单改成否；
+ 2.若有vs2010与更高版本的vs，如vs2013、vs2015等，则在C盘搜索cvtres.exe，并用C:\Windows\winsxs\x86_netfx-cvtres_for_vc_and_vb_b03f5f7f11d50a3a_6.1.7601.18523_none_ba1d9002f0b0fff8目录下的cvtres替换C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin下的cvtres.exe。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

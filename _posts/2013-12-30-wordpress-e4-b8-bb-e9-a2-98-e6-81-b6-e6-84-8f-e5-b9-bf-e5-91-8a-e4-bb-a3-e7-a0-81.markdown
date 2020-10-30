@@ -1,0 +1,42 @@
+---
+layout: post
+title: wordpress主题恶意广告代码
+date: 2013-12-30 04:21:07.000000000 +08:00
+---
+
+检测到几款主题存在恶意广告代码。
+
+恶意代码在你启用不同主题的时候，会把同样的恶意代码复制到所有主题的 functions.php 中去，从而在页面底部显示广告代码。
+
+因为我们提供的主题文件都是基于作者提供的文件，目前已删除来源地址的链接，我们当前提供的下载已经经过处理，大家可以放心下载。
+
+受影响的主题有以下5款，请大家及时查看自己的主题是否存在类似问题。
+
+[Colossus](http://themes.wopus.org/wpthemes/cms/4691.html)
+
+[ZCool Like](http://themes.wopus.org/wpthemes/cn-wordpress-themes/3868.html)
+
+[PixLog](http://themes.wopus.org/wpthemes/cn-wordpress-themes/3656.html)
+
+[Zeta Theme](http://themes.wopus.org/wpthemes/two-column/3559.html)
+
+[Tripress](http://themes.wopus.org/wpthemes/cms/2915.html)
+
+有相应类似的问题，大家可以联系我们，或者在下面评论。
+
+2011.12.06 21:09 更新：
+
+恶意程序的特征，方便大家查找自己的主题是否存在问题。
+
+functions.php 文件中如果存在这几个函数，就可能已经被恶意程序修改，请及时查找所有的主题文件，删除相关函数的代码。
+
+_verify_isactivate_widgets 或者 _check_isactive_widget  
+ _get_allwidgetscont  
+ _prepare_widgets  
+ __popular_posts
+
+如感觉中招了，网站不能访问，查看文章《[WordPress Cannot redeclare comment_mail_notify()解决办法](http://kongqia.com/31916.html)》
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [wordpress主题恶意广告代码](http://kongqia.com/31917.html)
+
+

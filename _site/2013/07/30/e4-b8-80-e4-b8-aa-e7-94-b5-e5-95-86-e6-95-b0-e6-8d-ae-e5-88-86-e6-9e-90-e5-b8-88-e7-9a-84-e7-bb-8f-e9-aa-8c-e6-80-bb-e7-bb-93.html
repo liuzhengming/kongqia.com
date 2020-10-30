@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>一个电商数据分析师的经验总结</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">一个电商数据分析师的经验总结</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-07-30">30 July 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h2 id="08年毕业不知不觉的混进了电子商务行业又不知不觉的做了三年数据分析恰好又赶上了互联网电子商务行业发展最快的几年也算是不错吧毕竟感觉前途还是很光明的三年来可以说跟很多同事学到了不少东西需要感谢的人很多他们无私的教给了我很多东西"><span style="font-size: 13px;font-weight: normal">08年毕业，不知不觉的混进了电子商务行业，又不知不觉的做了三年<span class="wp_keywordlink_affiliate"><a href="http://www.woshipm.com/tag/%E6%95%B0%E6%8D%AE" title="查看 数据 中的全部文章">数据</a></span>分析，恰好又赶上了互联网电子商务行业发展最快的几年，也算是不错吧，毕竟感觉前途还是很光明的。三年来，可以说跟很多同事学到了不少东西，需要感谢的人很多，他们无私的教给了我很多东西。</span></h2>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/728c47aed2a700aa1126e449786f3f23.jpg" alt="" /></p>
+
+<p>就<span class="wp_keywordlink_affiliate"><a href="http://www.woshipm.com/tag/%E6%95%B0%E6%8D%AE" title="查看 数据 中的全部文章">数据</a></span>分析职业来说，个人感觉这对互联网公司来说是非常重要的，也是确实能够带来实际效果的东西。比如说利用数据分析做会员的细分以进行精准化营销；利用 数据分析来发现现有的不足，以作改进，让顾客有更好的购物体验；利用CRM系统来管理会员的生命周期，提高会员的忠诚度，避免会员流失；利用会员的购买数 据，挖掘会员的潜在需求，提供销售，扩大影响力等等。</p>
+
+<p>最开始进公司的时候是在运营部，主要是负责运营报表的数据，当时的系统还很差，提取数据很困难，做报表也很难，都是东拼西凑一些数据，然后做成PPT，记 得当时主要的数据就是销售额、订单量、毛利额、客单价、每单价、库存等一些特别基础的数据，然后用这些数据作出一些图表来。在这个阶段基本上就是做一些数 据的提取工作，Excel的技巧倒是学到了不少，算是数据分析入门了吧。</p>
+
+<p>后来公司上了数据仓库，里面就有了大量的原始数据，提取数据非常方便了，而且维度也多，可以按照自己的想法随意的组合分析，那个阶段主要就是针对会员购物 行为的分析，开始接触数据建模，算法等一些比较难的东西，也是学到东西最多的时候。记得当时做了很多分析报告，每周还要给总裁办汇报这些报告，下面详细说 一下当时使用的一些主要的模型及算法：</p>
+
+<div>**1、  RFM模型**</div>
+<div>****模型定义：在众多的客户关系管理的分析模式中，RFM模型是被广泛提到的。RFM模型是衡量客户价值和客户创利能力的重要工具和手段。该机械模型通过一个 客户的近期购买行为、购买的总体频率以及花了多少钱三项指标来描述该客户的价值状况。在RFM模式中，R(Recency)表示客户最近一次购买的时间有 多远，F(Frequency)表示客户在最近一段时间内购买的次数，M (Monetary)表示客户在最近一段时间内购买的金额。一般的分析型CRM着重在对于客户贡献度的分析，RFM则强调以客户的行为来区分客户。利用 RFM分析，我们可以做以下几件事情：</div>
+<div>⑴ 建立会员金字塔，区分各个级别的会员，如高级会员、中级会员、低级会员，然后针对不同级别的会员施行不同的营销策略，制定不同的营销活动。  
+ ⑵ 发现流失及休眠会员，通过对流失及休眠会员的及时发现，采取营销活动，激活这些会员。  
+ ⑶ 在短信、EDM促销中，可以利用模型，选取最优会员。  
+ ⑷ 维系老客户，提高会员的忠诚度。  
+ 使用方法：可以给三个变量不同的权重或按一定的规则进行分组，然后组合使用，即可分出很多不同级别的会员。**2、  关联分析**
+
+</div>
+<div>****关联分析最原始的案例来自于沃尔玛的“啤酒与尿布”。通俗意义上讲，就是只买了A商品的人，又有很多人买了B商品，那么我们就可以认为A、B两个商品的关 联性比较高。很多数据挖掘工具都有关联挖掘，主要使用的算法是Apriori算法，在计算的过程中会主要考察项集、置信度、相关性这三个结果数据，以最终 确定商品之间的相关性。除了Apriori算法外，还有许多其他的关联分析的算法，基本上也都是从Apriori发展而来，比如FPgrowth。本人从 几年的数据分析经验感觉，关联分析在零售业中并不太实用，挖掘出来的关联度比较高的商品一般都是同类商品或者同品牌的商品，像“啤酒与尿布”这种，很少能 够有。</div>
+<div>使用方法：组套销售或者相关陈列等。**3、  聚类分析**
+
+</div>
+<div>****零售行业的聚类分析主要是指将具有相似购物行为的顾客进行群体的细分，以支持精细化的营销活动，带来更大的营销效果，节省成本。Spss里面的聚类分析主 要有两种K-means聚类和系统聚类。也可以在数据仓库中根据顾客购买的商品属性进行会员的聚类分析，这里就不需要算法的支持，只需要根据系统的已经有 的商品分类，把购买过相同商品类别的顾客划分到一起。这种方法可能与公司的业务更加贴近。聚类分析是进行会员精细化管理，精细化营销的基础，做好聚类分 析，对企业将有很大的益处。</div>
+<div>使用方法：对顾客细分，精准化营销。**4、“之”字分析法**
+
+</div>
+<div>****该种方法主要是有一种很明确的会员群体，然后通过分析这些会员群体的购买行为，提取这些购物行为的相似点，然后再通过这些相似点返回到整个数据里面，从中抽取更大的会员群体，以制定精准的营销。</div>
+<div></div>
+<div>再后来，公司又上了SAP，又去BW组去做报表开发，做报表开发这一块能够接触到更多的业务方面的知识，虽然做数据挖掘比较少了，但是数据最终是要指导业务的，所以这对我的成长也算是非常有利的。业务方面主要了解到了几大块：</div>
+<div>1、库存管理-库存管理这块主要有正品库存的管理，滞销库存，高库存商品等各种不同类型的库存该怎么定义以及该如何去管理。比如去管理供应商的库存的时候会根据正品库存及滞销库存和库存正常的周转天数来计算该供应商的库存是否在合理的水平，是否该进货还是要减少库存。  
+ 2、促销管理-促销管理是以提高销售额为目的，吸引、刺激消费者消费的一系列计划、组织、领导、控制和协调管理的工作。数据方面来说主要是针对不同的促销 方式来计算不同的方式收益情况，不同的促销方式可以带来不同的效果，因此在使用促销的时候要审慎的选择，以达到理想的效果。  
+ 另外，还有财务报表、采购流程等很多方面的东西，这些接触的比较少就不写啦。 </div>
+<div>在BW项目组的时候，也经常会帮网站做一些分析工作，自己也自学了两本关于网站数据分析方面的书，感觉学到了一些皮毛，下面说一下吧：</div>
+<div>**1、  网站流量分析**</div>
+<div>****网站流量的比较重要的KPI指标有浏览量、访问量、独立访客数、跳失率、转化率、页面停留时间、访问页面数、流量来源、流量来源ROI等等。通过这些数据 可以全面的反映网站的整体情况。其中跳失率可以用来衡量页面的质量，流量来源及转化率可以衡量市场及营销的工作情况。进行网站数据分析的时候，需要牢牢的 把握转化率这一指标，然后由这一指标的变化来寻找其他相关数据的变化，最终找出原因，做相对应的策略，改进我们的工作。</div>
+<div>**2、  网站分析细分**</div>
+<div>****数据分析行业有句话-无细分，毋宁死，足矣看出细分对数据分析意义。对于网站的数据分析尤其是如此。网站的流量数据量非常大，从整体上看根本都看不出那里 会出现问题，所以必须要细分。比如说营销人员需要看的转化率，必须就要细分到每个渠道里面，然后再看到这些渠道来的会员的点击情况，他们都看过那些网页， 对什么感兴趣，跳失率是多少，浏览时间多长，最终转化的是多少等等，这样才能看出问题。</div>
+<div>**3、  网站的短信促销及EDM**</div>
+<div>****在这个电子商务普遍烧钱的时代，花出去的钱到底能有多少能够带来实际的收益呢？在抢占市场的同时，怎么才能做到ROI最大化这个问题急需要解决。公司每天 几乎都要发几万条甚至几十万条的促销的短信，短信的反馈率基本上都在2%一下，怎么才能提高转化率，这就需要更精准的用户定位，把钱花到最有可能带来收益 的地方。因此网站的短息促销及EDM促销，必须要依据会员的精细化细分，不但要满足客户的需求，更要挖掘出他们的需求。</div>
+<div></div>
+<div>写到这里基本上写的差不多，通过总结才发觉自己原来很是知道的很少，还有很多需要学习的地方，比如说数学建模方面的知识不够，统计学软件使用不够好，业务了解的不够深入，对整个电子商务行业的发展把握不清晰，这些都是需要以后加强的地方。最近在一个[<span>数据分析师</span>](http://www.itongji.cn/tag/shujufenxishi_2455_1.html)的前辈的博客上看到他对[<span>数据分析师</span>](http://www.itongji.cn/tag/shujufenxishi_2455_1.html)的要求只有一点，就是要热爱数据。感觉自己还不够，平时工作的时候还不够投入，总觉得是在为公司工作，不是在为自己的兴趣工作，其实一个人每天做的事，一定要都当做是为自己做才行，就算真的不是为自己做，也要从中学到一些东西来变成自己的东西，为自己服务。</div>
+<div></div>
+<div>转自：中国统计网</div>
+<p><span style="font-weight:bold">声明:</span> 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="署名-非商业性使用-相同方式共享">BY-NC-SA</a> 协议进行授权 | <a href="http://www.woshipm.com/">人人都是产品经理</a><br />
+转载请注明转自《<a href="http://www.woshipm.com/data/36334.html" title="一个电商数据分析师的经验总结">一个电商数据分析师的经验总结</a>》</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/17096.html">一个电商数据分析师的经验总结</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E7%9A%84%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93&amp;url=/2013/07/30/e4-b8-80-e4-b8-aa-e7-94-b5-e5-95-86-e6-95-b0-e6-8d-ae-e5-88-86-e6-9e-90-e5-b8-88-e7-9a-84-e7-bb-8f-e9-aa-8c-e6-80-bb-e7-bb-93.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/07/30/e4-b8-80-e4-b8-aa-e7-94-b5-e5-95-86-e6-95-b0-e6-8d-ae-e5-88-86-e6-9e-90-e5-b8-88-e7-9a-84-e7-bb-8f-e9-aa-8c-e6-80-bb-e7-bb-93.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/07/30/e4-b8-80-e4-b8-aa-e7-94-b5-e5-95-86-e6-95-b0-e6-8d-ae-e5-88-86-e6-9e-90-e5-b8-88-e7-9a-84-e7-bb-8f-e9-aa-8c-e6-80-bb-e7-bb-93.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/07/30/e6-88-91-e4-b8-ba-e4-bb-80-e4-b9-88-e4-b8-8d-e8-bf-bd-e6-b1-82-e6-9e-81-e8-87-b4-e7-9a-84-e7-94-a8-e6-88-b7-e4-bd-93-e9-aa-8c.html">
+        <section class="post">
+            <h2>我为什么不追求极致的用户体验</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/07/29/e8-bf-91-e8-b7-9d-e7-a6-bb-e7-9a-84-e7-be-8e-e5-a5-bd-e8-bf-91-e5-9c-ba-e4-ba-a4-e4-ba-92-e5-8f-8a-e5-ba-94-e7-94-a8.html">
+        <section class="post">
+            <h2>近距离的美好——近场交互及应用</h2>
+            <p>![](http://mux.baidu.com/img2/34/top.jpg)
+一、什么是近场交互？
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

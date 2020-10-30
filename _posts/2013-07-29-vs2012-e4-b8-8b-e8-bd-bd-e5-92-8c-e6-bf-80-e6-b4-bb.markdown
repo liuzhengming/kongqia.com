@@ -1,0 +1,15 @@
+---
+layout: post
+title: vs2012下载和激活
+date: 2013-07-29 03:04:24.000000000 +08:00
+---
+
+下载地址：
+
+[点我下载](http://download.microsoft.com/download/B/0/F/B0F589ED-F1B7-478C-849A-02C8395D0995/VS2012_ULT_chs.iso)
+
+旗舰版序列号：YKCW6-BPFPF-BT8C9-7DCTH-QXGWC
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [vs2012下载和激活](http://kongqia.com/16925.html)
+
+

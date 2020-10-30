@@ -1,0 +1,73 @@
+---
+layout: post
+title: 10款必备的HTML5开发工具
+date: 2013-09-03 05:35:13.000000000 +08:00
+---
+
+利用HTML5工具不仅可以帮助设计师和开发者创建更具吸引力的网站，还能增加网站的可用性和可访问性。本文收集了10款HTML5开发工具让你在网页中搭建特效、动画、视频、音频等诸多功能，为你节省更多开发时间。
+
+[Patternizer](http://patternizer.com/jrpg)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b0723e7e51.jpg)](http://cms.csdnimg.cn/article/201308/26/521b0723e7e51.jpg)
+
+这个工具可以让你开发真正炫酷的设计，比如各种线条。你可以随意修改线条的宽度、色彩、角度等等。有了它，帮你打造超赞的背景图片。
+
+[Font Dragr](http://fontdragr.com/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b073ba4a90.jpg)](http://cms.csdnimg.cn/article/201308/26/521b073ba4a90.jpg)
+
+这款工具可根据你的实际项目选择适宜的字体，你还可以通过拖放功能随意查看网站字体。
+
+#### [Adobe Typekit](http://html.adobe.com/edge/typekit/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b07511bcb0.jpg)](http://cms.csdnimg.cn/article/201308/26/521b07511bcb0.jpg)
+
+这款工具允许你可根据视线范围来选择适宜的字体并查看实时页面。
+
+#### [Rendera](http://rendera.heroku.com/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b076878b94.jpg)](http://cms.csdnimg.cn/article/201308/26/521b076878b94.jpg)
+
+如果你渴望这样一个工作氛围，可以检查、发现和研究不同类型的CSS、HTML或者JavaScript ，那么这款工具就可满足你的需求，根据选择的类型提供实时的结果并且让你的编码过程更加快速、炫酷。
+
+#### [CanvasLoader Creator](http://heartcode.robertpataki.com/canvasloader/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b078903f39.jpg)](http://cms.csdnimg.cn/article/201308/26/521b078903f39.jpg)
+
+这款颠覆性的工具允许你修改载入程序，使其看起来更加引抢眼，并为访问者提供一个更加合理的理解（即使其选择的区域正在加载），它不需要任何编程教学。
+
+#### [Webdirections](http://tools.webdirections.org/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b079e6c435.jpg)](http://cms.csdnimg.cn/article/201308/26/521b079e6c435.jpg)
+
+Webdirections是一款不错的代码集合工具，允许开发者检查、搜索、试验代码。你可以选择HTML5工具、CSS工具以及设计类工具等等，可以毫不费力的迅速点击打开。
+
+[Initializr](http://www.initializr.com/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b07af7df14.jpg)](http://cms.csdnimg.cn/article/201308/26/521b07af7df14.jpg)
+
+Initializr是一个HTML5模板生成器，以帮助你启动HTML5项目开发 。你可以根据自己的项目进行选择哪些项目可包含在HTML中，哪些不可以。
+
+#### [On/Off Flipswitch HTML5/CSS3 Generator](http://proto.io/freebies/onoff/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b07c59cee1.jpg)](http://cms.csdnimg.cn/article/201308/26/521b07c59cee1.jpg)
+
+Flip-Switches允许用户在网站上在线/离线状态下移动图片。只需修改小段代码即可实现这一功能，让你坦然面的各种操作系统、Web浏览器。
+
+#### [Liveweave](http://liveweave.com/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b088c96d34.jpg)](http://cms.csdnimg.cn/article/201308/26/521b088c96d34.jpg)
+
+LiveWeave是一个极好的在线工具，该工具支持HTML5、CSS3、JavaScript，允许你检验、测试并运行代码。
+
+#### [HTML KickStart](http://www.99lime.com/)
+
+[![](http://cms.csdnimg.cn/article/201308/26/521b07e611eaa.jpg)](http://cms.csdnimg.cn/article/201308/26/521b07e611eaa.jpg)
+
+该工具让你轻松创建网站，支持排版、表格、按钮、列表等功能。
+
+英文出自：[Designdrizzle](http://designdrizzle.com/10-best-html5-development-tools-for-web-developers-to-streamline-their-workflow/)
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [10款必备的HTML5开发工具](http://kongqia.com/17866.html)
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>windows store app 文本框默认边距</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">windows store app 文本框默认边距</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-02-15">15 February 2014</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><a href="http://kongqia.com/wp-content/uploads/2014/02/307021517305.jpg"><img src="http://kongqia.com/wp-content/uploads/2014/02/307021517305.jpg" alt="307021517305" /></a></p>
+
+<p> </p>
+
+<p>最近开发windows store app的时候发现input总有内边距，这个问题给了我许多的困惑；</p>
+
+<p>之前没有遇到过这样的问题，但是有点想法，就是引用了ui-dark.css，愿意肯定就是这个；</p>
+
+<p>开始一行一行看ui-dark.css，当看到231行的时候，出现了这样的样式：</p>
+
+<blockquote>
+  <p>input::-ms-value {</p>
+
+  <p>margin: 4px 8px;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>瞬间豁然开朗，问题找到了，只要恢复margin为0就好了，解决如下：</p>
+
+<blockquote>
+  <p>input::-ms-value {</p>
+
+  <p>margin: 0;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33284.html">windows store app 文本框默认边距</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=windows%20store%20app%20%E6%96%87%E6%9C%AC%E6%A1%86%E9%BB%98%E8%AE%A4%E8%BE%B9%E8%B7%9D&amp;url=/2014/02/15/windows-store-app-e6-96-87-e6-9c-ac-e6-a1-86-e9-bb-98-e8-ae-a4-e8-be-b9-e8-b7-9d.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2014/02/15/windows-store-app-e6-96-87-e6-9c-ac-e6-a1-86-e9-bb-98-e8-ae-a4-e8-be-b9-e8-b7-9d.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2014/02/15/windows-store-app-e6-96-87-e6-9c-ac-e6-a1-86-e9-bb-98-e8-ae-a4-e8-be-b9-e8-b7-9d.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2014/02/20/33290.html">
+        <section class="post">
+            <h2>isotope</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2014/02/14/e7-a6-81-e7-94-a8windows-8-1-e4-b8-ad-e7-9a-84skydrive.html">
+        <section class="post">
+            <h2>禁用Windows 8.1中的SkyDrive</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

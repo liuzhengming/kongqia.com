@@ -1,0 +1,25 @@
+---
+layout: post
+title: 提交windows8 应用商店应用的地址
+date: 2013-07-28 04:47:46.000000000 +08:00
+---
+
+[![QQ20130727-1@2x](http://www.kongqia.com/wp-content/uploads/2013/07/QQ20130727-1@2x-300x229.png)](http://www.kongqia.com/wp-content/uploads/2013/07/QQ20130727-1@2x.png)
+
+ 
+
+地址：
+
+https://appdev.microsoft.com/StorePortals/zh-cn/Account/Signup/SelectAccountType
+
+需要登录之后才可以；
+
+需要永信用卡支付；
+
+个人账户：300
+
+企业账号：600
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [提交windows8 应用商店应用的地址](http://kongqia.com/16817.html)
+
+

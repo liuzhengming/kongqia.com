@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>阿里云服务器配置VPN</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">阿里云服务器配置VPN</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-07-04">04 July 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>阿里云服务器配置详解（测试成功） 
+操作环境：阿里云香港节点云服务器，操作系统：CentOS 6.3 64位 
+名词解释：pptp是VPN服务器类型之一，PPP是一种数据链路层协议，iptables是IP信息包过滤系统。</p>
+
+<h3 id="1-服务器端安装软件">1 服务器端安装软件</h3>
+
+<h6 id="11-首先安装ppp命令">1.1 首先安装ppp，命令：</h6>
+
+<p><code class="highlighter-rouge">yum install -y ppp iptables </code></p>
+
+<p>提示Complete! ，安装成功；</p>
+
+<h3 id="12安装pptp">1.2安装pptp</h3>
+
+<p>由于pptp没有存放在CentOS的源中，所以用yum命令安装返回的是找不到安装包的，需要从网上下载，安装命令如下：</p>
+
+<p><code class="highlighter-rouge">rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64//pptpd-1.4.0-3.el6.x86_64.rpm</code></p>
+
+<h3 id="2-配置pptp">2 配置pptp</h3>
+<h6 id="21编辑etcpptpdconf命令如下">2.1编辑/etc/pptpd.conf，命令如下</h6>
+<p><code class="highlighter-rouge">vi /etc/pptpd.conf</code> 
+将</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>#localip 192.168.0.1 
+#remoteip 192.168.0.234-238,192.168.0.245 
+</code></pre>
+</div>
+<p>修改成(如未找到则添加)</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>localip 192.168.0.1 
+remoteip 192.168.0.234-238,192.168.0.245 
+</code></pre>
+</div>
+
+<p>即将这两行第一个字符“#”去掉，保存退出</p>
+
+<h6 id="22编辑etcpppoptionspptpd命令如下">2.2编辑/etc/ppp/options.pptpd，命令如下</h6>
+<p><code class="highlighter-rouge">vi /etc/ppp/options.pptpd</code></p>
+
+<p>将</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>#ms-dns 10.0.0.1 
+#ms-dns 10.0.0.2 
+</code></pre>
+</div>
+<p>改成</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ms-dns 8.8.8.8 
+ms-dns 8.8.4.4 
+</code></pre>
+</div>
+<p>即将这两行第一个字符“#”去掉，而后修改DNS的IP。</p>
+
+<h6 id="23设置使用pptp的用户名和密码">2.3设置使用pptp的用户名和密码</h6>
+
+<p>命令：</p>
+
+<p><code class="highlighter-rouge">vi /etc/ppp/chap-secrets</code></p>
+
+<p>打开后只有两行，而且一个账号都没有</p>
+<div class="highlighter-rouge"><pre class="highlight"><code># Secrets for authentication using CHAP 
+# client server secret IP addresses 
+</code></pre>
+</div>
+<p>根据您的需要添加账号，每行一个。按照：
+<code class="highlighter-rouge">用户名 pptpd 密码 ip地址</code>的格式输入，每一项之间用空格分开，例如：<code class="highlighter-rouge">kuro pptpd 123456 * </code>（*表示所有IP）</p>
+
+<p>保存并退出。</p>
+
+<h3 id="3修改内核设置使其支持转发">3、修改内核设置，使其支持转发</h3>
+<p>命令：</p>
+
+<p><code class="highlighter-rouge">vi /etc/sysctl.conf</code></p>
+
+<p>将<code class="highlighter-rouge">net.ipv4.ip_forward=0</code> 
+改成<code class="highlighter-rouge">net.ipv4.ip_forward=1</code></p>
+
+<p>将<code class="highlighter-rouge">net.ipv4.tcp_syncookies= 1</code> 
+改成<code class="highlighter-rouge">#net.ipv4.tcp_syncookies= 1</code></p>
+
+<p>保存并退出</p>
+
+<p>执行以下命令使修改后的内核生效</p>
+
+<p><code class="highlighter-rouge">sysctl -p</code></p>
+
+<h3 id="4添加iptables转发规则">4、添加iptables转发规则</h3>
+<p><code class="highlighter-rouge">iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth1 -jMASQUERADE</code> 
+（注意：由于阿里云是双网卡，内网eth0，外网eth1，所以这块特别容易误写为eth0，这也是为什么很多杂乱的教程无法配置成功的原因之一）</p>
+
+<p>添加好转发规则后保存一下并重启iptables</p>
+
+<p><code class="highlighter-rouge">/etc/init.d/iptables save</code><br />
+<code class="highlighter-rouge">/etc/init.d/iptablesrestart</code></p>
+
+<h3 id="5重启pptp服务">5、重启pptp服务</h3>
+
+<p><code class="highlighter-rouge">/etc/init.d/pptpd restart</code></p>
+
+<p>这里要注意一下，其实此时pptp还没运行起来。所以使用restart重启，会显示<code class="highlighter-rouge">Shutting down pptp [FAILED]</code>。还会有一个警告，可以忽略。如不放心可以再用以上命令重启一下pptp就非常顺利的运行了。</p>
+
+<h3 id="6设置pptp和iptables随系统启动">6、设置pptp和iptables随系统启动</h3>
+
+<p><code class="highlighter-rouge">chkconfig pptpd on</code><br />
+<code class="highlighter-rouge">chkconfig iptables on</code></p>
+
+<p>至此，pptp服务端安装结束。</p>
+
+<p>在PC端的“网络和共享中心”，设置新的连接或网络，即可访问VPN。</p>
+
+<p><em>** 转至：https://centos.pkgs.org/6/epel-x86_64/pptpd-1.4.0-3.el6.x86_64.rpm.html **</em></p>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEVPN&amp;url=/2017/07/04/aliyunvpn.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2017/07/04/aliyunvpn.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2017/07/04/aliyunvpn.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2017/12/15/vpsda-jian-shadowsocksfu-wu-yi-ji-pei-zhi-shadowsocksduo-yong-hu.html">
+        <section class="post">
+            <h2>VPS搭建shadowsocks服务以及配置shadowsocks多用户</h2>
+            <p>介绍在VPS中（虚拟主机）搭建shadowsocks服务，从而实现科学上网，配置多个shadowsocks用户实现多用户共享。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2017/04/25/ubuntu-install-mongodb.html">
+        <section class="post">
+            <h2>Ubuntu 上安装 MongoDB</h2>
+            <p>运行下列命令，导入 MongoDB 公开 GPG 键：
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

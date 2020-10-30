@@ -1,0 +1,41 @@
+---
+layout: post
+title: wordpress获取某分类下文章
+date: 2013-08-26 04:34:41.000000000 +08:00
+---
+
+获取wordpress分类下得几篇文章，其实也很简单，就是下面这单代码：
+
+> <div>  
+>     <?php query_posts(“showposts=10&orderby=date&order=DESC”)?>  
+>     <?php while (have_posts()) : the_post(); ?>  
+>         <a href=”<?php the_permalink() ?>” rel=”bookmark”><?php the_title(); ?></a>    <?php the_time(‘m-d’); ?>  
+>         <br/>  
+>     <?php endwhile; ?>  
+> </div>
+
+小小解释下：  
+query_posts：查询文章函数
+
+showposts=10 ：显示文章数量，这里是10篇
+
+orderby=date：这个是排序规则，表示按时间排序
+
+当然也可以考虑其他参数排序：
+
+- orderby=author
+- orderby=date
+- orderby=category
+- orderby=title
+- orderby=modified
+- orderby=modified
+- orderby=menu_order
+- orderby=parent
+- orderby=ID
+
+
+order=DESC：ASC表示升序，DESC表示降序
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [wordpress获取某分类下文章](http://kongqia.com/17838.html)
+
+

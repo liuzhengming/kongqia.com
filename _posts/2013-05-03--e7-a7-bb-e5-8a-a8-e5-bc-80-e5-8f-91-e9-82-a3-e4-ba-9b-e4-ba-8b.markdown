@@ -1,0 +1,174 @@
+---
+layout: post
+title: 移动开发那些事
+date: 2013-05-03 07:24:37.000000000 +08:00
+---
+
+说实话，我们这次开发移动端的项目，整个项目组的人都是第一次，最初立项的时候为是选择native app和web app还争论了一番，最后综合考虑，我们选择了web（我们选择了h5）开发。但从这两种开发模式的特点来说，从它们诞生之日起就开始了不断的争论，孰好孰坏，本文不作探讨，只是简单罗列下本人开发遇到的问题和最终的解决方案。
+
+**1. 响应式web设计**
+
+说到这个，移动开发面对的屏幕尺寸那叫一个丰富，其中安卓阵营就够让人头痛的。我们在PC端常用的两种布局方式就是固定布局和弹性布局，前者设置一个绝大多数电脑能正常显示的固定宽度居中显示，后者则采用百分比。关于这两者讨论的文章很多，有兴趣的自己查阅下，我今天要介绍的就是相信你已经听过的“响应式布局”，响应式布局意味着媒体查询，这个在css2就已经出现的东西随着html5、css3的到来又增添了新的生机。
+
+响应式web设计并非新的技术，只不过将已有的开发技巧（弹性布局、弹性图片和媒体查询等）整合在了一起，并命了这个听起来很牛X的名字——响应式web设计。犹如当年的Ajax一样，将已有的技术重新组合发挥新的作用。
+
+（1）.媒体查询初探。媒体查询并非新出现的技术，如下：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7049_1.png "1")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7049_1.png)  
+ 其中就使用了媒体查询，通过 标签的media属性为样式表指定了设备类型，当然CSS3时代的媒体查询更加丰富。
+
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/aa38_2.png "2")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/aa38_2.png)  
+ 发现了他们的区别吗？对，不只是针对设备进行适配，而且加了一个条件，就是当设备纵向放置的时候才匹配，咱们再看一个。
+
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5241_3.png "3")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5241_3.png)  
+ 大家会发现我们又拓展了一个条件，对，就是当设备屏幕的宽度大于960px才会加载style.css样式文件。我们究竟有哪些特性是可以被探测到的呢？下面列了一部分供大家参考（参考自http://www.w3.org/html/ig/zh/wiki/CSS3媒体查询）：  
+  width 视口宽度  
+  height 视口高度  
+  device-width 设备屏幕的宽度  
+  device-height 设备屏幕的高度  
+  orientation 检测屏幕处于横屏还是竖屏  
+  aspect-ratio 基于视口的宽高比例  
+  device-aspect-ratio 基于设备屏幕的宽高比  
+  color 颜色的位数，如min-color：32 匹配设备是否有32位或以上的颜色  
+  color-index 设备的颜色索引表中的颜色数  
+  monochrome 检测单色振缓冲区中每像素使用的位数。为非负数，如monochrome：3  
+  resolution 检测屏幕或打印机的分辨率，如min-resolution：300dpi(dpi后面会介绍)，也可以是每厘米像素点的度量值，如min-resolution：120dpcm  
+  scan 扫描方式，值为progressive（逐行扫描）、interlace（隔行扫描）  
+  grid 检测输出设备是网格设备还是位图设备
+
+创建媒体查询时，上述特性（scan和grid不行）都可以加上min和max前缀创建媒体查询的范围。除了link标签能够进行媒体查询，是不是还有其它的呢，答案是Yes 。html中的meta标签，此前我们常用的应该是这个  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/66ed_4.png "4")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/66ed_4.png)  
+ 但是现在我们要说的不是这个，而是这个：[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/fc20_5.png "5")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/fc20_5.png)  
+ 在多数ios和android设备的浏览器都支持viewport meta元素覆盖默认的画布缩放设置。在标签中插入meta标签，设置相应属性即可，如上代码，name=”viewport” content中width=device-width表示浏览器页面宽度等于设备宽度（同理可以设置高度，也可指定具体值），initial-scale=1表示页面不缩放保持，mininum-scale=1和maximum-scale=1表示允许用户最小缩小至原大小和扩大到原大小（实际就是不让缩放^^），user-scaleable=no 表示禁止缩放, target- densitydpi = high-dpi表示适配高分辨率的屏幕，还可以取值为dpi_value | device-dpi| high-dpi | medium-dpi | low-dpi，后面的四个定性，第一个定量，即dpi_value是DPI值，device-dpi是使用设备原本的 dpi 作为目标 dp，不发生默认缩放，而后面的三个是指dpi取值在一定范围的表示。这里我们先介绍前文出现过的一个名词dpi，所表示的是每英寸所拥有的像素（pixel）数目，数值越高，即代表显示屏能够以越高的密度显示图像。当达到人眼的极限分辨率时，乔帮主给它取了一个很高端的名字——Retina。那么目前市面的手机分辨率是怎样的一个分布呢，ios大家都知道的，从iphone4时代开始就已经是Retina屏了，至于Android可以看下此前Google官方公布的数据：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5a03_6.png "6")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5a03_6.png)  
+ 从上面可以看出，高分屏和超分屏已经是主流了，具体的适配范围还是看各自的项目和定位吧。
+
+讲了这么多，有人可能会疑惑为什么这些都不是用在CSS中的？别急，慢慢来，现在就介绍如何在样式中运用，按照上述屏幕分辨率的四种划分，我们可以看到基本可以舍弃ldpi了。  
+ /* 中分辨率屏幕 */  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/a4a5_7.png "7")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/a4a5_7.png)
+
+/*高分辨率屏幕*/  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7ee3_8.png "8")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7ee3_8.png)
+
+/*超高分辨率屏幕（传说中的Retina屏）*/  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/6e30_9.png "9")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/6e30_9.png)
+
+上面就是在css中的用法，把我们需要的css代码包含在大括号中就能用了，是不是很方便的样子%>_<%。当然我们还可以用到之前提供的几个特性，如下：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/56c1_10.png "10")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/56c1_10.png)
+
+针对视口宽度不大于768像素的情况加载大括号中的样式。  
+ 虽然我们可以把设备的分辨率可以分为这几类，但是屏幕的尺寸实在太多，如果针对每一种尺寸写一种样式，我觉得设计师和前端面不用干别的了，因为开发成本实在太大，而且没有必要，我们只需要针对绝大多数的设备结合媒体查询和弹性布局来调整，减少开发成本。
+
+**2.CSS3新增属性**
+
+现在移动端两大阵营ios和android都是基于webkit内核的，而webkit内核对CSS3的支持走在了前面，在这里我们可以抛开翔一样的ie家族，尽情享受多彩绚丽CSS3世界吧！
+
+CSS3给我们带来了如：文字阴影（text-shadow）、盒子阴影（box-shadow）、圆角（border-radius）、背景渐变（background: linear-gradient(#000, #fff)）、2D变换（transition）、动画（animation）等大家耳熟能详的常用属性外，还有如-webkit-mask、-webkit-text-stroke、-webkit-nbsp-mode、-webkit-tap-highlight-color、-webkit-box-reflect、-webkit-marquee、-webkit-box等webkit内核私有属性，至于这些属性其他浏览器支持程度，有兴趣的可以自己研究研究，这上面的每一个属性都有自己的使用场景，就看如何灵活运用。今天我不全部列出，仅简单介绍几个。
+
+（1）、介绍的第一个就是display：-webkit-box，我们知道元素大致分为内联元素、块状元素和介于两者之间的元素，当然还有inline-table、table-cell等神马的，那么display: -webkit-box怎么用呢，什么举个应用场景，对于下图所示的情况，父元素被1、2、3均分，且2和1之间间隔10px，你会怎么做？  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/42e5_11.png "11")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/42e5_11.png)
+
+这时候我们可以试试新的display:-webkit-box，另外还有如下属性配合使用，  
+ -webkit-box-orient子元素排列方向 horizontal | vertical | inline-axis | block-axis | inherit，其中默认值是inline-axis，即横向排列  
+ -webkit-box-flex 子元素之间比例，仅作一个系数  
+ -webkit-box-direction 子元素排列顺序 normal | reverse | inherit，其中默认值是normal  
+ -webkit-box-flex-group 以组为单位的流体系数  
+ -webkit-box-ordinal-group 以组为单位的子元素排列方向  
+ -webkit-box-lines 子元素是否换行，类似word-wrap和word-break的作用  
+ -webkit-box-align 子元素垂直方向的对其方式  
+ -webkit-box-pack 子元素水平方向的对其方式  
+ 这些配合使用的属性我们全部默认即可
+
+CSS：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/0bd3_12.png "12")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/0bd3_12.png)
+
+HTML：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/e88a_13.png "13")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/e88a_13.png)
+
+怎么理解上面的代码呢，父亲有一块地，要分给兄弟几个，除去老大和老二之间的分割线所占的那块，剩下的部分均分的分数由li的兄弟个数和box-flex的总数确定，现在一共三兄弟，每兄弟的box-flex都是1，所以就总分数=1*1+1*1+1*1=3。  
+ 如果代码稍作修改  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/cb3c_14.png "14")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/cb3c_14.png)  
+ 那么现在老二的box-flex是2了，总分数就是1*1+1*2+1*1=4，其中老大老三各占一份，老二占两份，显示效果如下：  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/0678_15.png "15")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/0678_15.png)
+
+（2）、-webkit-text-size-adjust:none;我做项目的时候发现一个问题，就是当竖屏的屏的时候显示效果不错，但是当横屏的时候，字体会变大，无论你怎么设置字体大小都无效，后来才知道是text-size-adjust（https://developer.mozilla.org/en-US/docs/CSS/text-size-adjust）在作怪。浏览器默认会根据当前屏幕和内容作调整，在webkit内核的浏览器中只需要-webkit-text-size-adjust:none就禁止自动调整，至于是否全局活局部使用看自己的项目需求。  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/597d_2013-4-9-15-28-22.png "2013-4-9 15-28-22")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/597d_2013-4-9-15-28-22.png)  
+ 如上图所示，很明显当手机由竖屏转向横屏的时候主题区域的文字自动变大，跟你自己设置的大小无关，当你设置了-webkit-text-size-adjust:none后横屏的效果是这样的  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/3414_2013-4-9-15-28-34.png "2013-4-9 15-28-34")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/3414_2013-4-9-15-28-34.png)  
+ 这样，字体的大小就有我们自己设置，是可控的。
+
+（3）、字级单位。
+
+我们常用的有px、pt、百分比、em等，很惭愧，我最近才知道有rem，而且是个相当不错的朋友。前面的几个单位大家都比较熟悉，不知道有没有和我一样小白的才知道rem的呢，我们就介绍一下这个新朋友，它是随着css3来到这个世界。
+
+我们之前用em、百分比的时候遇到的问题就是计算，而且当嵌套的层级太多时就会非常难以把控，而用px则被固定死了，现在我们用rem完全不用担心这个问题，因为rem的参照对象只有根节点。我们只需设置根节点的大小，所有子节点都只需参照它来设计就可以，下面是px、em、百分比和pt的对比  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/f375_19.png "19")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/f375_19.png)
+
+根据上面的图表（红色部分为默认，当然不同的浏览器渲染默认值不一样，具体还需各位实测）可以看出，我们只需设置html根元素字体大小为75%，对应的px值就是12，这样我们可以很方便的设置页面的宽高和字体大小，当然单位是rem，这样参考对象才会永远是html而不是父元素，当需要变化的时候，只需改变html的大小其他的元素都会相应变化，方便极了。
+
+**3、HTML5新增标签。**
+
+在html5中新增量很多标签，加强连html标签的语义化，如[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5aff_2013-4-9-15-27-37.png "2013-4-9 15-27-37")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/5aff_2013-4-9-15-27-37.png)等等，这些标签都各自有自己大意义，不再仅仅是span和div，虽然html4中也有很多语义化的标签，但是不如html5丰富。除了这些新增的标签，还有一些此前就有的标签，但是类别新增，最具代表性的就是表单form，而本文要介绍的就是form。  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/dca1_20.png "20")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/dca1_20.png)  
+ 以上除了type=text外，其他的都是新增的，如果浏览器支持这些属性的话，就会自动调用相应组件，如在移动设备中type=number/email/text时，浏览器会调用不同版面的键盘，这样加快用户的输入，体验也更美好，如下  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/dbad_22.png "22")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/dbad_22.png)
+
+如果是type=range则会出现这样的组件，供选择范围  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/fb71_23.png "23")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/fb71_23.png)
+
+如果是type=color则会出现颜色选择器  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7e9c_24.png "24")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7e9c_24.png)
+
+如果是type=date则出现日期选择器  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/81f3_2013-4-9-15-28-49.png "2013-4-9 15-28-49")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/81f3_2013-4-9-15-28-49.png)
+
+如果是type=search,则在输入时候出现一个一键清除的按钮，点击输入的文字全部清除  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/b907_26.png "26")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/b907_26.png)
+
+另外，除了input的type新增量类别，还增加一些很实用的属性，如placeholder，我们知道，input中我们常常会默认一些文案，当用户输入的时候会自动清除，html5之前我们是靠javascript实现的，但是有了html5，我们可以轻松实现，只需要placeholder=”默认文案” 如下
+
+当然新增的不只有placeholder，还有譬如可以关闭默认大小写的autocapitalize=”off”，有兴趣的童鞋可以研究研究。
+
+**4、选择符**
+
+选择符大致分为元素选择符、关系选择符、属性选择符、伪类选择符、伪对象选择符，在PC端，我们用的最多的就是元素选择符、关系选择符和属性选择符如  
+ div{……}、div.class{……}、div#id{……}、div span{……}、div[class=”classname”]{}
+
+但是由于ie某些浏览器的原因，很多好用的选择符不能广泛使用，如ie6只支持a标签的伪类选择符，但是在移动端，我们就不用在意这些了，绝大多数选择符都已经可以使用了，如前文已经用到的
+
+.item_list li:first-child{background: #f00}  
+ .item_list li:nth-child(2){margin-left: 10px;background: #ff0;-webkit-box-flex:1;}  
+ .item_list li:last-child{background: #c96}
+
+伪类选择符和伪对象选择符有很多，灵活运用可以减少很多不必要的代码。如E:nth-child(n){ …… }、E:nth-of-type(n){ …… }、E:disabled{ …… }、E:empty{ …… }、E:first-letter/E::first-letter{ …… }、E:first-line/E::first-line{ …… }、E:before/E::before{ ……}、E:after/E::after{…… }、E::selection{ …… }等，这里不细说。
+
+**5、一些小的建议**
+
+（1）、如何禁止用户旋转设备  
+ 这里其实是想告诉你在浏览器里办不到，因为禁止开发者阻止浏览器的orientationchange事件。
+
+（2）、禁用自动识别电话号码  
+ 在开发项目的时候，我们经常会用到一些数字或者就是电话号码，但是又不想系统自动识别让用户可以直接拨打，我们只需要在标签之间加入即可，但是有些特殊情况我们需要可以用户直接拨打，如  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/9cca_27.png "27")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/9cca_27.png)  
+ 没关系，像这样[010-52918772](tel:010-52918772)即可，系统会自动识别，用户点击即可选择拨号。
+
+（3）盒子边框溢出  
+ 当我们指定了一个块级元素时，并且为其定义了边框，设置了其宽度为100％。按照盒子模型，就会发现该元素的左右边框各1个像素会溢了，导致出现横向滚动条，这时候我们可以为其添加-webkit-box-sizing:border-box用来指定该盒子的大小包括边框的宽度。
+
+（4）、ios数字颜色样式超过9位后失控  
+ 这个问题我不知道该怎么描述，就是在ios中，当数字超过9位数时，浏览器会给这个数字默认加上一个颜色，无论你设置什么颜色都无效。  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/ff7f_28.png "28")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/ff7f_28.png)  
+[![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/87a7_29.png "29")](http://alibuybuy-img11.stor.sinaapp.com/2013/04/87a7_29.png)
+
+（5）、iOS可禁止用户在新窗口打开页面  
+ 在项目开发中，有时我们需要某个链接在当前页面打开，这样需要禁止用户在新窗口打开页面，我们可以使用a标签的target=”_self“指定在当前页面打开，但是在iOS中长按链接一段时间后，系统会弹出一个对话框，用户可以通过点击“在新页面中打开”来在新窗口打开页面，这样我们指定的target属性就失效了，但是可以通过指定当前元素的-webkit-touch-callout属性为none来禁止iOS弹出这些按钮。
+
+（6）、CSS3绘图和CSS3动画  
+ 在html5和css3的世界里，很多图片都是多余的，我们可以尽情发挥自己的想象，让CSS3替代不必要的图片不必要的JavaScript，另外做CSS3动画时最好将动画代码提取出来单独命名。
+
+本文前前后后啰啰嗦嗦说了很多，大多都是一笔带过没有细说，因为每一个小点的研究都可以写一篇博文了，我这就不班门弄斧，有兴趣的童鞋就细细研究一番。由于文笔不好加上知识范围有限，如有错误敬请指正，谢谢！
+
+（[微博UDC](http://udc.weibo.com/)原创博文，转载请注明出处
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [移动开发那些事](http://kongqia.com/1619.html)
+
+

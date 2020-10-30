@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>wordpress从数据库修改默认主题</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">wordpress从数据库修改默认主题</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-12-31">31 December 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>打开phpMyAdmin，选择对应的数据库，在sql文本框中输入以下查询语句，则看到当前的主题（theme）。</p>
+
+<blockquote>
+  <p>SELECT *</p>
+
+  <p>FROM wp_options</p>
+
+  <p>WHERE option_name = ‘template’</p>
+
+  <p>OR option_name = ‘stylesheet’</p>
+
+  <p>OR option_name = ‘current_theme’;</p>
+</blockquote>
+
+<p>结果如下：</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2013/12/2.png"><img src="http://kongqia.com/wp-content/uploads/2013/12/2.png" alt="2" /></a>将对应的红色字段修改为我们的主题名称即可。</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/31939.html">wordpress从数据库修改默认主题</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=wordpress%E4%BB%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98&amp;url=/2013/12/31/wordpress-e4-bb-8e-e6-95-b0-e6-8d-ae-e5-ba-93-e4-bf-ae-e6-94-b9-e9-bb-98-e8-ae-a4-e4-b8-bb-e9-a2-98.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/12/31/wordpress-e4-bb-8e-e6-95-b0-e6-8d-ae-e5-ba-93-e4-bf-ae-e6-94-b9-e9-bb-98-e8-ae-a4-e4-b8-bb-e9-a2-98.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/12/31/wordpress-e4-bb-8e-e6-95-b0-e6-8d-ae-e5-ba-93-e4-bf-ae-e6-94-b9-e9-bb-98-e8-ae-a4-e4-b8-bb-e9-a2-98.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2014/01/02/2014-e5-b9-b4-e9-83-a8-e5-88-86-e8-8a-82-e5-81-87-e6-97-a5-e5-ae-89-e6-8e-92.html">
+        <section class="post">
+            <h2>2014年部分节假日安排</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/12/30/wordpress-e6-8f-90-e7-a4-ba-ef-bc-9a-e6-ad-a3-e5-9c-a8-e6-89-a7-e8-a1-8c-e4-be-8b-e8-a1-8c-e7-bb-b4-e6-8a-a4-e8-af-b7-e4-b8-80-e5-88-86-e9-92-9f-e5-90.html">
+        <section class="post">
+            <h2>Wordpress提示：正在执行例行维护,请一分钟后回来</h2>
+            <p>FTP 进入网站的根目录，删除 .maintenance 文件就好了。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

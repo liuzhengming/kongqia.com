@@ -1,0 +1,33 @@
+---
+layout: post
+title: google被墙了怎么办
+date: 2014-07-10 02:56:32.000000000 +08:00
+---
+
+![google logo](http://kongqia.com/wp-content/uploads/2014/07/images.jpg)
+
+近期，由于某某事件，google又一次被墙了。
+
+但是百度知道的真心不够多，所以还是要到google去冲一冲。
+
+很简单：
+
+只要在添加DNS记录就完美可以解决问题了，亲测[https://www.google.com](https://www.google.com "google")毫无压力。
+
+DNS：42.120.21.30
+
+ 
+
+另一个办法：访问ip地址完爆google，如下：
+
+[http://84.15.64.35](http://84.15.64.35 "google")
+
+ 
+
+happy吧。
+
+致敬！
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [google被墙了怎么办](http://kongqia.com/33482.html)
+
+

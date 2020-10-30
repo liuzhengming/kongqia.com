@@ -1,0 +1,22 @@
+---
+layout: post
+title: 微信应用框架
+date: 2014-06-26 04:48:19.000000000 +08:00
+---
+
+![微信logo](http://kongqia.com/wp-content/uploads/2014/06/141911_56716055.png)
+
+wx是极简设计的微信（公共平台）应用参考级框架，而并非微信接口在node.js下的幂等映射。
+
+wx面向微信应用的普适需求，为开发者设计自然的研发体验。  
+ 多数场景中，wx默默地协调着数个微信接口，允许开发者朴素、直观地定义微信应用的用户体验。
+
+wx鼓励开发者以终端用户所理解的文学化编程风格，自顶向下叙述产品行为，开心地忽略与用户体验无关的部分技术细节。
+
+GitHub：[https://github.com/baoshan/wx](https://github.com/baoshan/wx)
+
+官网：[http://weixinjs.org](http://weixinjs.org)
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [微信应用框架](http://kongqia.com/33466.html)
+
+

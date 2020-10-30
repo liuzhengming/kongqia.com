@@ -1,0 +1,27 @@
+---
+layout: post
+title: wordpress分页
+date: 2013-11-17 18:45:06.000000000 +08:00
+---
+
+效果：
+
+[![分页](http://kongqia.com/wp-content/uploads/2013/11/QQ20131117-1@2x-300x74.png)](http://kongqia.com/wp-content/uploads/2013/11/QQ20131117-1@2x.png)
+
+在function.php中添加以下代码：
+
+> /* 分页 */ function pagenavi( $before = '', $after = '', $p = 2 ) { if ( is_singular() ) return; global $wp_query, $paged; $max_page = $wp_query->max_num_pages; if ( $max_page == 1 ) return; if ( empty( $paged ) ) $paged = 1; echo $before.'<div id="pagenavi">'."n"; echo '<span>Page: ' . $paged . ' of ' . $max_page . ' </span>'; if ( $paged > 1 ) p_link( $paged - 1, 'Previous Page', '«' ); if ( $paged > $p + 1 ) p_link( 1, 'First Page' ); if ( $paged > $p + 2 ) echo '... '; for( $i = $paged - $p; $i <= $paged + $p; $i++ ) { if ( $i > 0 && $i <= $max_page ) $i == $paged ? print "<span class='page-numbers current'>{$i}</span>" : p_link( $i ); } if ( $paged < $max_page - $p - 1 ) echo '... '; if ( $paged < $max_page - $p ) p_link( $max_page, 'Last Page' ); if ( $paged < $max_page ) p_link( $paged + 1,'Next Page', '»' ); echo '</div>'.$after."n"; } function p_link( $i, $title = '', $linktype = '' ) { if ( $title == '' ) $title = "Page {$i}"; if ( $linktype == '' ) { $linktext = $i; } else { $linktext = $linktype; } echo "<a class='page-numbers' href='", esc_html( get_pagenum_link( $i ) ), "' title='{$title}'>{$linktext}</a>"; }
+
+在需要分页的地方添加以下代码：
+
+> <?php pagenavi(); ?>
+
+现在样式不太好，稍微调整以下，在style.css中添加以下代码：
+
+> /* 分页 */ #pagenavi a, #pagenavi a:visited, #pagenavi span { height: 25px; line-height: 25px; display: inline-block; padding: 1px 8px; } #pagenavi a, #pagenavi a:visited { margin: 0 2px; } #pagenavi span.pages { color: #777; font-weight: bold; margin-right: 10px; padding: 0; } #pagenavi span.current { margin: -2px 2px -1px; padding: 0 9px; height: 28px; line-height: 28px; text-align: center; }
+
+现在只是做了简单的装饰，还可以继续深化调整。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [wordpress分页](http://kongqia.com/17974.html)
+
+

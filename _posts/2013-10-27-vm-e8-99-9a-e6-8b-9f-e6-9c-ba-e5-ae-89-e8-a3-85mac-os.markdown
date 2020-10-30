@@ -1,0 +1,47 @@
+---
+layout: post
+title: vm虚拟机安装Mac OS[2013年10月27日]
+date: 2013-10-27 00:01:47.000000000 +08:00
+---
+
+下载：以下内容：
+
+1. vm workstation
+
+2. mac os 镜像
+
+3. vm 安装mac os的补丁工具   http://pan.baidu.com/s/1ilOGl
+
+安装步骤：
+
+1. 安装vm
+
+2. 打开cmd（管理员方式打开），从cmd 中安装vm mac os补丁
+
+3. 新建虚拟机，添加mac os 镜像文件
+
+4. 你就等着乐吧，后边都是下一步选择就可以了。
+
+5. 安装遇到，选择硬盘发现没有的选择，是需要格式化才可以，如图：
+
+[![y2p-luCM5_cDwl9MydmO_4iMFLBFIlSWTH9MsFr-HLZqJLp4QwhpamCTbGrpdFUmPCURQLUejBHqbgKGt68yajW4w](http://www.kongqia.com/wp-content/uploads/2013/10/y2p-luCM5_cDwl9MydmO_4iMFLBFIlSWTH9MsFr-HLZqJLp4QwhpamCTbGrpdFUmPCURQLUejBHqbgKGt68yajW4w-300x225.png)](http://www.kongqia.com/wp-content/uploads/2013/10/y2p-luCM5_cDwl9MydmO_4iMFLBFIlSWTH9MsFr-HLZqJLp4QwhpamCTbGrpdFUmPCURQLUejBHqbgKGt68yajW4w.png)
+
+[![y2pgiDZYMjpO8CFDURyNO5pLMUiHWQ-I7yGxEkPnAwWp6hwT3aLD_M7XmjwIboKwahWs-3lmPHubNbiVwtAE1Jtsw](http://www.kongqia.com/wp-content/uploads/2013/10/y2pgiDZYMjpO8CFDURyNO5pLMUiHWQ-I7yGxEkPnAwWp6hwT3aLD_M7XmjwIboKwahWs-3lmPHubNbiVwtAE1Jtsw-300x225.png)](http://www.kongqia.com/wp-content/uploads/2013/10/y2pgiDZYMjpO8CFDURyNO5pLMUiHWQ-I7yGxEkPnAwWp6hwT3aLD_M7XmjwIboKwahWs-3lmPHubNbiVwtAE1Jtsw.png)
+
+[![y2pf5ByljXulADWczYGj_B7U0szrNGRoqm-KKd08GZ15MdsqkGN5WCKtqmkaSBYGd-ivTO0b40CIxjcvm99m7tbFA](http://www.kongqia.com/wp-content/uploads/2013/10/y2pf5ByljXulADWczYGj_B7U0szrNGRoqm-KKd08GZ15MdsqkGN5WCKtqmkaSBYGd-ivTO0b40CIxjcvm99m7tbFA-300x225.png)](http://www.kongqia.com/wp-content/uploads/2013/10/y2pf5ByljXulADWczYGj_B7U0szrNGRoqm-KKd08GZ15MdsqkGN5WCKtqmkaSBYGd-ivTO0b40CIxjcvm99m7tbFA.png)
+
+[![y2phEtgTgogXk60Qd0UHCqUgOt9tSBq5lXSsM9yv6VBqhib2VqnejOuRkxqImXyMq7P4Zhu5tJxdCCkxWEyEv5C4Q](http://www.kongqia.com/wp-content/uploads/2013/10/y2phEtgTgogXk60Qd0UHCqUgOt9tSBq5lXSsM9yv6VBqhib2VqnejOuRkxqImXyMq7P4Zhu5tJxdCCkxWEyEv5C4Q-300x225.png)](http://www.kongqia.com/wp-content/uploads/2013/10/y2phEtgTgogXk60Qd0UHCqUgOt9tSBq5lXSsM9yv6VBqhib2VqnejOuRkxqImXyMq7P4Zhu5tJxdCCkxWEyEv5C4Q.png)
+
+6. 安装vm tools
+
+附安装成功后的图：
+
+[![Snip20131027_1](http://www.kongqia.com/wp-content/uploads/2013/10/Snip20131027_1-300x187.png)](http://www.kongqia.com/wp-content/uploads/2013/10/Snip20131027_1.png)
+
+<table id="top1"><tbody><tr><td rowspan="2"></td><td><div> 
+
+装完vm tools也就大功告成了，happy吧，骚年。
+
+</div></td></tr></tbody></table><div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"></div>未经允许不得转载：[空洽网](http://kongqia.com) » [vm虚拟机安装Mac OS[2013年10月27日]](http://kongqia.com/17901.html)
+
+

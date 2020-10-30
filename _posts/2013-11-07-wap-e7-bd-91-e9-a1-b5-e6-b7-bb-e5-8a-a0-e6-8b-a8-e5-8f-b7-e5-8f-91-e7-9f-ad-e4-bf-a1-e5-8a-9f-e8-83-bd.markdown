@@ -1,0 +1,19 @@
+---
+layout: post
+title: wap网页添加拨号发短信功能
+date: 2013-11-07 04:56:32.000000000 +08:00
+---
+
+ 
+
+[![iphone 拨号](http://www.kongqia.com/wp-content/uploads/2013/11/u1033379432368117287fm23gp0-168x300.jpg)](http://www.kongqia.com/wp-content/uploads/2013/11/u1033379432368117287fm23gp0.jpg)
+
+这个实例只可以在手机浏览器上用，电脑上是看不到效果的。
+
+> <a href=”tel:15888888888″>打电话给刘德华</a>
+> 
+> <a href=”sms:15888888888″>短信给刘德华</a>
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [wap网页添加拨号发短信功能](http://kongqia.com/17936.html)
+
+

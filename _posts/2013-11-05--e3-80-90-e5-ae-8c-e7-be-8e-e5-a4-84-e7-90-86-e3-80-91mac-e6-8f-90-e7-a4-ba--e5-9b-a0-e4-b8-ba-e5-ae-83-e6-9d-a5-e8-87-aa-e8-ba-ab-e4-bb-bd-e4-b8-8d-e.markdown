@@ -1,0 +1,31 @@
+---
+layout: post
+title: "【完美处理】mac提示 因为它来自身份不明的开发者"
+date: 2013-11-05 04:45:48.000000000 +08:00
+---
+
+应该有不少朋友遇到这个问题：
+
+因为它来自身份不明的开发者… …
+
+不要着急，这其实就是安全级别需要设置一下就Ok了
+
+系统偏好设置->安全性与隐私->通用->允许从以下位置下载的应用程序->任何来源
+
+图：
+
+[![145816pila29pibff88fi9](http://www.kongqia.com/wp-content/uploads/2013/11/145816pila29pibff88fi9-300x180.png)](http://www.kongqia.com/wp-content/uploads/2013/11/145816pila29pibff88fi9.png)
+
+[![15560477y7znpgbjwjened](http://www.kongqia.com/wp-content/uploads/2013/11/15560477y7znpgbjwjened-300x237.jpg)](http://www.kongqia.com/wp-content/uploads/2013/11/15560477y7znpgbjwjened.jpg)
+
+ 
+
+[![155623qigzdn4in74qrc7g](http://www.kongqia.com/wp-content/uploads/2013/11/155623qigzdn4in74qrc7g-300x272.jpg)](http://www.kongqia.com/wp-content/uploads/2013/11/155623qigzdn4in74qrc7g.jpg)
+
+ 
+
+这就OK了，开始玩吧。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [【完美处理】mac提示 因为它来自身份不明的开发者](http://kongqia.com/17927.html)
+
+

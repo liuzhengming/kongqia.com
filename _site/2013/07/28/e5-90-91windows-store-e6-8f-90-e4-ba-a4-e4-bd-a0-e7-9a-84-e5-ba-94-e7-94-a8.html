@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>向Windows Store提交你的应用</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">向Windows Store提交你的应用</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-07-28">28 July 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>为了确保 Windows 应用商店能够获得成功，我们认识到需要打造得力的工具，帮助开发人员成功地开发出卓越的应用程序，在应用商店中陈列这些应用程序，跟踪应用程序性能并随时更新应用程序。在设计提交流程时，我们将开发人员视为我们的合作伙伴，设定共同的奋斗目标，与他们携手为用户提供丰富的卓越应用程序。</p>
+
+<p>在此博文中，我将与您分享设计应用程序提交体验的过程中会对我们的选择产生影响的目标。</p>
+
+<h3 id="设计迭代和学习">设计迭代和学习</h3>
+
+<p>除定义了一套必要的基准情景外，我们还将一些早期设计原型引入到了可用性实验室，以便从各个行业的开发人员那里获得直接的反馈。另外，我们还尽可能地听取了开发人员的意见，要求他们描述在将应用程序提交到其他平台时遇到的困难。</p>
+
+<p>开发人员的期望是多样的，如同他们编写的应用程序那样千变万化。有的开发人员渴望能够提供丰富的信息，希望全面了解各种选择，而有的开发人员则希望简化操作流程，在几分钟内完成操作。我们已经知道提前设定时间和复杂性预期的重要性，我们需要提供直接的提交路径，同时不能影响到开发人员研究和考虑各种选择的灵活性。此外，我们还了解到考虑发布应用程序的选择（基本上包括市场、价格、试用版和应用程序内产品）经常可以鼓励开发人员添加新的功能并更改部分代码。</p>
+
+<p>我们将提交流程细分为两个阶段。首先，开发人员处于主导地位，承担着学习、提交和审查其自有数据的重任，并按自己的进度来完成。但是，在您提交应用程序进行认证之后，您便处于次要地位，可以跟踪应用程序的进程，但无法像以前那样影响进度和结果。我们需要制定可以在第二个阶段提升信心的计划，同时在认证期间还要跟踪应用程序的状态。</p>
+
+<p>我们希望您可以提交更多的应用程序，而提交过程只需几个会话即可完成。我们需要一种即使在数据不理解的情况下，也可以通过可预知且可靠的方式对其进行保存的系统，因为有时您需要在处理其他任务之后继续处理某一进程。</p>
+
+<h3 id="设计目标">设计目标</h3>
+
+<p>由于我们希望集中工程力量来处理影响大多数开发人员且影响最为频繁的问题，我们制定了以下一些目标：</p>
+
+<ul>
+  <li>鼓励开发人员在开始编码之前访问应用商店开发人员门户网站</li>
+  <li>协助开发人员以使其符合应用商店技术要求</li>
+  <li>通过直接从应用程序包提取信息，减少概念和重复</li>
+</ul>
+
+<h4 id="鼓励开发人员在开始编码之前访问应用商店开发人员门户网站">鼓励开发人员在开始编码之前访问应用商店开发人员门户网站</h4>
+
+<p>我们可用性测试的一贯主题之一就是如果开发人员在完成编码后才能访问应用商店开发人员门户，则在应用程序提交过程中所做的决定通常会促使他们对代码稍做改动。类似的，开发人员需要确保在他们完成编码并准备上载时，他们应用程序名称未被使用。通过允许开发人员在提交应用程序之前保留名称，我们额外增加了一个可预知性层级，以保证名称是唯一的仅供您使用。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/4201.image1_5F00_6B62AA2E.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/8726.image1_5F00_thumb_5F00_0319E195.png" alt="“应用商店”菜单的下拉列表中包含“打开开发人员帐户...”和“保留应用程序名称”" title="Visual Studio 11 的“应用商店”菜单" /></a></p>
+
+<p>使开发人员能够提前保留应用程序名称的优势之一在于可以将它们更早地引入开发人员门户站点，并使他们了解到必须牢记的一些其他选项和要求。</p>
+
+<p>从 Visual Studio 到应用商店门户的链接无法直接深度链接至相同的名称预留页面，而是设置应用程序提交流程上下文的概览页面。我们觉得提交应用程序到应用商店的流程的透明度以及预先措施都十分重要，这样能够以可见的方式制定出涵盖多个概念的预期，包含各步骤所需时间的估算。</p>
+
+<p>请注意，尽管只启用了第一部分，您始终可以使用相关链接来了解有关各个步骤的更多信息。您可以立即开始，也可以花时间来了解有关各个选项的更多信息。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/3630.image2_5F00_77842455.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/2475.image2_5F00_thumb_5F00_16C6CB29.png" alt="使用以下步骤提交应用程序页面：名称, 销售详细信息, 高级功能, 年龄评级和评级认证, 加密, 软件包, 描述, 测试人员注释。各个步骤均包含简述和时间估算。" title="开发中心的应用程序提交页面" /></a></p>
+
+<p>我们刻意在此页中对步骤进行了排序，对在流程的开始阶段可能会促使您更改代码的概念进行了分组，以帮助您上载应用程序包。</p>
+
+<p>我将简要说明三个概念：</p>
+
+<ul>
+  <li><strong>市场</strong> – 我的同事 Aayaz Bhorania 在他的博文中提到 <a href="http://blogs.msdn.com/b/windowsstore_cn/archive/2012/01/10/10255228.aspx">Windows 应用商店的全球化运营和机遇</a>，但也提到为您的应用程序选择市场的相关内容，明确指出本地化的重要性，这似乎已成为下一个需要增加的功能（您只能在视频中看到简短的市场列表，因为我使用的是 Beta 版本的门户，而列表中的内容将会不断增加）。</li>
+  <li><strong>货币化</strong> – 应用商店提供了对试用版的全面支持，包括内置的基于时间的试用版和包含试用版用户功能区分的简易方法。使用应用程序内采购，用户可以在不离开所在上下文的情况下解锁新的应用程序功能。对这些基于试用和采购的功能进行编码非常容易，但需要进行计划或测试。</li>
+  <li><strong>服务</strong> – 通过以下方式预先访问门户可为您的测试提供真正的帮助。Windows 8 具有一些强大的内置<a href="http://blogs.msdn.com/b/b8_cn/archive/2011/11/09/updating-live-tiles.aspx">推送通知技术</a>，允许您的应用程序体验直接扩展到应用商店屏幕上的应用程序图块。在为您的应用程序保留名称之后，应用商店将生成一个唯一的应用程序身份并进行推送配置。在“高级功能”页面中，您可以找到所有需要的相关信息，使您的本地项目与应用商店分配的身份详细信息相符。这允许您在发布应用程序之前对其进行测试（包括端到端挂起推送通知）。<br />
+<em>**</em></li>
+</ul>
+
+<h4 id="协助制定应用商店技术要求">协助制定应用商店技术要求</h4>
+
+<p>为了创造一致的消费者体验，我们需要对某些应用程序包详细信息进行限制。例如，为了使消费者能够在应用商店以可靠的方式查找、获取和提供应用程序反馈，我们需要确保消费者看到的所有应用程序都具有唯一的名称。出于某些技术原因，每个应用程序的唯一身份必须包含一些应用程序特定的详细信息和一些开发人员特定的详细信息。</p>
+
+<p>在尝试与开发人员就应用程序包上载页面的复杂性（在不影响上载的情况下）进行了沟通之后，我们考虑和拒绝了多种设计，并决定提供一个自动选项，使该信息更接近于开发环境。使用 Visual Studio，您可以通过应用商店身体验证、查看应用程序列表、选择已在应用商店门户定义的应用程序，并创建与应用商店要求的所有应用程序特定的和开发人员特定的详细信息相符的应用程序包。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/1464.image3_5F00_0ECF28C7.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/8420.image3_5F00_thumb_5F00_34C4D91D.png" alt="“创建应用程序包”对话框在顶部的 Visual Studio 窗口，具体如下：为该应用程序包选择应用程序名称、应用程序名称、应用商店中的当前应用程序包、保留名称...、按钮：上一页、下一页、创建、取消" title="在 Visual Studio 11 中创建应用程序包对话框" /></a></p>
+
+<p>应用商店要在上载应用程序包之后立即对其进行基本的验证，Visual Studio 中的上述体验能够以可预知的方式使您的应用程序包符合应用商店限制条件，并允许您的应用程序包在首次上载到应用商店时即被成功接受。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/2553.image4_5F00_05FF207B.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/1055.image4_5F00_thumb_5F00_77547495.png" alt="应用程序包 - 使用控件上载您在 Visual Studio 中使用“创建应用程序包”创建的应用程序包。应用程序包的部分内容是特定于您的 Windows Store 开发人员帐户的。如果要在 Visual Studio 中正确构建应用程序包，请通过与 Windows 应用商店开发人员帐户一起使用的 Microsoft 帐户进行登录。" title="应用程序提交流程中的应用程序包页面" /></a></p>
+
+<p>在应用程序通过全面的应用商店认证流程方面，我们还增强了可预知性，方法是使用 Windows 应用程序认证包（与应用程序认证期间应用商店运行的技术测试相同）。在上载应用程序包之前，通过本地运行该测试，您可以及早的发现技术问题，从而提升您的应用程序通过技术认证的信心。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/5277.image5_5F00_0BD9C414.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/1067.image5_5F00_thumb_5F00_6AE6516C.png" alt="总评：通过。消除应用程序失败 [PASSED]（通过） [The app should launch successfully]（应用程序应成功启动）。[PASSED]（通过） [Do not install executables that crash or hang during the testing process]（不要安装在测试过程中崩溃或被挂起的可执行程序）。Metro 风格应用程序测试失败 [PASSED]（通过） [Metro style app manifest must include valid entries for all required fields]（Metro 风格应用程序清单的所有必填字段必须均包含有效条目）。选择进入 Windows 安全功能 [PASSED]（通过） [Binary Analyzer]（二进制分析器）..." title="Windows 应用程序认证包测试结果" /></a></p>
+
+<h4 id="直接从应用程序包提取信息">直接从应用程序包提取信息</h4>
+
+<p>如果要简化体验并避免必须多次输入相同数据，我们将尽可能地从应用程序包直接提取数据。Visual Studio 提供了相关的工具，可帮助开发人员声明应用程序包中的某些详细信息（例如，您的应用程序所支持的语言和您希望客户看到的标志）。这些关系往往非常复杂，因为有些应用程序包含多种分辨率、不同对比度和多种语言的资产，而在不同上下文中会出现内容重叠和回退。我们从应用程序包中直接读取数据并视之为主控副本，而不是在应用商店门户重复这种复杂性并要求您重新定义。</p>
+
+<p>此处，我们的选择已经影响到了一些提交事件的执行时间，例如，如果要求您为应用程序所支持的每种语言提供本地化的应用程序列表数据，则您需要上载应用程序包以便实现提交体验部分的内容。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/7713.image6_5F00_635AE1FF.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/7888.image6_5F00_thumb_5F00_0CA20431.png" alt="应用程序包 - 30 分钟 - 将您的应用程序上载到 Windows 应用商店" title="应用程序提交页面（第 6/8 步）" /></a></p>
+
+<p>应用商店门户从上载的应用程序包中读取支持的语言之后，“说明”部分即会启用，本案例中英文和法文各包含一部分内容：</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/2526.image7_5F00_7DF7584B.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/5241.image7_5F00_thumb_5F00_23ED08A2.png" alt="应用程序包 - 已完成，说明 - 30 分钟 - 英文未启动，法文未启动。" title="应用程序提交页面（第 7/8 步）" /></a></p>
+
+<p>我们看一下其中的一个说明页面，该页面是大多数本地化文本和图像的输入屏幕，客户将在应用商店的<a href="http://blogs.msdn.com/b/windowsstore_cn/archive/2012/02/02/windows-designing-user-experience.aspx">应用程序列表页面</a>中看到这些内容。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/2627.image8_5F00_61A1500F.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/4278.image8_5F00_thumb_5F00_2952B32A.png" alt="包含下列字段的长表单：说明, 说明项目符号, 关键字, 更新说明, 关键字, 版权和商标信息, 附加许可条款, 屏幕截图, 推广图像, 建议的硬件项目符号, 应用程序网站, 支持联系信息, 隐私政策。" title="应用程序提交到应用商店：说明页面" /></a></p>
+
+<p>首先，您会发现页面很长。为帮助您完成该长表单，我们内建了所谓的“去赶公交车”功能。我们从许多开发人员那里了解到，当他们遇到这种包含多个必填字段大型表单时，有时会觉得相对于必须手动输入数据的情况，这种表单在系统的数据完整性需求方面予以了更多的设计考虑。通常，在内容不完整或包含无效数据的时即会出现这种表单。</p>
+
+<p>我们希望您赶上公交车，因此我们允许您在任何状态下保存数据。我们能够了解到是否数据为无效，并确保在问题得到解决之前您不会意外提交应用程序来进行认证。您可以在将来信心满满地精炼您要向消费者传达的信息，从而更好地说明您的应用程序的真实价值。这一点非常重要，我们支持您将其纳入您的时间表。</p>
+
+<p>另外，在整个体验过程中，我们还有意使用了“保存”这个比喻，因为我们希望强化您将来可以重返此处来继续完成相关内容这一事实。您可能还注意到在一些页面中，根本没有要保存的数据，但我们认为自始至终地使用“保存”按钮增强了安全感和可预知性，从而您可以保留内容并随时返回将其完成。</p>
+
+<h3 id="跟踪认证状态">跟踪认证状态</h3>
+
+<p>当从提交转移到跟踪阶段时，我们需要找到许多因素的折中方案。这是此情境中尤其敏感的一部分内容，并且您的上市时间也很重要。您可以在计划、编码、测试和提交阶段处于主导地位，而当情景突然发生转变时，您必须耐心等待结果。我们早已知道这是体验的关键部分，如果设计天衣无缝，我们就可以提升开发人员在提交应用程序到 Windows 应用商店阶段的信心和满意度。我们还了解到我们所采取的其他步骤（在您提交应用程序之前允许运行 Windows 应用程序认证包，在我们的<a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh694083.aspx">应用程序认证策略</a>中使用通俗易懂的文字提供了相关指南）有助于实现可预知性和一致性，但依然未直接回答“我的应用程序状态如何？”的问题。</p>
+
+<p>我们在此页面中的目标是透明性（包括应用程序的相关信息、应用程序所处于的阶段和所需时间）。您可以查看您的应用程序在整个认证过程中的进度，并使用与您在门户其他位置所使用的可视化语言相同的语言来直观了解向数百万 Windows 8 用户推广您应用程序的进展情况。</p>
+
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/6283.image9_5F00_255DFEE9.png"><img src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-49-52-metablogapi/6874.image9_5F00_thumb_5F00_39E34E67.png" alt="认证天气。预处理 - 已完成，安全测试 - 已完成，技术合规性 - 正在进行，通常在 6 个小时内完成，发布 - 待定，等待应用程序通过认证，签名和发布 - 待定，通常在 2 个小时内完成" title="跟踪认证状态页面" /></a></p>
+
+<p>下面是每个阶段幕后的具体内容。</p>
+
+<ul>
+  <li><strong>预处理。</strong>在此阶段，我们将检查并确保已具备发布您的应用程序需要的所有适当的详细信息。这包括检查您的开发人员帐户状态以及检查您的应用程序是标有购买价格还是属于应用程序内产品，另外我们还要确保已具备全部书面材料以便向您支付费用。我们了解完成这些书面材料可能需要几天的时间，因此我们允许您立即开始提交应用程序，即使有些表单不完整也无妨。</li>
+  <li><strong>安全测试</strong>。我们将检查您提交的所有内容中是否包含病毒或恶意软件。</li>
+  <li><strong>技术合规性</strong>。我们将使用 Windows 应用程序认证包检查您的应用程序是否符合技术政策的规定。这与 SDK 中包含的技术认证评估完全相同，您可以在本地运行，随后上载您的应用程序包。</li>
+  <li><strong>内容合规性</strong>。我们的测试人员团队将查看您的应用程序，以检查其内容是否与我们的内容政策相符。由于需要真人查看您的应用程序，该过程要比其他步骤使用的时间更长。</li>
+  <li><strong>发布</strong>。该阶段进展迅速，除非您指定将来的发布日期。如果您从“销售”详细信息页面请求等到特定日期再向客户推广您的应用程序，则在您通过其他测试后，您将停留在此阶段，直至到达该日期。</li>
+  <li><strong>签名和发布。</strong>最后，我们将对您提交的应用程序包进行签名，并提供与您开发人员帐户的技术详细信息相符的可信证书。这样可以向客户保证应用程序已经过 Windows 应用商店的认证并且未被篡改。随后，我们将连同您应用程序列表页面中的所有其他可视数据一起，将您的应用程序包发布到应用商店，以便数百万的 Windows 8 用户可以查找、获取和使用您的应用程序。</li>
+</ul>
+
+<p>我希望您喜欢阅读我们在 Windows 应用商店提交体验的设计中融入的理论和概念的相关信息。我期待继续进行这种对话，并在 Windows 应用商店中早日看到您的应用程序。</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/16801.html">向Windows Store提交你的应用</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E5%90%91Windows%20Store%E6%8F%90%E4%BA%A4%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8&amp;url=/2013/07/28/e5-90-91windows-store-e6-8f-90-e4-ba-a4-e4-bd-a0-e7-9a-84-e5-ba-94-e7-94-a8.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/07/28/e5-90-91windows-store-e6-8f-90-e4-ba-a4-e4-bd-a0-e7-9a-84-e5-ba-94-e7-94-a8.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/07/28/e5-90-91windows-store-e6-8f-90-e4-ba-a4-e4-bd-a0-e7-9a-84-e5-ba-94-e7-94-a8.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/07/28/e8-8e-b7-e5-8f-96windows-e5-ba-94-e7-94-a8-e5-95-86-e5-ba-97-e5-bc-80-e5-8f-91-e8-80-85-e6-b3-a8-e5-86-8c-e7-a0-81.html">
+        <section class="post">
+            <h2>获取Windows 应用商店开发者注册码</h2>
+            <p>2.6.2　获取Windows 应用商店开发者注册码
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/07/27/e9-9d-9e-e6-8a-80-e6-9c-af-e8-bd-ac-e4-ba-a7-e5-93-81-e7-bb-8f-e7-90-86-e5-a6-82-e4-bd-95-e6-8b-93-e5-b1-95-e8-87-aa-e8-ba-ab-e6-8a-80-e8-83-bd.html">
+        <section class="post">
+            <h2>产品经理，不懂技术也能活的很好！</h2>
+            <p>前言：
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

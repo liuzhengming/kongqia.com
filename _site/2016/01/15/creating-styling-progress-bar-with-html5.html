@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Creating & Styling Progress Bar With HTML5</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Creating & Styling Progress Bar With HTML5</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-01-15">15 January 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><a href="http://www.hongkiat.com/blog/tag/html5/">HTML5</a> introduced the progress bar element, which allows us to show the progress of certain tasks, like uploads or downloads, basically anything that is in progress</p>
+
+<div class="et_social_media_wrapper">![](http://media02.hongkiat.com/html5-progress-bar/html5-progress-bar.jpg)<div class="et_social_media et_social_media_hidden et_social_mobile_on"></div></div>
+<p>In this article, we will discuss how to add this element in the document, how to style it with CSS and animate the progress bar meter.</p>
+
+<p>Let’s get started.</p>
+
+<p>RECOMMENDED READING:<a href="http://www.hongkiat.com/blog/beautiful-progress-bars/">35 Beautiful Progress Bar Designs</a></p>
+
+<h3 id="basic-usage">Basic Usage</h3>
+
+<p>The progress bar can be added with <code class="highlighter-rouge">&lt;progress&gt;</code>; the progress value is determined with the <code class="highlighter-rouge">value</code>, <code class="highlighter-rouge">min</code> and <code class="highlighter-rouge">max</code> attributes, as follows.</p>
+
+<div><div class="syntaxhighlighter  html" id="highlighter_889303"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="html plain">&lt;``<code class="html keyword">progress``<code class="html color1">value``<code class="html plain">=``<code class="html string">"10"``<code class="html color1">max``<code class="html plain">=``<code class="html string">"100"``<code class="html plain">&gt;&lt;/``<code class="html keyword">progress``<code class="html plain">&gt;`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Since this is a native progress bar, the presentation is vary dependent on the platform. Below is how a native progress bar looks in Windows and OSX.
+
+<div class="et_social_media_wrapper">![](http://media02.hongkiat.com/html5-progress-bar/native-progress-bar.jpg)<div class="et_social_media et_social_media_hidden et_social_mobile_on"></div></div>Now, let’s try styling this progress bar, so it has a consistent or similar look across all platform.
+
+### Styling Progress Bar
+
+In the stylesheet, we actually can use the element selector to target and add style rules to `<progress>` element. In this example, we change the background color, remove the border line, and make it rounded by adding a border radius at half of its height.
+
+<div><div class="syntaxhighlighter  css" id="highlighter_209574"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="css plain">progress {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="css spaces">    ``<code class="css keyword">background-color``<code class="css plain">: ``<code class="css value">#f3f3f3``<code class="css plain">;`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="css spaces">    ``<code class="css keyword">border``<code class="css plain">: ``<code class="css value">0``<code class="css plain">;`&lt;/div&gt;<div class="line number4 index3 alt1">`<code class="css spaces">    ``<code class="css keyword">height``<code class="css plain">: ``<code class="css value">18px``<code class="css plain">;`&lt;/div&gt;<div class="line number5 index4 alt2">`<code class="css spaces">    ``<code class="css plain">border-radius: ``<code class="css value">9px``<code class="css plain">;`&lt;/div&gt;<div class="line number6 index5 alt1">`<code class="css plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;However, each browser handles this a bit differently.
+
+In Firefox, the styles affect the progress bar, while the progress meter / value is not affected.
+
+In Chrome and Safari, it will remove the native styles and presentation from the platform and replace it with the [Webkit stylesheet](http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css), the styles above will not be applied (at least, at the moment).
+
+So, we need some more workaround in these cases.
+
+<div class="et_social_media_wrapper">![](http://media02.hongkiat.com/html5-progress-bar/progress-styles.jpg)<div class="et_social_media et_social_media_hidden et_social_mobile_on"></div></div>In Chrome and Safari, the progress element is translated this way.
+
+<div><div class="syntaxhighlighter  html" id="highlighter_705972"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="html plain">&lt;``<code class="html keyword">progress``<code class="html plain">&gt;`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="html spaces">    ``<code class="html plain">┗ &lt;``<code class="html keyword">div``<code class="html plain">&gt; ::-webkit-progress-bar`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="html spaces">         ``<code class="html plain">┗ &lt;``<code class="html keyword">div``<code class="html plain">&gt;::-webkit-progress-value`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Thus, to change the progress bar and the progress value styles in these browsers, we need to add those Webkit `pseudo-classes`.
+
+<div><div class="syntaxhighlighter  css" id="highlighter_366542"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="css plain">progress::-webkit-progress-bar {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="css plain">}`&lt;/div&gt;<div class="line number4 index3 alt1">`<code class="css plain">progress::-webkit-progress-value {`&lt;/div&gt;<div class="line number5 index4 alt2">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number6 index5 alt1">`<code class="css plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Firefox also has its special pseudo-class that is ::-moz-progress-bar. Unlike Chrome and Safari, this pseudo-class in Firefox refers to the progress meter/value.
+
+<div><div class="syntaxhighlighter  css" id="highlighter_818390"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="css plain">progress::-moz-progress-bar {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="css plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;To conclude, these are currently the entire selectors for styling HTML5 progress bar.
+
+<div><div class="syntaxhighlighter  css" id="highlighter_971580"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="css plain">progress {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="css plain">}`&lt;/div&gt;<div class="line number4 index3 alt1">`<code class="css plain">progress::-webkit-progress-bar {`&lt;/div&gt;<div class="line number5 index4 alt2">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number6 index5 alt1">`<code class="css plain">}`&lt;/div&gt;<div class="line number7 index6 alt2">`<code class="css plain">progress::-webkit-progress-value {`&lt;/div&gt;<div class="line number8 index7 alt1">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number9 index8 alt2">`<code class="css plain">}`&lt;/div&gt;<div class="line number10 index9 alt1">`<code class="css plain">progress::-moz-progress-bar {`&lt;/div&gt;<div class="line number11 index10 alt2">`<code class="css spaces">    ``<code class="css comments">/* style rules */`&lt;/div&gt;<div class="line number12 index11 alt1">`<code class="css plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;### Animate the Progress
+
+Next, we will see how to animate the progress bar. Typically, the progress bar expands from left to right as the task progresses.
+
+The idea is, the progress bar will expand from `0` and stop once it reaches the maximum value. We will also display the value number as it is progressing. Below is the HTML structure.
+
+HTML
+
+<div><div class="syntaxhighlighter  html" id="highlighter_404039"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="html plain">&lt;``<code class="html keyword">progress``<code class="html color1">id``<code class="html plain">=``<code class="html string">"progressbar"``<code class="html color1">value``<code class="html plain">=``<code class="html string">"0"``<code class="html color1">max``<code class="html plain">=``<code class="html string">"100"``<code class="html plain">&gt;&lt;/``<code class="html keyword">progress``<code class="html plain">&gt;`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;CSS
+
+In this example, we will use jQuery to animate the progress bar. So, we should also not forget to insert the jQuery, like so.
+
+<div><div class="syntaxhighlighter  html" id="highlighter_431147"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="html plain">&lt;``<code class="html keyword">script``<code class="html color1">src``<code class="html plain">=``<code class="html string">"js/jquery.js"``<code class="html color1">type``<code class="html plain">=``<code class="html string">"text/javascript"``<code class="html plain">&gt;&lt;/``<code class="html keyword">script``<code class="html plain">&gt;`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Then, we add the scripts to make the progress bar expand. First, we store the progress bar element, the progressbar value as well the maximum value, and the timeframe, in Variables.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_387730"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js keyword">var``<code class="js plain">progressbar = $(``<code class="js string">'#progressbar'``<code class="js plain">),`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="js spaces">    ``<code class="js plain">max = progressbar.attr(``<code class="js string">'max'``<code class="js plain">),`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="js spaces">    ``<code class="js plain">value = progressbar.val(),`&lt;/div&gt;<div class="line number4 index3 alt1">`<code class="js spaces">    ``<code class="js plain">time = (1000/max)*5;`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Next, we create a variable that store the animation function. In this example, we call the variable `loading`.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_420967"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js keyword">var``<code class="js plain">loading = ``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number2 index1 alt1"></div><div class="line number3 index2 alt2">`<code class="js plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Inside the above function, we set the progress interval. We will increase the value by `1` per timeframe — you can increase the value to make the progress run faster.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_62439"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js plain">value += 1;`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;And then, we add the result to the progress bar.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_642527"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js plain">addValue = progressbar.val(value);`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;We also show the value inside, next to the progress bar.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_928617"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js plain">$(``<code class="js string">'.progress-value'``<code class="js plain">).html(value + ``<code class="js string">'%'``<code class="js plain">);`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;Next, we create a new function to run the animation function.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_82947"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js plain">setInterval(``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="js spaces">    ``<code class="js plain">loading();`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="js plain">}, time);`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;At this point, the animation is already functioning. However, the value will keep increasing infinitely. So, we need to create a conditional statement for the animation to stop when it reaches its maximum value.
+
+First, let’s store the above function in a variable like so.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_323306"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js keyword">var``<code class="js plain">animate = setInterval(``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="js spaces">    ``<code class="js plain">loading();`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="js plain">}, time);`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;And, inside the `loading` variable, we add the conditional statement, as follow.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_829722"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js keyword">if``<code class="js plain">(value == max) {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="js spaces">    ``<code class="js plain">clearInterval(animate);`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="js plain">}`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;The above script states that once the value is equal to the maximum value, clear the interval, which will stop the animation function.
+
+That’s it and here are all the codes to animate the progress bar.
+
+<div><div class="syntaxhighlighter  js" id="highlighter_111677"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2">`<code class="js plain">$(document).ready(``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number2 index1 alt1">`<code class="js spaces">    ``<code class="js keyword">var``<code class="js plain">progressbar = $(``<code class="js string">'#progressbar'``<code class="js plain">),`&lt;/div&gt;<div class="line number3 index2 alt2">`<code class="js spaces">        ``<code class="js plain">max = progressbar.attr(``<code class="js string">'max'``<code class="js plain">),`&lt;/div&gt;<div class="line number4 index3 alt1">`<code class="js spaces">        ``<code class="js plain">time = (1000/max)*5,    `&lt;/div&gt;<div class="line number5 index4 alt2">`<code class="js spaces">        ``<code class="js plain">value = progressbar.val();`&lt;/div&gt;<div class="line number6 index5 alt1"></div><div class="line number7 index6 alt2">`<code class="js spaces">    ``<code class="js keyword">var``<code class="js plain">loading = ``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number8 index7 alt1">`<code class="js spaces">        ``<code class="js plain">value += 1;`&lt;/div&gt;<div class="line number9 index8 alt2">`<code class="js spaces">        ``<code class="js plain">addValue = progressbar.val(value);`&lt;/div&gt;<div class="line number10 index9 alt1">`<code class="js spaces">        `&lt;/div&gt;<div class="line number11 index10 alt2">`<code class="js spaces">        ``<code class="js plain">$(``<code class="js string">'.progress-value'``<code class="js plain">).html(value + ``<code class="js string">'%'``<code class="js plain">);`&lt;/div&gt;<div class="line number12 index11 alt1"></div><div class="line number13 index12 alt2">`<code class="js spaces">        ``<code class="js keyword">if``<code class="js plain">(value == max) {`&lt;/div&gt;<div class="line number14 index13 alt1">`<code class="js spaces">            ``<code class="js plain">clearInterval(animate);                    `&lt;/div&gt;<div class="line number15 index14 alt2">`<code class="js spaces">        ``<code class="js plain">}`&lt;/div&gt;<div class="line number16 index15 alt1">`<code class="js spaces">    ``<code class="js plain">};`&lt;/div&gt;<div class="line number17 index16 alt2"></div><div class="line number18 index17 alt1">`<code class="js spaces">    ``<code class="js keyword">var``<code class="js plain">animate = setInterval(``<code class="js keyword">function``<code class="js plain">() {`&lt;/div&gt;<div class="line number19 index18 alt2">`<code class="js spaces">        ``<code class="js plain">loading();`&lt;/div&gt;<div class="line number20 index19 alt1">`<code class="js spaces">    ``<code class="js plain">}, time);`&lt;/div&gt;<div class="line number21 index20 alt2">`<code class="js plain">};`&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;You can view the demo and download the source from the following links.
+
+- [View Demo](http://demo.hongkiat.com/html5-progress-bar/)
+- [Download Source](http://demo.hongkiat.com/html5-progress-bar/source.zip)
+
+### Browser Support
+
+According to [CanIUse.com](http://caniuse.com/#feat=progressmeter), HTML5 progress element is fully supported in the following browsers: Firefox 16+, Chrome 8+, Safari 6+ and Opera 11+.
+
+<div class="et_social_media_wrapper">![](http://media02.hongkiat.com/html5-progress-bar/browser-support.jpg)<div class="et_social_media et_social_media_hidden et_social_mobile_on"></div></div>[Lea Verou provides polyfills](http://lea.verou.me/2011/07/a-polyfill-for-html5-progress-element-the-obsessive-perfectionist-way/) to replicate similar functionality of this element in unsupported browsers though.
+
+### Furher References
+
+Below are a few good references to dig into this element further.
+
+- [Cross Browser HTML5 Progress Bar in Depth](http://www.useragentman.com/blog/2012/01/03/cross-browser-html5-progress-bars-in-depth/) – User Agent Man
+- [HTML5 file upload with progress](http://www.matlus.com/html5-file-upload-with-progress/) – FileZilla Project
+- [HTML5 Progress Documentation](http://www.w3.org/html/wg/drafts/html/master/single-page.html#the-progress-element) – W3.org
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [Creating &amp; Styling Progress Bar With HTML5](http://kongqia.com/33671.html)
+
+
+</code></div></code></code></div></code></code></div></code></code></code></code></code></div></code></code></div></code></code></div></code></code></div></code></code></code></div></code></code></code></code></code></code></div></code></div></code></code></div></code></code></div></code></code></code></code></code></div></code></code></div></code></code></div></code></code></code></code></div></code></code></code></code></code></div></code></code></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></code></code></div></div></td></tr></tbody></table></div></div></code></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></div></div></td></tr></tbody></table></div></div></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></code></div></code></code></div></code></code></code></code></div></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></code></code></code></code></code></code></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></code></code></code></code></code></code></code></code></code></code></code></code></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></div></code></div></code></code></div></code></div></code></div></code></code></div></code></div></code></div></code></code></div></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></div></code></div></code></div></code></code></div></code></div></div></td></tr></tbody></table></div></div></code></code></code></code></div></code></code></code></code></div></code></code></code></div></div></td></tr></tbody></table></div></div></code></div></code></code></code></code></div></code></code></code></code></code></div></code></code></code></code></code></div></code></code></code></code></code></div></code></div></div></td></tr></tbody></table></div></div></progress></code></code></code></code></code></code></code></code></code></code></code></div></div></td></tr></tbody></table></div></div>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Creating%20&%20Styling%20Progress%20Bar%20With%20HTML5&amp;url=/2016/01/15/creating-styling-progress-bar-with-html5.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2016/01/15/creating-styling-progress-bar-with-html5.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2016/01/15/creating-styling-progress-bar-with-html5.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2016/02/23/gmat-e8-af-b4-e6-98-8e-e8-bf-90-e7-94-a8-e6-9c-89-e9-99-90-e7-87-83-e6-96-99-e5-8d-87-e9-ab-98-e8-bf-9c-e5-9c-b0-e7-82-b9.html">
+        <section class="post">
+            <h2>Gmat说明-运用有限燃料升高远地点</h2>
+            <p>空间任务设计中，经常出现的一个问题是，运用有限燃料达到指定轨道目标。    在这里，我们将运用GMAT将低轨飞行器升高到指定远地点半径。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2015/12/29/e6-a8-a1-e5-9e-8b-e5-92-8c-e5-85-83-e6-a8-a1-e5-9e-8b.html">
+        <section class="post">
+            <h2>模型和元模型</h2>
+            <p>模型（model）是对现实的抽象，或者是对这个抽象的描述。元模型（meta-model）当然也是模型，他描述的对象是“模型中的元素、元素间关系以及表示法”，或者说它是一种语言，人们使用这种语言来描述模型。使用同样元模型的人，可以互相理解彼此所建立的模型。我们的每一句话，每篇文章都是一个模型（参看前文：《名可名，非常名》），中文是我们的建模语言。掌握中文的人，可以通过理解对方的句子和文章。中文、英文、德文、法文都是自然语言，也都是元模型。如果你要发明一种新的自然语言，你需要发明哪些要素呢？例如：你是否需要发明相关的词汇和语法？词汇是否需要分成名词、动词、形容词等等？每一个词汇是否都应该有读音和写法？（ps，《指环王》的作者托尔金大叔就发明了一种新的语言，名曰精灵语，而且居然还有个女人把它学会了。）或者，你发明了一种新的“自然语言”，但是它是不是真正意义上的自然语言呢？显然，要回答这个问题，我们需要先搞清楚什么是“自然语言”。怎么才能精确的说清楚？最好是建立一个模型，用这个模型来阐明“自然语言”的要素和结构。使用这个模型，我们可以定义自己的“自然语言”。这个模型对于任何一种自然语言（例如中文），就是元模型；而相对于一个句子或者一篇文章则是元元模型。如此类推，我们还可以建立元元元模型，元元元元模型，等等。但是，陷于人类的思维能力和实际的需要，4层可能就足够了。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

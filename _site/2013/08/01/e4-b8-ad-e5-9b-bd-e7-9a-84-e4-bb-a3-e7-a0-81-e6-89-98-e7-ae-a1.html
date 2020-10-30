@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>中国的代码托管</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">中国的代码托管</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-08-01">01 August 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><img src="http://img0.tech2ipo.com/upload/img/article/2013/08/1375334458602.jpg" alt="" title="Octocat.jpg" /></p>
+
+<p><strong><span>引言</span></strong></p>
+
+<p>源代码管理作为软件开发领域的基本需求由来已久，流行的代码管理工具也由 CVS，SVN，发展到了目前的 Git。开源的流行和社会化编程的需求推动了 Github 的兴起，国内涌现了一 aole 批 Github 的模仿者。比较有意思的是，Github 在世界范围内已经流行了好多年，为何国内的模仿者今年才出现，而且是同时出现？这个原本不惹人注意的领域突然热了起来。</p>
+
+<p><strong><span>局面</span></strong></p>
+
+<p>在 Git 出现之前，国内也有一些基于 SVN 的代码托管服务，但都不是很引人注意，例如 svnchina.com、 teamhost.org、code.taobao.org。其中 SVNChina 是一家独立的网站，具体背景不是很清楚，在业界不算活跃。Teamhost.org 是盛大创新院推出的代码托管服务，也是一直不温不火，盛大在 2012 年底关闭了这个网站，在业界引起了不少讨论。后来似乎有人接手了 teamhost 的代码，挪到了 code.huihoo.com。code.taobao.org 是淘宝推出的代码托管服务，中文名叫“淘蝌蚪”是淘宝工程师的业余作品，用的人也不多。前一阵子淘宝正明（张文嵩）说要加大投入好好搞淘蝌蚪，莫非是受了其他几家 git 服务的刺激？</p>
+
+<p>上面说的那些都是基于 SVN 的代码托管服务，也是目前这场代码托管战争打响之前就有的服务。Github 流行以后，国内第一个模仿的是 Gitcafe。Gitcafe 最初似乎是针对全球市场的，有英文版，服务器也放在国外，可能是意识到国外市场不靠谱，最近把服务器挪到了国内。Gitcafe 的系统应该绝大部分是自己开发的，在他们看来这是值得自豪的地方也是抨击对手的子弹，但我认为这一点有利有弊。</p>
+
+<p>和 gitcafe 差不多同时出现的还有 geakit 和 gitshell，但这两家都比较小，像是业余作品所以知道的人也不多。真正引爆这场战争的是国内 IT 界的两大技术社区 CSDN 和开源中国。我不知道这两家是不是商量好的，他们几乎在同一时间（开源中国比 CSDN 早了一个月）推出了基于同一个开源项目 Gitlab 的代码托管服务。而且，CSDN 和开源中国都选择了通过子域名来做代码托管，code.csdn.net 和 git.oschina.net。这些都是巧合？还是存在某种必然性？</p>
+
+<p>六月底的时候，开源中国宣布公有库和私有库都永久免费，将来有可能通过额外的增值服务收费。没过几天，Gitcafe 宣布私有库要开始收费了。CSDN 在推出代码托管的时候说每个账户有一个私有库是免费的。感觉有点乱，显然大家对国内的这块市场还看不透，都在摸着石头过河。</p>
+
+<p><strong><span>冲突</span></strong></p>
+
+<p>入局的人多了，竞争加剧了，多少还是会引发一些冲突。前一阵子 Gitcafe 的创始人（@ghosTM55）在微博上骂开源中国在他们的博客上做广告。随后开源中国的创始人（@zhlmmc）回应说不认识发帖的人。</p>
+
+<p><img src="http://img0.tech2ipo.com/upload/img/article/2013/08/1375333748922.png" alt="" /></p>
+
+<p>再看后面的讨论，大家的话风都转向“有人从中挑拨”去了。我想大家都是电影看多了吧……</p>
+
+<p>就在这间事情前不久，京东突然宣布推出代码托管服务。这实在是让人无法理解，据说是为京东的云开放平台服务，为京东的第三方开发者服务，但怎么看都感觉别扭。京东的代码托管服务一推出就引来了 Gitcafe 的抨击，据说是因为“像素级的模仿”。奇怪的是最初发微博申讨京东的是 Gitshell，申讨的内容是京东的代码托管抄袭 Gitcafe 的界面……有点乱。</p>
+
+<p>除了 Gitcafe 以外，其他几家似乎都没有明面上的冲突。Gitcafe 出现的较早，在国内也一直没有竞争者，应该是朝着“中国的 github”方向在发展。现在一下突然冒出来这么多竞争对手，似乎是动了它的蛋糕，显然有些不淡定，也是情理之中。</p>
+
+<p><strong><span>展望</span></strong></p>
+
+<p>虽然国内现在提供代码托管服务的网站众多，但是目前没有一家的服务能做到脱颖而出，跟国外同类的服务也有较大的差距。在国内 IT 大环境的背景下，想要通过代码托管服务在国内实现高收入不太可能，但这确实是一项利国利民的服务，需求也很强烈。从某种意义上讲，代码托管是具有一定公益性质的服务。有竞争是好事，希望一定的竞争能让国内的代码托管水准更高，更好的推动国内 IT 业的发展，而不是恶意的冲突和不必要资源的浪费。</p>
+
+<p>作者：鸿海，苦逼程序猿一员，对开源软件开发很感兴趣，欢迎同道中人一起交流！</p>
+
+<p>原文标题《中国代码托管的乱象》</p>
+
+<p>编辑：逍遥小妖</p>
+
+<p><img src="http://tech2ipo.feedsportal.com/c/34822/f/641707/s/2f6a81e5/mf.gif" alt="" /></p>
+
+<p><a href="http://da.feedsportal.com/r/172487626136/u/197/f/641707/c/34822/s/2f6a81e5/a2.htm"><img src="http://da.feedsportal.com/r/172487626136/u/197/f/641707/c/34822/s/2f6a81e5/a2.img" alt="" /></a><img src="http://pi.feedsportal.com/r/172487626136/u/197/f/641707/c/34822/s/2f6a81e5/a2t.img" alt="" /></p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/17724.html">中国的代码托管</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1&amp;url=/2013/08/01/e4-b8-ad-e5-9b-bd-e7-9a-84-e4-bb-a3-e7-a0-81-e6-89-98-e7-ae-a1.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/08/01/e4-b8-ad-e5-9b-bd-e7-9a-84-e4-bb-a3-e7-a0-81-e6-89-98-e7-ae-a1.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/08/01/e4-b8-ad-e5-9b-bd-e7-9a-84-e4-bb-a3-e7-a0-81-e6-89-98-e7-ae-a1.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/08/01/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-97-b6-e4-bb-a3-ef-bc-9a-e4-ba-94-e5-a4-a7-e5-95-86-e4-b8-9a-e5-88-86-e6-9e-90-e6-8a-80-e6-9c-af-e8-b6-8b-e5-8a-bf.html">
+        <section class="post">
+            <h2>大数据时代：五大商业分析技术趋势</h2>
+            <p>目前，趋势中心对如何应对分析挑战的关注力度并不亚于他们考虑在新商业视角中如何充分利用机遇的力度。例如，随着越来越多的公司开始不得不面对海量数据以及 考虑如何利用这些数据，管理与分析大型不同数据集的技术开始出现。提前分析成本与性能趋势意味着公司能够提出比以前更为复杂的问题，提供更为有用的信息以 帮助他们运营业务。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/08/01/e4-ba-ba-e5-9c-a8-e8-81-8c-e5-9c-ba-ef-bc-9a-e8-81-8c-e4-b8-9a-e7-94-9f-e6-b6-af-e4-bf-ae-e7-82-bc-e5-bf-85-e8-bf-87-e7-9a-84-e4-b8-83-e9-81-93-e5-85.html">
+        <section class="post">
+            <h2>人在职场：职业生涯修炼必过的“七道关”</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

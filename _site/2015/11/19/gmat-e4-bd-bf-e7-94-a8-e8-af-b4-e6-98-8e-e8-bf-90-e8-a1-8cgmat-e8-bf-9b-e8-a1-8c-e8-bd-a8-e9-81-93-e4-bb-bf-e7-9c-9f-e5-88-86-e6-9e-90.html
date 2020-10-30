@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Gmat使用说明——运行Gmat进行轨道仿真分析</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Gmat使用说明——运行Gmat进行轨道仿真分析</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-11-19">19 November 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>使用Gmat建立轨道有两种方式。一种是建立mission，通过图形化界面，按步骤设定轨道参数；另一种是建立script，通过脚本设定轨道参数。</p>
+
+<p><strong>1.建立mission</strong></p>
+
+<p>通过图形化界面设置，建立mission。</p>
+
+<p><strong>1.1新建任务</strong></p>
+
+<p>打开Gmat软件后，会自动新建一个默认任务，从左侧窗口中可以浏览默认任务的内容。如图1所示，包括资源、任务和输出三个标签。资源标签展示任务相关的资源树，包括飞行器、编队、地面站、硬件、飞行途中点火、预报器、太阳系、解算、输出、接口、脚本、变量/数组/字符串、坐标系。任务标签展示任务树；任务树展示控制命令，控制任务中时间相关的事件序列。输出标签展示输出树；输出树包括Gmat所有输出，例如报告文档和图形展示。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片11.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片11.png" alt="图片1" /></a></p>
+
+<p>图1 Gmat资源窗口</p>
+
+<p>    若想新建另一个任务，则点击菜单栏的新建任务按钮或选择文件-&gt;新建-&gt;任务来建立。</p>
+
+<p><strong>1.2设置飞行器参数</strong></p>
+
+<p>1）重命名飞行器：选择左侧窗口的资源标签，右键DefaultSC-&gt;Rename，修改为Sat，点击OK。</p>
+
+<p>2）设置飞行器时间：在左侧窗口资源树下，双击Sat打开属性页，选择Orbit标签；在时间格式下拉菜单，选择UTCGregorian，下方相应的时间格式变为UTCGregorian；在时间框内，输入22 Jul 2014 11:29:10.811（日期必须满足相应的填写格式要求，不然无法识别）。</p>
+
+<p>3）设置飞行器轨道：在状态类型下拉列表中，选择Keplerian，右侧相应的元素会发生变化。在SMA框中，输入83474.318，其余元素设定如图2。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片2.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片2.png" alt="图片2" /></a></p>
+
+<p>图2 飞行器轨道设置</p>
+
+<p>4）点击OK。</p>
+
+<p>5）点击保存，产生.script文件。第一次保存时，需选择合适的路径及名称。</p>
+
+<p><strong>1.3设置预报器参数</strong></p>
+
+<p>1）重命名预报器：选择左侧窗口资源标签，右键DefaultProp-&gt;Rename，修改为LowEarthProp，点击OK。</p>
+
+<p>2）设置力模型：双击LowEarthProp打开属性页；在右侧重力标签区，Degree框中输入10，Order框中输入10；在大气模型下拉列表中，选择JacchiaRoberts；单击Point Masses框右侧的Select按钮，打开CelesBodySelectDialog，在左侧列表中选择Sun，使用-&gt;按钮将其添加到右侧框中，以同样方式将Lunar添加到右侧框中，点击OK关闭CelesBodySelectDialog；勾选Use Solar Radiation Pressure，设置后的效果如图3。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片3.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片3.png" alt="图片3" /></a></p>
+
+<p>图3 预报器参数设置</p>
+
+<p><strong>1.4设置轨道视图</strong></p>
+
+<p>设置三维视图：在资源树下，双击DefaultOrbitView，在View Point Vector右侧的三个框中，依次输出-60000、30000及20000；在Drawing Option标签框下，取消勾选Draw XY Plane。设置后效果如图4所示。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片4.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片4.png" alt="图片4" /></a></p>
+
+<p>图4 轨道视图设置</p>
+
+<p><strong>1.5设置预报命令</strong></p>
+
+<p>设置预报命令是运行任务前的最后一个步骤。</p>
+
+<p>1）在左侧窗口任务标签下的任务树中，双击Propagate1。</p>
+
+<p>2）在停止条件下，双击Sat.ElapsedSecs按钮左侧的（…）按钮，打开ParameterSelectDialog窗口。</p>
+
+<p>3）在Object List框中，如果Sat没有选中，则点击选中。该操作将停止条件与Sat飞行器关联起来。</p>
+
+<p>4）在Object Properties列表中，双击Periapsis，将其添加到右侧Selected Values列表中。</p>
+
+<p>设置完成后如图5所示，点击OK保存设置。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片5.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片5.png" alt="图片5" /></a></p>
+
+<p>图5 设置预报命令</p>
+
+<p><strong>2.编辑脚本</strong></p>
+
+<p>    参考保存mission产生的脚本文件格式，在脚本中设置1中所述参数。</p>
+
+<p><strong>3.运行及结果分析</strong></p>
+
+<p>1）点击运行，结果如图6所示。</p>
+
+<p>2）在左侧窗口任务标签下的任务树中，右键点击Propagate1，选择Command Summary，可以查看Sat飞行器的结束状态数据。选择Coordinate System列表不同坐标系，可以查看不同坐标系下的数据。</p>
+
+<p>3）点击Start Animation按钮，查看从初始状态到结束状态的轨道预报。</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2015/11/图片6.png"><img src="http://kongqia.com/wp-content/uploads/2015/11/图片6-595x325.png" alt="图片6" /></a>图6 任务运行轨道视图</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33626.html">Gmat使用说明——运行Gmat进行轨道仿真分析</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Gmat%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E2%80%94%E2%80%94%E8%BF%90%E8%A1%8CGmat%E8%BF%9B%E8%A1%8C%E8%BD%A8%E9%81%93%E4%BB%BF%E7%9C%9F%E5%88%86%E6%9E%90&amp;url=/2015/11/19/gmat-e4-bd-bf-e7-94-a8-e8-af-b4-e6-98-8e-e8-bf-90-e8-a1-8cgmat-e8-bf-9b-e8-a1-8c-e8-bd-a8-e9-81-93-e4-bb-bf-e7-9c-9f-e5-88-86-e6-9e-90.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2015/11/19/gmat-e4-bd-bf-e7-94-a8-e8-af-b4-e6-98-8e-e8-bf-90-e8-a1-8cgmat-e8-bf-9b-e8-a1-8c-e8-bd-a8-e9-81-93-e4-bb-bf-e7-9c-9f-e5-88-86-e6-9e-90.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2015/11/19/gmat-e4-bd-bf-e7-94-a8-e8-af-b4-e6-98-8e-e8-bf-90-e8-a1-8cgmat-e8-bf-9b-e8-a1-8c-e8-bd-a8-e9-81-93-e4-bb-bf-e7-9c-9f-e5-88-86-e6-9e-90.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2015/11/20/linux-bower-esudo-cannot-be-run-with-sudo.html">
+        <section class="post">
+            <h2>LINUX bower ESUDO Cannot be run with sudo</h2>
+            <p>ERROR:
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2015/11/13/gmat-e7-ae-80-e4-bb-8b.html">
+        <section class="post">
+            <h2>Gmat简介</h2>
+            <p>Gmat（General Mission Analysis tool，通用任务分析用具）用于建模、优化和评估飞行器轨道，包括低地球轨道、月球应用、星际轨线及其他深空飞行任务。Gmat分析器对空间任务建模，首先需要创建资源，例如飞行器、预报器、评估器及优化器。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

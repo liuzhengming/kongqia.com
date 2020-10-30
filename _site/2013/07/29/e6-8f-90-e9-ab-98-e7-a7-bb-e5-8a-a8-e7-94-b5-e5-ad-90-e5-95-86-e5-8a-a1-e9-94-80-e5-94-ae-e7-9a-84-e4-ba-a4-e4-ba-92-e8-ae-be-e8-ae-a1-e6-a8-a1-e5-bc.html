@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>提高移动电子商务销售的交互设计模式</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">提高移动电子商务销售的交互设计模式</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-07-29">29 July 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><a href="http://www.woshipm.com/wp-content/uploads/2013/07/5f7ffb32071a881c1818e66a9b432fe6.jpg"><img src="http://www.woshipm.com/wp-content/uploads/2013/07/5f7ffb32071a881c1818e66a9b432fe6.jpg" alt="主图大2" /></a></p>
+
+<p>译者注：2012年，各大电商巨头以及品牌商的移动终端订单量都呈现出迅猛增长的态势。人人已经看见，移动电商已经来了。那么设计优良的移动购物体验必将能争夺更多的用户，提升销售额。本文较为全面的介绍了移动购物流程中各环节的<span class="wp_keywordlink_affiliate"><a href="http://www.woshipm.com/tag/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1" title="交互设计">交互设计</a></span>模式，供大家参考学习。</p>
+
+<p>原文地址：<a href="http://uxdesign.smashingmagazine.com/2012/12/19/boost-your-mobile-e-commerce-sales-with-mobile-design-patterns/">http://uxdesign.smashingmagazine.com/2012/12/19/boost-your-mobile-e-commerce-sales-with-mobile-design-patterns/</a></p>
+
+<p>现在越来越多的人使用智能手机来替代台式电脑购物和购买。随着更多的人从电脑转移到移动设备上购买产品和服务，网站创建者可以使用一些设计模式以帮助快速启动一个移动电商项目。</p>
+
+<p>良好的移动购物体验是很重要的。最近的研究发现，67%的顾客愿意在设计体验友好的移动端进行购物。</p>
+
+<p>设计模式的好处在于告诉你其他设计师是如何解决相似的问题的，而不需要你重新发明轮子。这样你设计的网站可以满足人们因使用其他网站而产生的预期，并且可以在这些设计模式的基础上考虑更好的设计方案。</p>
+
+<p>本文主要专注于为<span class="wp_keywordlink_affiliate"><a href="http://www.woshipm.com/tag/%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1" title="查看 移动电子商务 中的全部文章">移动电子商务</a></span>功能设计的模式和方法，包括以下几个方面：</p>
+
+<ul>
+  <li>主页</li>
+  <li>全站导航</li>
+  <li>搜索建议</li>
+  <li>搜索结果</li>
+  <li>搜索过滤和排序</li>
+  <li>产品页面</li>
+  <li>图片陈列</li>
+  <li>购物车</li>
+  <li>使用已有账户/访客 结算</li>
+  <li>表单</li>
+</ul>
+
+<p>本文案例的界面主要选自大型百货零售商的移动浏览器版本，大型零售商由于产品品类丰富更加需要深思熟虑的设计方案，比如搜索及搜索结果的过滤与排序。 这些设计模式同样适用于本地应用。</p>
+
+<h3 id="主页"><strong>主页</strong></h3>
+
+<p>在移动端访问时，主页的首要作用是帮助用户找到他们想要的东西。常见的模式有为促销设计的单列布局以及单栏的链接列表，链接到网站的特色区域或产品目录页。主页一般还包含关键词查询、商店位置指引、促销邮件及忠诚度计划的注册表。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/6f68184d83bbc86f2002e438cd25f001.png" alt="Homepages11" /></p>
+
+<p>Amazon 和 Macy’s 均混合使用了促销元素及列表菜单。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/d0fef4ea948b3d4ee6c7b3e94ffd9f75.png" alt="Homepages2-opt" /></p>
+
+<p>Target促销区域比简单的列表占用了更多的屏幕区域但也因此有更强的视觉冲击力。Threadless 使用了在本地应用中更常见的仪表盘设计模式。</p>
+
+<p>如果顾客访问网站的目的是为了快速比价，那么简单的列表模式和搜索功能会更合适。如果他们是想找促销，Target的设计方案会更好。究竟采用哪种方案则需要你进行数据挖掘，分析消费者使用你的网站时的行为。</p>
+
+<h3 id="全站导航"><strong>全站导航</strong></h3>
+
+<p>除了使用主页作为主要的导航中心外，许多网站亦会在其它页面的顶部放置导航菜单。这样顾客不必回到主页就可以导航至别的页面。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/2d616c640b7ee14ad6577c9812bd13e8.png" alt="menus1" /></p>
+
+<p>Lowe’s 的全站导航菜单每一个选项是一个icon。Best Buy的导航采用两栏布局，选项是按钮的形式。Lowe’s的菜单覆盖在内容上，而Best Buy的下拉菜单推动内容相应下移。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/5db1ddb973c56348eb95b2d02ce9916b.png" alt="menus2" /></p>
+
+<p>Macy’s 的全站导航菜单包含了二级子菜单的选项。CVS的两栏菜单中每个选项都配了一个icon。这两个案例的菜单均是置于页面顶部。</p>
+
+<p>上面几个案例展示了几种全站导航的方式。Lowe’s 的设计很简单，并且icon加了视觉效果，内容区置灰融入背景中可以让用户更专注于导航菜单，即当前的任务上。而CVS两栏的icon设计则显得比较凌乱，触摸目标之间过于接近也会带来许多可用性问题。</p>
+
+<h3 id="搜索建议"><strong>搜索建议</strong></h3>
+
+<p>搜索建议又称“输入提示”或“自动完成”，指当用户输入字符时显示可能的搜索目标。对于常见的、名称较长的搜索目标来说，自动完成可以大大方便顾客。但也有一个问题，虚拟键盘容易误操作从而使建议的搜索目标不准确。显示常见的“正确”目标会非常有效。同时也可以考虑使用<a href="http://uxdesign.smashingmagazine.com/2011/04/27/mobile-auto-suggest-on-steroids-tap-ahead-design-pattern/">改进的自动完成模式</a>来减少顾客的输入，用最有效的方式利用较慢的移动带宽。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/37d46052ea38090ae9bb58330028698d.png" alt="suggested-search" /></p>
+
+<p>在Office Depot’s Website 的搜索框中输入“d-r-a-f”有几种可能的搜索目标。而错误输入“d-r-a-g”导致非用户期望的搜索目标。在使用虚拟键时不小心输入目标相邻的字母是很常见需要解决的问题。</p>
+
+<p>如果设计师无法改善用户误输入的问题，那么最好提供其它的方式让用户可以从错误的搜索结果到达目标产品页面，如产品目录的下拉列表或是顶级类别的全站导航。网站经理也可以微调改进搜索功能，比如为“dragt”显示“draft”的建议搜索。</p>
+
+<h3 id="搜索结果"><strong>搜索结果</strong></h3>
+
+<p>两种移动电商网站常见的设计模式：表格和网格模式。表格模式每一行展示商品的缩略图及基本的相关信息如商品名和价格。网格模式则使用更大的图片更少的信息。有的网站允许用户在两种模式中切换。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/5a05ce033ebc32010980dd531338fc03.png" alt="search1" /></p>
+
+<p>Zappos 采用网格的形式展示较大的商品图，对于展示如鞋这类的商品是一种不错的方式。Walgreens 的表格模式则突出了购物和查找商品的功能。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/aced3469f664cc3e744e75c031e4e420.png" alt="search2" /></p>
+
+<p>OfficeMax 在大的类目“paper”下让用户选择更细的子分类，然后呈现相应的子分类的商品结果。如果像“Scissors”这类较少子分类的商品则直接呈现商品结果。</p>
+
+<p>如果顾客不清楚要找的目标在复杂的类目层级中属于哪一个类，这种模式就会有问题。在OfficeMax例子中，如果顾客要找8.5*11英寸的打印纸，就有可能属于复制&amp;多用途纸或激光打印纸。一个较好的解决办法就是在每个过滤条件下列出对应的子分类，如颜色、尺寸。每4-6周找一些典型用户做测试看看最常见的搜索词和最畅销产品的情况，你就可以大概判断哪种解决方案更好。A/B测试同样可以判断哪种方案可以带来更多的顾客及更高的购买转化率。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/7ed95802bc953e0095d160368a3f5c6e.png" alt="search3" /></p>
+
+<p>Gap’s 默认用表格模式展示搜索结果，也提供以网格的模式查看结果。展示结果的同时在搜过框保留搜索词。</p>
+
+<p>如果在Gap输入“men’s shirts”则找不到搜索结果，亦没有导向“men’s t-shirts”搜索结果的链接。改进的办法比如Gap可以增加询问语句“您是想找？”，Google则处理的很好，列出可能的搜索目标“men’s t-shirts”并且呈现相关的搜索结果。</p>
+
+<h3 id="搜索排序"><strong>搜索排序</strong></h3>
+
+<p>通过不同的指标将搜索结果排序可以帮助顾客组织信息，如价格排序，用户评分排序。常见的排序界面模式有按钮及选择菜单。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/6f5396af2734ab849cd9bb14afc03da6.png" alt="sort1" /></p>
+
+<p>Walmart提供三个筛选的按钮。Seras相似，采用的分段控件。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/8ef0b6ff795f9160f11ca07487214ccc.png" alt="sort22" /></p>
+
+<p>J.C.Penney采用定制风格的选择菜单，而Eddie Bauer则用浏览器默认的选择菜单。两者均调用了浏览器自带的选择菜单控件。</p>
+
+<p>Walmart的三个按钮的大小及距离保证了目标较好的可点击性，尽管这使得Walmart只能提供三个选择而Sears有四个。Sears的“all”选项，如果顾客在排序结果中找不到想要的目标，则可以快速回到最初的搜索结果页。绝大多数的浏览器都支持选择菜单控件，而且选择菜单可以容纳更多的选项，不过也占用更多的空间，因此需要做测试来权衡和评估这些设计模式的优缺点。</p>
+
+<h3 id="搜多过滤"><strong>搜多过滤</strong></h3>
+
+<p>过滤允许顾客通过不同的维度来缩小搜索结果的范围，如颜色，品牌和尺寸。过滤功能通常给出带有数值的不同维度。常见的过滤界面模式有选择菜单，下拉列表及可折叠的面板。选择某个维度的一个或多个数值后就可以过滤结果了。然而如果过滤维度过多，选择的数值过多就有可能导致搜索失败及较高的交互成本。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/8974da8af7c3395185c0bbafd10cbb59.png" alt="product-pages2" /></p>
+
+<p>CVS的过滤使用选择菜单，选择相应选项后会马上更新搜索结果。J.C.Penney使用下拉列表并且标明对应每项过滤维度的结果数量，还允许同时选择多项维度，而要权衡的是顾客要多进行一次点击“apply”。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/e407f9c8092cea93a4730b2a6304fc2b.png" alt="filter2" /></p>
+
+<p>Kohl’s使用可折叠的面板（手风琴式面板）来组织筛选的维度，每个面板展开是维度的不同数值选择。Threadless则将所有维度的数值直接呈现在一个界面中。每选一个数值，搜索结果即时更新。</p>
+
+<p>直接呈现所有维度及数值可以让顾客一目了然有哪些筛选的数值选择。采用这种模式或可折叠的面板模式取决于你产品的筛选维度的多少。如果产品的筛选维度多种多样，非常丰富，则需要不断尝试来找到最好的设计方案。你可以优化那些顾客最经常使用筛选功能的产品的界面。</p>
+
+<h3 id="产品页"><strong>产品页</strong></h3>
+
+<p>产品页是电商网站详细展示商品的页面。它们往往包含不止一种设计模式，如标签，可折叠的面板及图片陈列。两种常见的产品页形式，一种是包含所有详细信息的长页面，一种是嵌有标签或可折叠面板多模块页面，让用户根据需要展开不同的信息。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/09fbced0e2a67aa8f7efcded26a178e9.png" alt="product-pages1" /></p>
+
+<p>Samsung和Dell均采用渐进式的方式呈现商品，这类商品通常包含大量的详细信息。Samsung使用可折叠的面板，Dell使用标签。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/8974da8af7c3395185c0bbafd10cbb59.png" alt="product-pages2" /></p>
+
+<p>Cobela’s和office Depot均是一个长页面来展示商品所有信息。这种模式使用时需要经常上下滚动页面获取信息，但是免去了切换标签和面板的麻烦。采用哪种模式取决于产品的信息量大小以及如何有效的组织信息模块。</p>
+
+<p>长页面比逻辑模块分割的页面需要更多的页面滚动，并且顾客需要花费更多努力找到他们需要的某条具体信息。在我做的可用性测试中，两种模式都有用户偏爱，但是很明显用户使用分成逻辑模块的页面更容易。如果使用逻辑分块的页面，确保用户点击标签或面板后可以快速加载相应信息。</p>
+
+<p>最容易的方法就是一次性加载所有产品页的信息，包括隐藏在标签和面板中的信息，以便用户切换时可以马上显示。这种方法好处是用户断网时仍然可以继续浏览，而缺点是不管是否需要，一次性要加载所有的信息，这会增加你的服务器负担，并且消耗用户更多的数据流量。因此你需要权衡。</p>
+
+<h3 id="图片陈列"><strong>图片陈列</strong></h3>
+
+<p>图片陈列对于服饰及消费类电子产品来说尤为重要。你也许不需要从三个不同的角度看一个扳手，但是对于衣服、鞋类和高端的智能手机来说图片很重要。常见的设计模式有可滑动的陈列，双击放大及缩略图。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/e4bd79df25a9723f4e42682ebfb01d6f.png" alt="galleries1" /></p>
+
+<p>Palyess使用可滑动的陈列从不同的角度展示商品，用户也可以双击放大查看细节。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/5c74cf8a6f0cee4dc4711d09067f583c.png" alt="galleries2" /></p>
+
+<p>Payless的双击放大在屏幕上保持几秒后消失以保证用户有足够的时间理解和注意到如何操作。放大查看细节的功能对于服饰和鞋类商品很重要。</p>
+
+<p>Dockers（左上）采用图片陈列的方式，双击放大查看细节，同时用户可以切换不同的颜色。Levi’s（右上）类似的，多了可选择的不同视角的缩略图。Dockers切换不同颜色时整个页面重新刷新，而Levi’s 则不是。</p>
+
+<p>Levi’s在用户切换不同颜色时保持大部分内容不刷新，乍看会觉得这是更好的用户体验，但实际上，在同一天的同一时刻对比来看，Docker的全页刷新加载要快的多。Levi’s 加载过慢可能是由于除了主图外还要加载刷新五张缩略图，或者有其它的原因如网络塞车。每种模式都有优劣势。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/764d920bb531365157ee3990559dd760.png" alt="galleries3" /></p>
+
+<p>Samsung 和Dell均使用图片陈列方式展示商品。Samsung在可折叠面板中嵌套使用，而Dell则使用一个单独的页面展示。</p>
+
+<p>Samsung的方式似乎更友好，减少了页面切换。Samsung和Dell均使用的高分辨率的图片，图片质量对于用户使用体验来说是很重要的。Dell的设计优势在于让顾客专注于图片，减少其它内容的干扰。</p>
+
+<h3 id="购物车"><strong>购物车</strong></h3>
+
+<p>购物车通常使用表格模式展示产品。除了必要的购买信息外，还提供额外的功能如修改订单，保存订单，添加至收藏夹或愿望清单，删除或更改数量，选择提货方式，使用优惠券、折扣券及支付等。用户可通过网页的顶部或全站导航进入购物车。<br />
+<img src="http://www.woshipm.com/wp-content/uploads/2013/07/6f322bd7e7aa230b8bf99eebd2f72170.png" alt="cart1" /></p>
+
+<p>Lowe’s（左上）提供了将商品从购物车移除、选择提货方式的功能。Bed Bath &amp;Beyond（右上）也有移除商品的功能，可更改商品数量。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/b7a1e08b45b1335cde9b3d5828f8cc02.png" alt="cart2" /></p>
+
+<p>Crate&amp;Barrel（左上）提供移除商品、保存至收藏夹、更改数量的功能。同时包括配送信息如价格和时间。Payless（右上）也提供类似的功能。</p>
+
+<p>购物车必须要提供最好的用户体验，因为顾客在这里离最后的购买只差一步了。允许用户无需跳转页面就可更改数量、移除商品、使用优惠券对于快速流畅的购买体验来说至关重要。如果页面承载信息过多，可以使用可折叠面板随着用户的需要渐进的展示信息。</p>
+
+<h3 id="支付"><strong>支付</strong></h3>
+
+<p>支付更多的是一个流程而不是模式。许多电商网站允许用户使用已有的账户或是访客身份进行支付结算。对于已有账户的顾客来说，使用已有的支付方式和配送信息将大大简化支付流程。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/fde6140258417533b3572b026dbf6017.png" alt="checkout1" /></p>
+
+<p>Crutchfield 和Nordstrom均允许用户以访客的身份或已有的账户来结算。两者提供以访客身份结算后再注册账户的功能，以及更改密码的功能。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/af7d21d71c5c859d62cdd8bbe4c7500c.png" alt="checkout2" /></p>
+
+<p>Amazon在支付页面的首页询问顾客的电子邮件地址，并询问是否已有注册账户。这与其pc端网站的做法保持一致。Target在移动网页端提供登录、注册及以访客身份结算、更改密码的功能。</p>
+
+<p>对于大多数电商网站来说，允许顾客用已有账户或访客身份支付结算是必须的。同时，考虑邀请顾客在支付结算完成后注册账户，因为此时顾客已输入了足够的信息进行注册。这会大大提高顾客注册的成功率，因为此时顾客几乎无需再多付出多少努力。</p>
+
+<p>Target的“Create Target.com account”按钮很有可能引导顾客偏离购买流程因为这需要顾客付出很多努力。先下单结算再邀请顾客注册会更好。限制顾客结算时的选择可大大提高购买成功率，减少顾客需要做的决定。</p>
+
+<h3 id="表单"><strong>表单</strong></h3>
+
+<p>表单在移动电商中使用非常频繁，如搜索、支付、注册、使用优惠券及促销码。以下是设计移动端表单时的一些原则：</p>
+
+<ul>
+  <li>标签置于输入区上方以避免用户放大输入区时标签溢出</li>
+  <li>使用HTML5调用合适的键盘，符合使用情景。如输入邮件地址时调用邮件的输入键盘，输入数字时调用数字键盘。</li>
+  <li>只在真正必要时才强迫用户输入需要的信息。这将大大减少顾客支付流程的阻碍。</li>
+</ul>
+
+<p>在手机上处理表单的最佳方式就是尽量少的使用它们。你可以调用地理定位功能来帮助顾客填写区号，你可以在顾客结算时自动调用用户以前输入过的信息。记住最好的表单是用户无需完成的。</p>
+
+<p><img src="http://www.woshipm.com/wp-content/uploads/2013/07/ac68b62abfd6a9fe26e8ac4236c8ce0c.png" alt="forms" /></p>
+
+<p>CVS（左上）在用户输入区号时未调用数字键盘。这让用户不得不从多了一步操作，切换键盘。CVS的标签采用左对齐，当用户放大页面时存在标签溢出的问题。Crate&amp;Barrel （右上）的表单则更友好，当用户输入区号时自动调用数字键盘，标签采用顶对齐。</p>
+
+<p>记住表单是帮助顾客在网站上完成购买的。你应该特别留心并且尽可能的减少顾客的交互成本。有时这意味着你需要尝试其它更好的方法。</p>
+
+<h3 id="结论"><strong>结论</strong></h3>
+
+<p>随着移动电商贡献的销售额越来越高，基于移动浏览器的购物网站提供许多顾客在pc端使用和期待的功能。正如Sterling Brands 和 SmithGeiger 调查显示，移动用户更愿意在友好的网站上购买。</p>
+
+<p>利用已有的设计模式，你可以尝试不同的方法来快速搭建你自己的适用于小屏幕的电商网站。但是不要满足已有的设计模式，将它们作为起点去尝试更多不同的设计方案。并且随着浏览器性能的提升，触屏版的设计可以更多的考虑借鉴本地应用的设计模式。</p>
+
+<p>来源：腾讯ecd</p>
+
+<p><span style="font-weight:bold">声明:</span> 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="署名-非商业性使用-相同方式共享">BY-NC-SA</a> 协议进行授权 | <a href="http://www.woshipm.com/">人人都是产品经理</a><br />
+转载请注明转自《<a href="http://www.woshipm.com/ucd/36203.html" title="提高移动电子商务销售的交互设计模式">提高移动电子商务销售的交互设计模式</a>》</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/17013.html">提高移动电子商务销售的交互设计模式</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E6%8F%90%E9%AB%98%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E9%94%80%E5%94%AE%E7%9A%84%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F&amp;url=/2013/07/29/e6-8f-90-e9-ab-98-e7-a7-bb-e5-8a-a8-e7-94-b5-e5-ad-90-e5-95-86-e5-8a-a1-e9-94-80-e5-94-ae-e7-9a-84-e4-ba-a4-e4-ba-92-e8-ae-be-e8-ae-a1-e6-a8-a1-e5-bc.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/07/29/e6-8f-90-e9-ab-98-e7-a7-bb-e5-8a-a8-e7-94-b5-e5-ad-90-e5-95-86-e5-8a-a1-e9-94-80-e5-94-ae-e7-9a-84-e4-ba-a4-e4-ba-92-e8-ae-be-e8-ae-a1-e6-a8-a1-e5-bc.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/07/29/e6-8f-90-e9-ab-98-e7-a7-bb-e5-8a-a8-e7-94-b5-e5-ad-90-e5-95-86-e5-8a-a1-e9-94-80-e5-94-ae-e7-9a-84-e4-ba-a4-e4-ba-92-e8-ae-be-e8-ae-a1-e6-a8-a1-e5-bc.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/07/29/e8-bf-91-e8-b7-9d-e7-a6-bb-e7-9a-84-e7-be-8e-e5-a5-bd-e8-bf-91-e5-9c-ba-e4-ba-a4-e4-ba-92-e5-8f-8a-e5-ba-94-e7-94-a8.html">
+        <section class="post">
+            <h2>近距离的美好——近场交互及应用</h2>
+            <p>![](http://mux.baidu.com/img2/34/top.jpg)
+一、什么是近场交互？
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/07/29/e5-88-a9-e7-94-a8-e4-b8-89-e8-bd-b4-e5-8a-a0-e9-80-9f-e5-99-a8-e7-9a-84-e8-ae-a1-e6-ad-a5-e6-b5-8b-e7-ae-97-e6-96-b9-e6-b3-95.html">
+        <section class="post">
+            <h2>利用三轴加速器的计步测算方法</h2>
+            <p>随着现代生活质量提高，越来越多人开始注重自己的日常健康锻炼，计步作为一种有效记录监控锻炼的监控手段，已经广泛应用在移动终端的应用中。但目前大部分实现都是通过GPS信号来测算运动距离反推行走步数，有效但是在室内或者无GPS信号的设备上无法工作，同时GPS精度对结果的干扰也比较大，本文提出一个新的测步方法，即通过设备上的加速器来计算步数，在不支持GPS的设备上也可正常工作，可用以与GPS互相配合测步，让应用的使用场景更加多样。
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

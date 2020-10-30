@@ -1,0 +1,35 @@
+---
+layout: post
+title: PHP获取磁盘文件名称并输出
+date: 2014-04-09 07:19:39.000000000 +08:00
+---
+
+> <?php
+> 
+> $dir=dirname(__FILE__).”/abc/”;//这里输入其它路径  
+>  //PHP遍历文件夹下所有文件  
+>  $handle=opendir($dir.”.”);  
+>  //定义用于存储文件名的数组  
+>  $array_file = array();  
+>  while (false !== ($file = readdir($handle)))  
+>  {  
+>  if ($file != “.” && $file != “..”) {  
+>  $array_file[] = $file; //输出文件名  
+>  }  
+>  }  
+>  closedir($handle);  
+>  // print_r($array_file);  
+>  // 输出  
+>  echo “<ul>”;
+> 
+> foreach ($array_file as $file) {  
+>  echo “<li><a href=’/tools/$file/’ target=’_blank’>$file</a></li>”;  
+>  }
+> 
+> echo “</ul>”;
+> 
+> ?>
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [PHP获取磁盘文件名称并输出](http://kongqia.com/33399.html)
+
+

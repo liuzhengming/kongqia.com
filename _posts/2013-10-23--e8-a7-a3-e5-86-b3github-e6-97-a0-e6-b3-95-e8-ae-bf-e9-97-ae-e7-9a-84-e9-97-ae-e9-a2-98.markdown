@@ -1,0 +1,33 @@
+---
+layout: post
+title: 解决GitHub无法访问的问题
+date: 2013-10-23 05:11:00.000000000 +08:00
+---
+
+之前google不能访问，就通过修改dns来解决的。
+
+现在也可以用这个办法来解决这个问题。
+
+打开C盘中hosts文件，需要用管理员打开，添加以下记录
+
+> 207.97.227.239 github.com
+> 
+> 65.74.177.129 www.github.com
+> 
+> 207.97.227.252 nodeload.github.com
+> 
+> 207.97.227.243 raw.github.com
+> 
+> 204.232.175.78 documentcloud.github.com
+> 
+> 204.232.175.78 pages.github.com
+
+保存即可。
+
+随想：
+
+对于GitHub这样的公司，这些个ip可能过一段时间就不能用了，更换的频率会较高，不过暂时用这个还是没有问题的。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [解决GitHub无法访问的问题](http://kongqia.com/17894.html)
+
+

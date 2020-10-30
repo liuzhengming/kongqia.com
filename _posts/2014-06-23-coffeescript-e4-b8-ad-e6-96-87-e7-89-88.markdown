@@ -1,0 +1,25 @@
+---
+layout: post
+title: CoffeeScript中文版
+date: 2014-06-23 05:06:34.000000000 +08:00
+---
+
+[![logo](http://kongqia.com/wp-content/uploads/2014/06/logo.png)](http://kongqia.com/wp-content/uploads/2014/06/logo.png)
+
+**CoffeeScript 是一门编译到 JavaScript 的小巧语言.** 在 Java 般笨拙的外表下, JavaScript 其实有着一颗华丽的心脏. CoffeeScript 尝试用简洁的方式展示 JavaScript 优秀的部分.
+
+CoffeeScript 的指导原则是: **“她仅仅是 JavaScript”**. 代码一一对应地编译到 JS, 不会在编译过程中进行解释. 已有的 JavaScript 类库可以无缝地和 CoffeeScript 搭配使用, 反之亦然. 编译后的代码是可读的, 且经过美化, 能在所有 JavaScript 环境中运行, 并且应该和对应手写的 JavaScript 一样快或者更快.
+
+**最新版本:** [1.7.1](http://github.com/jashkenas/coffee-script/tarball/1.7.1)
+
+> sudo npm install -g coffee-script
+
+中文地址：[http://coffeescript.kongqia.com](http://coffeescript.kongqia.com "CoffeeScript中文版")
+
+ 
+
+ 
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [CoffeeScript中文版](http://kongqia.com/33455.html)
+
+

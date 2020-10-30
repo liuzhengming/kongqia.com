@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>wordpress分页</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">wordpress分页</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-11-17">17 November 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>效果：</p>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2013/11/QQ20131117-1@2x.png"><img src="http://kongqia.com/wp-content/uploads/2013/11/QQ20131117-1@2x-300x74.png" alt="分页" /></a></p>
+
+<p>在function.php中添加以下代码：</p>
+
+<blockquote>
+  <p>/* 分页 */ function pagenavi( $before = ‘’, $after = ‘’, $p = 2 ) { if ( is_singular() ) return; global $wp_query, $paged; $max_page = $wp_query-&gt;max_num_pages; if ( $max_page == 1 ) return; if ( empty( $paged ) ) $paged = 1; echo $before.’&lt;div id="pagenavi"&gt;’.”n”; echo ‘<span>Page: ‘ . $paged . ‘ of ‘ . $max_page . ‘ </span>’; if ( $paged &gt; 1 ) p_link( $paged - 1, ‘Previous Page’, ‘«’ ); if ( $paged &gt; $p + 1 ) p_link( 1, ‘First Page’ ); if ( $paged &gt; $p + 2 ) echo ‘… ‘; for( $i = $paged - $p; $i &lt;= $paged + $p; $i++ ) { if ( $i &gt; 0 &amp;&amp; $i &lt;= $max_page ) $i == $paged ? print “<span class="page-numbers current">{$i}</span>” : p_link( $i ); } if ( $paged &lt; $max_page - $p - 1 ) echo ‘… ‘; if ( $paged &lt; $max_page - $p ) p_link( $max_page, ‘Last Page’ ); if ( $paged &lt; $max_page ) p_link( $paged + 1,’Next Page’, ‘»’ ); echo ‘&lt;/div&gt;’.$after.”n”; } function p_link( $i, $title = ‘’, $linktype = ‘’ ) { if ( $title == ‘’ ) $title = “Page {$i}”; if ( $linktype == ‘’ ) { $linktext = $i; } else { $linktext = $linktype; } echo “<a class="page-numbers" href="&quot;, esc_html( get_pagenum_link( $i ) ), &quot;" title="{$title}">{$linktext}</a>”; }</p>
+</blockquote>
+
+<p>在需要分页的地方添加以下代码：</p>
+
+<blockquote>
+  <?php pagenavi(); ?>
+</blockquote>
+
+<p>现在样式不太好，稍微调整以下，在style.css中添加以下代码：</p>
+
+<blockquote>
+  <p>/* 分页 */ #pagenavi a, #pagenavi a:visited, #pagenavi span { height: 25px; line-height: 25px; display: inline-block; padding: 1px 8px; } #pagenavi a, #pagenavi a:visited { margin: 0 2px; } #pagenavi span.pages { color: #777; font-weight: bold; margin-right: 10px; padding: 0; } #pagenavi span.current { margin: -2px 2px -1px; padding: 0 9px; height: 28px; line-height: 28px; text-align: center; }</p>
+</blockquote>
+
+<p>现在只是做了简单的装饰，还可以继续深化调整。</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/17974.html">wordpress分页</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=wordpress%E5%88%86%E9%A1%B5&amp;url=/2013/11/17/wordpress-e5-88-86-e9-a1-b5.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/11/17/wordpress-e5-88-86-e9-a1-b5.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/11/17/wordpress-e5-88-86-e9-a1-b5.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/11/18/google-e7-bd-91-e7-ab-99-e5-9c-b0-e5-9b-be-e6-8f-92-e4-bb-b6.html">
+        <section class="post">
+            <h2>google网站地图插件</h2>
+            <p>wordpress Google sitemap（google网站地图）下载地址：
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/11/16/wordpress-e4-ba-8c-e7-ba-a7-e5-9f-9f-e5-90-8d-e5-a4-9a-e7-ab-99-e7-82-b9-e8-ae-be-e7-bd-ae.html">
+        <section class="post">
+            <h2>wordpress二级域名多站点设置</h2>
+            <p>WordPress 3.0已经发布有差不多半个月了，WP3.0有个对我们来说比较实用 的功能，就是他的多站点模式。WordPress 3.0的多站点模式既可以是二级域名的形式，也可以通过目录的方式来实现。今天刚刚拿个域名捣鼓了一下子设置问题，在这里分享一下如何激活 WordPress 3.0二级域名多站点模式和其中的一些配置问题。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

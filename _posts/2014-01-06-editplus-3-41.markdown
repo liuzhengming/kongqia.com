@@ -1,0 +1,19 @@
+---
+layout: post
+title: EditPlus 3.41
+date: 2014-01-06 01:29:55.000000000 +08:00
+---
+
+[![EditPlus](http://kongqia.com/wp-content/uploads/2014/01/images.jpeg)](http://kongqia.com/wp-content/uploads/2014/01/images.jpeg)
+
+EditPlus，一个小巧但是功能强大的可处理文本、HTML和程序语言的编辑器。
+
+EditPlus（文字编辑器）汉化版是一套功能强大，可取代记事本的文字编辑器，拥有无限制的撤消与重做、英文拼字检查、自动换行、列数标记、搜寻取代、同时编辑多文件、全屏幕浏览功能。而它还有一个好用的功能，就是它有监视剪贴板的功能，同步于剪贴板可自动粘贴进 EditPlus 的窗口中省去粘贴的步骤。另外它也是一个非常好用的HTML编辑器，它除了支持颜色标记、HTML 标记，同时支持C、C++、Perl、Java，另外，它还内建完整的HTML & CSS1 指令功能，对于习惯用记事本编辑网页的朋友，它可帮你节省一半以上的网页制作时间，若你有安装IE3.0 以上版本，它还会结合IE浏览器于 EditPlus 窗口中，让你可以直接预览编辑好的网页（若没安装IE，也可指定浏览器路径）。
+
+下载地址：
+
+[http://pan.baidu.com/s/1jGC2HfC](http://pan.baidu.com/s/1jGC2HfC "EditPlus")
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [EditPlus 3.41](http://kongqia.com/33108.html)
+
+

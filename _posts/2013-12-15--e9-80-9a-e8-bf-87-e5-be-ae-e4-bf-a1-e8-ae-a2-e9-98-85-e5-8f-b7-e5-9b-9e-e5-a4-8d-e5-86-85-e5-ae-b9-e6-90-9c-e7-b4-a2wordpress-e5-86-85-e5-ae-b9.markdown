@@ -1,0 +1,35 @@
+---
+layout: post
+title: 通过微信订阅号回复内容搜索wordpress内容
+date: 2013-12-15 03:40:16.000000000 +08:00
+---
+
+[![微信](http://kongqia.com/wp-content/uploads/2013/12/img201112231021030.png)](http://kongqia.com/wp-content/uploads/2013/12/img201112231021030.png)
+
+功能：将你的微信公众账号和你的 WordPress 博客联系起来，搜索到和用户发送信息匹配的日志，并且自动回复用户。
+
+1. 安装wordpress插件：[http://pan.baidu.com/s/13oUyQ](http://pan.baidu.com/s/13oUyQ)
+
+2. 登陆微信公众号，功能>高级功能>开发模式>成为开发者
+
+> ##### 服务器配置（用于接收用户信息）
+> 
+> ##### <label>URL：          </label>http://kongqia.com/?weixin
+> 
+> ##### <label>Token：      </label>weixin
+
+现在，你的微信公众号就成为了博客的一个搜索引擎，你不需要订阅，不需要打开电脑，只需要在微信上搜索，就可以获得需要的文章。
+
+使用方法：关注公众账号，输入内容，回复即可收到回复的内容。
+
+测试：可以关注我的公众号测试一下效果：（扫一扫）
+
+[![空洽网公众号](http://kongqia.com/wp-content/uploads/2013/12/qrcode_for_gh_7ed0706efd06_430.jpg)](http://kongqia.com/wp-content/uploads/2013/12/qrcode_for_gh_7ed0706efd06_430.jpg)
+
+注：公众号需要审核一周左右。
+
+ 
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [通过微信订阅号回复内容搜索wordpress内容](http://kongqia.com/18239.html)
+
+

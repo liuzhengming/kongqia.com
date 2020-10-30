@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>元素被点击时的呼吸效果</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">元素被点击时的呼吸效果</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-03-03">03 March 2014</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><a href="http://kongqia.com/wp-content/uploads/2014/03/click_2014_03_02.html"><img src="http://kongqia.com/wp-content/uploads/2014/03/Snip20140302_1.png" alt="Snip20140302_1" /></a></p>
+
+<p>windows 8 中点击某处，到处可见呼吸效果。</p>
+
+<p>当然在它的生态系统中提供了这样的支持；现在从网页也模仿这个效果。</p>
+
+<p>CSS如下：</p>
+
+<blockquote>
+  <ul>
+    <li>{<br />
+ padding:0;<br />
+ margin:0;<br />
+ }<br />
+ body {<br />
+ height:500px;<br />
+ width:500px;<br />
+ }<br />
+ .a {<br />
+ width: 100px;<br />
+ height: 100px;<br />
+ background: pink;<br />
+ color:#fff;<br />
+ text-align:center;<br />
+ line-height:100px;<br />
+ float:left;<br />
+ margin:10px;<br />
+ cursor:default;<br />
+ /<em>transition: all 0.05s ease-in-out 0s;</em>/<br />
+ }</li>
+  </ul>
+
+  <p>.a:active {</p>
+
+  <p>width: 96px;<br />
+ height: 96px;<br />
+ margin:12px;<br />
+ /<em>transition: all 0.05s ease-in-out 0s;</em>/<br />
+ }<br />
+ .a:not(:hover) {<br />
+ width: 100px;<br />
+ height: 100px;<br />
+ float: left;<br />
+ margin: 10px;<br />
+ /<em>transition: all 0.05s ease-in-out 0s;</em>/<br />
+ }</p>
+</blockquote>
+
+<p>HTML如下：</p>
+
+<blockquote>
+  <p>&lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;<br />
+ &lt;div class=”a”&gt;点我&lt;/div&gt;</p>
+</blockquote>
+
+<p><a href="http://kongqia.com/wp-content/uploads/2014/03/click_2014_03_02.html" title="呼吸效果">点我查看演示效果</a>。</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33310.html">元素被点击时的呼吸效果</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E5%85%83%E7%B4%A0%E8%A2%AB%E7%82%B9%E5%87%BB%E6%97%B6%E7%9A%84%E5%91%BC%E5%90%B8%E6%95%88%E6%9E%9C&amp;url=/2014/03/03/e5-85-83-e7-b4-a0-e8-a2-ab-e7-82-b9-e5-87-bb-e6-97-b6-e7-9a-84-e5-91-bc-e5-90-b8-e6-95-88-e6-9e-9c.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2014/03/03/e5-85-83-e7-b4-a0-e8-a2-ab-e7-82-b9-e5-87-bb-e6-97-b6-e7-9a-84-e5-91-bc-e5-90-b8-e6-95-88-e6-9e-9c.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2014/03/03/e5-85-83-e7-b4-a0-e8-a2-ab-e7-82-b9-e5-87-bb-e6-97-b6-e7-9a-84-e5-91-bc-e5-90-b8-e6-95-88-e6-9e-9c.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2014/03/05/font-face-e5-8a-a0-e8-bd-bd-e5-ad-97-e4-bd-93.html">
+        <section class="post">
+            <h2>@font-face加载字体</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2014/02/28/wordpress-e8-8b-b1-e6-96-87-e8-bd-ac-e6-8d-a2-e4-b8-ba-e4-b8-ad-e6-96-87.html">
+        <section class="post">
+            <h2>wordpress英文转换为中文</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

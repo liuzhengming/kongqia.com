@@ -1,0 +1,41 @@
+---
+layout: post
+title: windows 8 / 8.1 激活方法
+date: 2014-03-23 05:34:13.000000000 +08:00
+---
+
+windows 8、windows8.1免费激活工具下载地址：
+
+[http://kongqia.com/33322.html](http://kongqia.com/33322.html)
+
+工具使用方法：
+
+1. 使用管理员方式打开工具，点击红色区域：
+
+![1](http://kongqia.com/wp-content/uploads/2014/03/11.jpg)
+
+2. 在新窗口中点击红色区域“EZ-Activator”，如下图：
+
+![2](http://kongqia.com/wp-content/uploads/2014/03/2.jpg)
+
+3. 点击激活按钮后等待黑色框中成功提示，提示具体内容如下：
+
+> —————————————-  
+>  Installing Any Matching Volume Keys.  
+>  —————————————-  
+>  Attempting To Activate Microsoft Windows  
+>  Attempting to Activate Professional  
+>  <Product activation successful>  
+>  —————————————-
+
+激活成功后提示如下图红色区域：
+
+![3](http://kongqia.com/wp-content/uploads/2014/03/3.jpg)
+
+现在你就完成了windows的激活，右键刷新桌面，右下角讨厌的水印就去掉了。
+
+瞬间世界好清静。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [windows 8 / 8.1 激活方法](http://kongqia.com/33362.html)
+
+

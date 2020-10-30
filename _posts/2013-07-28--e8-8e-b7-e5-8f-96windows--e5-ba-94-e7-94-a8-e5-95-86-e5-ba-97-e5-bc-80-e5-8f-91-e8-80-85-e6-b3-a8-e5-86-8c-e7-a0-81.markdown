@@ -1,0 +1,21 @@
+---
+layout: post
+title: 获取Windows 应用商店开发者注册码
+date: 2013-07-28 02:36:18.000000000 +08:00
+---
+
+**2.6.2　获取Windows 应用商店开发者注册码**
+
+学生开发者账号认证完成后，如果要免去注册Windows应用商店时的300元人民币注册费，还需要首先获得注册验证码。获取验证码的主要步骤如下。
+
+1）登录[https://www.dreamspark.com](https://www.dreamspark.com/)，首先选择“students”，再单击其右下面的“app development”菜单项，最后在页面左下角的Windows 8区域中选择“learn more”链接，如图2-36所示。
+
+<table align="center" bgcolor="#ddddd" border="1" cellspacing="0"><tbody><tr><td bgcolor="#ffffff">[![](http://images.51cto.com/files/uploadimg/20130226/1453290.jpg)](http://images.51cto.com/files/uploadimg/20130226/1453290.jpg)</td></tr><tr><td align="middle" bgcolor="#dddddd">（点击查看大图）图2-36　由DreamSpark账号进入Windows 8的界面</td></tr></tbody></table>2）进入Windows 8应用开发页面后，其中提供了从工具下载到程序上传的所有步骤列表，在页面中找到“Get your Registration Code”按钮并点击，如图2-37所示。
+
+<table align="center" bgcolor="#ddddd" border="1" cellspacing="0"><tbody><tr><td bgcolor="#ffffff">[![](http://images.51cto.com/files/uploadimg/20130226/1453291.jpg)](http://images.51cto.com/files/uploadimg/20130226/1453291.jpg)</td></tr><tr><td align="middle" bgcolor="#dddddd">（点击查看大图）图2-37　Windows 8应用开发页面</td></tr></tbody></table>3）在页面的右上角点击“Get code Now”按钮，在登录状态下，页面会显示注册Windows应用商店时使用的免费注册费用的注册码，如图2-38所示。
+
+<table align="center" bgcolor="#ddddd" border="1" cellspacing="0"><tbody><tr><td bgcolor="#ffffff">[![](http://images.51cto.com/files/uploadimg/20130226/1453292.jpg)](http://images.51cto.com/files/uploadimg/20130226/1453292.jpg)</td></tr><tr><td align="middle" bgcolor="#dddddd">图2-38　获取注册验证码的界面</td></tr></tbody></table>学生用户通过使用这个注册验证码，可以免去300元人民币的注册费用！
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [获取Windows 应用商店开发者注册码](http://kongqia.com/16808.html)
+
+

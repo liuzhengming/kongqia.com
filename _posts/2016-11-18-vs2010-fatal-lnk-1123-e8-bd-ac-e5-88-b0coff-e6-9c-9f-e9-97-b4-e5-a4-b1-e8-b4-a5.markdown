@@ -1,0 +1,13 @@
+---
+layout: post
+title: vs2010 fatal lnk 1123:转到COFF期间失败
+date: 2016-11-18 01:17:11.000000000 +08:00
+---
+
+出现这种错误解决办法：  
+ 1.在属性->配置属性->清单工具->输入和输出下，将嵌入清单改成否；  
+ 2.若有vs2010与更高版本的vs，如vs2013、vs2015等，则在C盘搜索cvtres.exe，并用C:\Windows\winsxs\x86_netfx-cvtres_for_vc_and_vb_b03f5f7f11d50a3a_6.1.7601.18523_none_ba1d9002f0b0fff8目录下的cvtres替换C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin下的cvtres.exe。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [vs2010 fatal lnk 1123:转到COFF期间失败](http://kongqia.com/33754.html)
+
+

@@ -1,0 +1,198 @@
+---
+layout: post
+title: 移动用户体验要素（下篇）
+date: 2013-05-06 05:48:21.000000000 +08:00
+---
+
+我们可以在任何时间、任何地点使用移动设备，因此，移动情景指的是用户使用时的环境和状态——也就是任何可以影响用户与设备进行交互的内容。由于这 些情境持续而快速地变化，对移动设备而言就显得尤为重要。我们在考虑用户分心、多任务、手势操作、低电量条件和糟糕的连接环境的同时，也要考虑极端好的情 景——假设在一个快速Wi-Fi环境下使用平板电脑。
+
+[![1](http://cdc.tencent.com/wp-content/uploads/2013/02/1.jpg)](http://cdc.tencent.com/?attachment_id=6987)
+
+*《移动交互的情景》（参见：*[*The Context of Mobile Interaction*](http://www.giantant.com/antenna/2007/06/design-sketch-the-context-of-m.html)*）**,Nadav Savio*
+
+**规范**
+
+1. 根据设备功能和硬件能力来预测和支持用户的使用情景。iCookbook应用中，用户可以用语音来查看食谱——就再也不用担心手上糊满面糊怎么办了。
+
+2. 根据一天不同的时段或用户使用过程，来适应情景的变化。Navfree GPS应用能在白天、夜间模式下自动切换，夜间采用低眩光的地图，开车会更安全。
+
+[![2](http://cdc.tencent.com/wp-content/uploads/2013/02/2.jpg)](http://cdc.tencent.com/?attachment_id=6988)
+
+3. 判断用户当前位置并展示附近相关的内容和帮助。用户在移动设备上用Google搜索电影，可以搜到附近正在热映的电影以及当天的电影场次，如果有票的话，还能看到买票的链接。
+
+4. 权衡用户提供的信息，并且尊重用户的喜好和设置。在完成多线航班的第一站后，TripIt应用向我展示了下一个航班、登机信息以及必须要花费的时间。而 United应用并没有做这样的事情，尽管它知道得更多。我就纳闷了，既然知道我是会员，它为什么不向我展示如何从当前飞机前往下一班飞机，另外明确标明 途中United的贵宾休息区，好让我舒适地度过这等待的两小时呢？
+
+5. 默认为用户提供最合适的体验（例如：一种适合小屏幕的移动体验，也可能是适合平板电脑的桌面产品体验），但还要提供高级选项。最近一次关于如何向用户展示这些信息的大型的讨论会上，*Jakob Nielsen**建议将移动网页与**Web**网页分开*（参见[Jakob Nielsen recommending a separate mobile website](http://www.useit.com/alertbox/mobile-vs-full-sites.html)），*Josh Clark**则觉得自适应的移动网页设计更好*（链接：[Josh Clark arguing instead for a responsive design](http://www.netmagazine.com/opinions/nielsen-wrong-mobile)），*而其他人认为**Nielsen**和**Clark**都错了*（参见[believe that Nielsen and Clark are both wrong](http://www.netmagazine.com/opinions/nielsen-vs-clark-theyre-both-wrong)）。
+
+**拓展阅读**
+
+1. “[The Context of Mobile Interaction](http://www.giantant.com/output/mobile_context_model.pdf)” (0.2 MB, PDF), Nadav Savio, Jared Braiterman
+
+2. “[On Mobile Context](http://blog.cloudfour.com/on-mobile-context/),” Jason Grigsby
+
+3. “[When and Where Are People Using Mobile Devices?](http://www.lukew.com/ff/entry.asp?1263),” Luke Wroblewski
+
+### 
+
+可用性指的是全面衡量信息架构、设计、内容和其他元素是否让用户很好地完成任务的标准。
+
+**规范**
+
+1. 让用户清晰地知道什么是可选的、什么是可点击的或可滑动的，尤其是在触摸屏设备上。*尼尔森诺曼团队在**iPad**的可用性调研*（参见[Nielsen Norman Group’s usability studies of the iPad](http://www.nngroup.com/reports/mobile/ipad/)） 中发现，用户通常不知道什么是可点击的，有时也被滑动这个手势搞得迷糊，尤其同一个滑动手势在同一界面的不同区域滑动却有不同的功能。所以，请确保可点击的内容是清晰的，比如链接、icon和按钮，要一看上去就是可点的。
+
+2. 在触摸屏上，确保点击对象的尺寸和位置以避免误操作。另外，将点击对象放在合适的区域，比如：把“删除”等具有破坏性的功能对象放在下图所示的“Reach”区域，Luke Wroblewski在*《移动为先》*（*Mobile First*）中提及。
+
+[![3](http://cdc.tencent.com/wp-content/uploads/2013/02/3.jpg)](http://cdc.tencent.com/?attachment_id=6989)
+
+* Luke Wroblewski , **《移动为先》*
+
+3. 遵守规范和模式来减少用户的学习成本，也能让移动体验更加自然。App的设计应该遵守特定平台规范标准和指南。在Breaking the Mobile Web网站中，《*移动设备和平板电脑的网页应用设计指南》*一文的作者综合收集了很多来自官方的UI和UX指南链接（参见[UI Guidelines for Mobile and Tablet Web App Design](http://www.mobilexweb.com/blog/ui-guidelines-mobile-tablet-design)）。
+
+4. 通过设计元素比如对比度、颜色、排版和字体大小，确保产品在情景变化下的可用性，变化的情景包括白天刺眼的阳光下，以及改变设备的物理角度和朝向时。
+
+5. 不要依赖那些不被移动设备广泛支持的的技术，比如Java、JavaScript, cookies, Flash, frames, 弹出框和自动刷新。当需要打开一个新窗口，或者从应用跳转到网页上时，要提醒用户避免重新加载已打开的页面。
+
+**拓展阅读**
+
+1. “[Usability of iPad Apps and Websites](http://www.nngroup.com/reports/mobile/ipad/),” Nielsen Norman Group
+
+2. “[UI Guidelines for Mobile and Tablet Web App Design](http://www.mobilexweb.com/blog/ui-guidelines-mobile-tablet-design),” Max Firtman
+
+3. “[Mobile Usability Update](http://www.useit.com/alertbox/mobile-usability.html),” Jakob Nielsen, Alertbox
+
+ 
+
+ 
+
+ 
+
+这里讨论的是当用户使用移动网站或App的自信心、信任感以及舒适度的问题。根据[Truste]()和Harris Interactive两家公司在2011年的研究，隐私和安全是智能手机用户最关心的两个问题。
+
+[![4](http://cdc.tencent.com/wp-content/uploads/2013/02/4.jpg)](http://cdc.tencent.com/?attachment_id=6990)
+
+ 
+
+**规范**
+
+1. 在未经用户明确许可下，不要使用移动设备里的个人信息（比如地理位置和通讯录）。今年的头几个月中，已经有不少关于从手机中私自复制通讯录的报告，文章[watchdogs up in arms](http://venturebeat.com/2012/02/22/privacy-policy-apps/)* *和[users retaliating](http://venturebeat.com/2012/03/17/apple-address-book-lawsuit/)中有所提及。
+
+2. 让用户轻松掌控App如何分享个人信息，比如访问位置前询问用户，允许他们退出目标广告。
+
+3. 在合适的情况下，清楚地阐述你们公司的商业行为（包括隐私、安全和投资回报）（比如在注册页面告知隐私和安全条款）。这些条款应作为次要元素出现（比如可 以放在底部栏或是“more”标签里）。通过显示受信任的标记来加强用户的信任感，尤其当用户需要提供个人或财务信息时。
+
+4. 在移动设备上适当地为用户提供条款，包括简洁的概述和是否发送到邮箱的选项。众所周知，隐私和安全条款通常冗长而无趣，用户往往都会盲目地点击同意继续下去，因此我们要尽量让这个过程容易一些。
+
+5. 当提供条款的时候，不要打断用户的任务流程。在被打断之前，*让用户返回到之前的位置*（参见：[Take them back to where they were](http://www.useit.com/alertbox/disrupting-users.html)），而不是重新开始。
+
+**拓展阅读**
+
+1. “[Layered Policy Design](http://www.truste.com/blog/2011/05/20/layered-policy-and-short-notice-design/)“, TRUSTe Blog
+
+ 
+
+ 
+
+ 
+
+这指的是如何吸引用户的注意力以及如何展示重要信息。
+
+**规范**
+
+1. 将提醒次数降低到最少，确保每一次的提醒都提供了重要的信息和有用的选项。可以去看看Chris Crutchfield的文章*视频上过多的信息和提示*（参见：[video on notification and alert overload](http://vimeo.com/35873217)）。
+
+2. 确保提醒简短而清晰，解释为什么会有这样的提示，用户可以做什么。另外，按钮标记要清晰。
+
+3. 消息提示应该简短而带有告知性，不要干扰用户的操作，并且很容易操作和离开。
+
+4. 在界面上提供的反馈和确认信息不要打扰用户的操作流程。
+
+5. 如果这个App有消息标记或是在状态栏上有提醒，就要保持这个标记和消息的更新。当用户添加新消息时要清除这个标记。当用户访问到消息标记时提醒要被清除，即使用户还没有发现究竟是哪个账号触发了消息提醒，这也会迫使用户一个个账号去试探。
+
+**拓展阅读**
+
+1. “[Mobile Notifications](http://www.avc.com/a_vc/2011/03/mobile-notifications.html),” Fred Wilson
+
+2. “[The Future of Mobile Notifications](http://www.trueventures.com/2011/03/01/the-future-of-mobile-notifications/),” True Ventures
+
+3. “[Chapter 8: Feedback and Affordance](http://mobiledesignpatterngallery.com/mobile-patterns.php?colid=65438029-72157627731646558),” Theresa Neil
+
+ 
+
+ 
+
+ 
+
+这指的是能帮助用户使用网页或者应用的相关选项、产品和服务。
+
+**规范**
+
+1. 让用户能轻松进入帮助和支持选项。用户通常会在移动网页的底部和应用的工具栏，或tab栏寻找帮助选项。
+
+2. 帮助的形式要多样化，尽量与移动应用场景相关，比如自助服务式的常见问题，现场帮助式的点击通话，接近实时的直接消息推送。美国运通（American Express）和花旗银行（Citibank）这两家金融服务公司都积极地通过Twitter提供支持。
+
+3. 在用户首次进入应用的时候，提供快速的介绍和简短的教程，但也要提供跳过和稍后查看的选项。
+
+4. 当首次引入新的或者特别的功能时（比如首次介绍如何使用移动应用检查支票），需要提供给用户情景化的帮助和提示，这也是对不经常使用的功能的回顾。
+
+5. 在合适的情况下，提供视频指导，但是要允许用户可以按自己意愿开始、暂停、停止和控制音量，并记住上文**“****内容****”**中提到的多媒体相关的规范。
+
+**拓展阅读**
+
+1. “[Chapter 7: Invitations](http://www.uxbooth.com/blog/mobile-design-patters/)” and “Chapter 9: Help,” Theresa Neil  
+ Chapter 7 is available online at UX Booth.
+
+2. “[Top 6 Help Design Patterns for iPhone Apps](http://www.inspireux.com/2011/02/07/top-6-help-design-patterns-for-iphone-apps/),” Catriona Cornett, inspireUX
+
+ 
+
+ 
+
+ 
+
+这指的是有社交元素的内容和功能，从而让用户在已有的社交网络上进行分享和交互。
+
+ **规范**
+
+1. 创建和维护社交网络（如Facebook）和本地服务（如综合的服务页面，像谷歌地图、Bing商业门户和雅虎本地）。在搜索结果和基于位置的社交网络服务中重点突出它们，除了你的商业名称，也包括了你的家庭住址、电话号码、URL和营业时间。
+
+2. 将社交活动和移动体验进行融合：如在网上展示最新活动，提供简单的方式关注或喜欢。
+
+3. 将社交网络的特性与网站的移动体验进行融合，用户可快速连上社交网，这就像使用APIs（[using APIs](http://www.verious.com/marketplace/social-networking.php)）支持社区分享、书签、加标签、喜欢和评论一样简单。
+
+4. 邀请用户使用移动设备创建能展示你品牌、产品和服务的内容，并提供一些激励作为回报。例如，汉堡连锁店红罗宾向用户发起邀请：只要分享一张孩子在店里读书的照片，就能获取一杯免费的奶昔。
+
+5.让移动端的内容可以被分享和病毒式的传播。比如，美国运通公司（American Express）最近提供的信用卡的储蓄和折扣优惠，只要你将个人信息同步到Facebook、Twitter和Foursquare上，就可获得。
+
+6. 那些依靠用户创建内容的App，应该要探索出一套让初始内容有用并最终能进行不断维护的方法。比如：My TSA应用有一个用户创建内容的功能，展示了安检站等待的时间，但是它常常显示一些过时的消息，尽管机场工作人员已经将等待时间贴了出来。
+
+**拓展阅读**
+
+1. “[The Definitive Guide to Adding Social Features to Your Mobile Apps](http://www.verious.com/marketplace/social-networking.php)“, Verious
+
+ 
+
+ 
+
+ 
+
+这指的是如何让用户发现一个网站和应用的途径以及鼓励反复使用的因素。
+
+ **规范**
+
+1. 通过优化移动端搜索和发现来确保产品的可寻性，比如保持URL简短。如果你有一个独立的移动网站，请遵循URL命名约定(m.site.com或 mobile.site.com)。在移动搜索结果里，提供快速访问本地的内容的入口（如当前位置的方向）以及系统自带功能（比如点击快速拨号）。
+
+[![5](http://cdc.tencent.com/wp-content/uploads/2013/02/5.jpg)](http://cdc.tencent.com/?attachment_id=6991)
+
+*左边是移动端对UPS搜索结果优化后的网页，右侧是没有优化的*
+
+2.  二维码的出现让移动设备的登录得到很大的优化，我们不需要到传统的那种需要放大才看得清楚的页面上，更加不需要到网站首页上寻找登录入口。另外，*附在产品上的二维码*（参见[QR codes painted on buildings](http://techcrunch.com/2012/03/25/facebook-rooftop-qr-code/)）应该清晰明确，这样移动设备才能辨识和解读。
+
+3. 给用户发送的邮件应当以移动设备支持的格式，内容应该包含一条可以查看产品相关信息的链接——而不要回到设备自身的网站首页上去。
+
+4. 可能情况下，在其他平台上（如电视、纸媒、店内广告）推销你的App，并且激励用户下载使用，通常可采取打折的办法。如果你的App有价格标签，那么可以在过度拥挤的市场中通过限时促销来吸引用户。另外你还可以通过每日限免市场来吸引用户。
+
+5. 提示使用过你App的用户进行评价打分，或是分享到社交平台，但是要给延迟或停止提示的选项。虽然这不是唯一产生口碑的途径，但能让你洞察到用户喜欢什么不喜欢什么。Smalltech在*控制你的评论*（参见[Taking Control of Your Reviews](http://www.smallte.ch/blog-read_en_24001.html)）一文中讨论了如何让用得爽的用户进行评价，以及让不爽的用户用邮件反馈意见的策略。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [移动用户体验要素（下篇）](http://kongqia.com/1918.html)
+
+

@@ -1,0 +1,182 @@
+---
+layout: post
+title: 移动用户体验要素（上篇）
+date: 2013-05-06 05:47:40.000000000 +08:00
+---
+
+<div id="container"><div id="content"><div>[![](http://cdc.tencent.com/wp-content/uploads/2013/01/0-banner1.jpg)](http://cdc.tencent.com/?p=6779)</div><div><div>　　译者注：对于移动用户体验的从业人员，本文可以说是一部宝典。文章不仅提纲挈领地概要了移动用户体验的12大要素及其规范，更提供了详实而丰富的参考文献。我和Nina将分别从上篇和下篇带来此篇译文，希望我们提供的译文能为从业者带来系统思考和思维启发。
+
+英文原文: [The Elements Of The Mobile User Experience](http://mobile.smashingmagazine.com/2012/07/12/elements-mobile-user-experience/ "Read 'The Elements Of The Mobile User Experience'")
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+移动用户数和手机使用量都在逐年增加。随着越来越多的用户使用手机完成任务（参见[The Future of Mobile](http://www.businessinsider.com/the-future-of-mobile-deck-2012-3?op=1)），如何改进移动用户体验的各个影响要素，便成为值得关注的焦点。
+
+移动用户体验是指用户使用低端功能机到高清平板电脑间的任意设备中，与移动产品（浏览器或App）互动之前、之时及之后的认知和感受。
+
+为了创建令移动用户愉悦的体验，我们必须重新思考那些长期以来被认为理所当然的桌面端设计。移动用户体验的复杂性源于移动设备的特性，主要包括：小屏幕，设备特性的巨大差异，电量和网络的限制，难以定位又永远变化的移动使用场景。
+
+通过解析移动用户体验的重要组成部分，我们可以得到一个概念框架来构建和评估好的移动体验。这些部分在文章[《以用户为中心的移动设计方法》](http://mobile.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/)中有所提及 （参见[user-centered approach to designing for mobile](http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/)）。下图组成要素决定了移动用户体验，包括：功能、情境、用户输入、内容和营销等等。
+
+[![1_elements-of-mobile-ux](http://cdc.tencent.com/wp-content/uploads/2013/01/1_elements-of-mobile-ux.png)](http://cdc.tencent.com/?p=6779)
+
+以上这些要素的重要性会根据设备类型不同（如非智能手机、智能手机、平板电脑）和界面显示不同（如App和Web）发生变化。本文将简要介绍这些要素，并详细说明相关的重要准则。
+
+ 
+
+
+## ｛功能｝
+
+ 
+
+功能是指帮助用户完成任务、实现目标的工具和特性。
+
+### 规范
+
+1. 优先考虑和展示其他平台上与移动环境高度相关的核心功能。如对于航空公司，应具有航班状态查询和自助登机功能。对于化妆品连锁店Sephora，用户可以在移动设备上方便地访问产品评论，然后到店内购物。
+
+2. 提供移动设备特有的功能（如条形码扫描和图像识别），必要时利用设备的硬件能力增强功能特性，从而提高用户的参与感及乐趣。在”Old Navy”的老版本中，用户在商店中拍下商标的照片后，可以获得有惊喜的游戏或折扣。
+
+3. 确保为移动设备优化基本功能和内容。例如，查找商店时显示最近的商店，并确保点击号码便能与商店通话。
+
+4. 提供与业务相关的功能。对于零售网站和App来说，主要包括产品搜索，订单状态和购物车。
+
+5. 提供所有平台都会有的关键功能。无论在何种设备或平台上，注册用户应该看到他们的个性化设置。如果移动端没有某些功能，那么要将用户引到合适的平台上，如TripIt，引导用户去web端设置个人网络。
+
+ 
+
+### 拓展阅读
+
+“[Sharing App Bump 3.0 Slashes Most Features, Proves Less Really Can Be More](http://www.fastcompany.com/1816610/why-entrepreneurs-must-focus-on-saying-no-bump-slashes-features),” Fast Company
+
+ 
+
+
+## ｛信息架构｝
+
+ 
+
+它是指将功能和内容组织成一种逻辑化的结构，以帮助用户查找信息，完成任务，包括：导航，搜索和标签栏。
+
+### 规范
+
+1. 起始页应该优先考虑用户需求，展示产品主要特性和功能链接。《移动设计模式库》（参见[MOBILE DESIGN PATTERN GALLERY](http://mobiledesignpatterngallery.com/mobile-patterns.php?colid=65438029-72157627607680275)）中提供了移动设备中的主要导航模式和辅助导航模式的样例，其中不少为垂直导航，而非桌面端网站的的水平导航。
+
+2. 让用户导航至最重要的内容和功能时，所需点击次数尽可能少。小屏幕上的导航通常情况下应该数量多、层级浅，一定不能有太深的层级。我们知道，每一个内容模块的访问不能超过三次点击（参见[THREE CLICKS (OR TAPS) IS NOT THE MAGIC NUMBER](http://www.uie.com/articles/three_click_rule/)），同时用户还需要知道每一次点击都在帮助他们完成任务。因为每一个附加的层级意味着：更多的点击、更多的页面加载和带宽消耗。
+
+3. 要同时考虑触摸屏和非触摸屏用户的导航需求。当为触摸屏设计时，需确保导航项的点击区域至少有30个像素的宽度或高度。而对于非触摸屏手机（非智能手机），需提供按键快捷键，这样用户可以通过输入0-9中的一个数字来快速访问。
+
+[![3_do-accesskey-dontbranding-link-below](http://cdc.tencent.com/wp-content/uploads/2013/01/3_do-accesskey-dontbranding-link-below.png)](http://cdc.tencent.com/?p=6779)
+
+CNN所做的快捷键（左图），很迎合非智能手机用户。而DELTA做的并不好，用户需要先连按9次下方向键才能开始使用其APP（中图和右图）。
+
+ 
+
+4. 提供导航提示让用户知道他们在哪里，如何返回，以及如何跳回到开始的地方。“移动面包屑”常被用于取代“返回”按钮，它用标签的形式展示了用户是从哪部分或类别而来。对于移动网站，尤其是当每个屏幕上的导航都不重复的时候，可使用标准规范，如“HOME”图标链接到首页。
+
+5. 使用简洁、明确、一致和描述性的标签作为导航和链接。这通常是一个很好的做法，尤其是在小型移动设备上更为重要。
+
+ 
+
+### 拓展阅读
+
+“[CHAPTER 1: NAVIGATION](http://mobiledesignpatterngallery.com/mobile-patterns.php?colid=65438029-72157627607680275),” MOBILE DESIGN PATTERN GALLERY, THERESA NEIL
+
+ 
+
+
+## ｛内容｝
+
+ 
+
+内容并不是LOU ROSENFELD和PETER MORVILLE在《万维网信息架构》中提及的“网站中展示的那堆东西”，而是能为用户提供信息的、以不同样式存在的多种类型的内容，比如文本、图片和视频。
+
+### 规范
+
+1. 提供适当而大众的内容给用户（如产品信息，社交内容，指导和支持的内容，营销内容）。
+
+2. 若多媒体在移动环境下对用户的操作有帮助，能增加内容价值或支持该网站的目标，那就用它吧。大多数时候，当用户需要消遣或娱乐（如新闻或有趣的片段），或指导（例如，如何使用APP或新功能）时，提供多媒体内容是最好的选择。
+
+3. 让用户控制多媒体：不要自动播放视频或音频、允许用户跳过或停止多媒体内容、让用户知晓多媒体内容占用的带宽。
+
+4. 确保内容适用于移动环境。正如从印刷转化为互联网文章使用的分块规则，应该缩短移动设备上的文章，以使用户能在较短的注意力集中时间读完。为移动设备优化图像和媒体；也就是在小设备上等比缩小图像和媒体内容，并确保图像在新IPAD上足够清晰（参见[SHARP ENOUGH FOR THE NEW IPAD](http://bradfrostweb.com/blog/mobile/hi-res-optimization/)）。
+
+5. 确保主要内容是目标设备支持的格式。即使是现在，大众官网仍然让IOS用户下载FLASH。
+
+![4_vw-ipad-flash-download](http://cdc.tencent.com/wp-content/uploads/2013/01/4_vw-ipad-flash-download.png)
+
+ 
+
+###  拓展阅读
+
+“[MOBILE CONTENT: IF IN DOUBT, LEAVE IT OUT](http://www.useit.com/alertbox/mobile-writing.html),” JAKOB NIELSEN, ALERTBOX
+
+“[MOBILE CONTENT STRATEGY LINK-O-RAMA 2011](http://karenmcgrane.com/2011/12/14/mobile-content-strategy/),” KAREN MCGRANE
+
+ 
+
+
+## ｛设计｝
+
+ 
+
+这是指视觉呈现和互动体验，包括平面设计、品牌包装和排版。
+
+### 规范
+
+1. 记住名言“移动化，而非小型化”（BARBARA BALLARD）和“不缩小，重新思考”（诺基亚）。它们都提到：移动设计并不仅仅是完全移植台式电脑的设计。
+
+2. 为了预览和快速扫描而设计。 预览设计指的是视觉设计如何能快速、轻松地传达信息。
+
+3. 通过色彩、排版和个性化设计，在视觉上保持设计元素和体验（手机，应用程序，网络，印刷和现实世界）统一。如下堆积的图片中，即使看不到品牌名称，辨识亚马逊仍然很容易。
+
+[![5_amazon](http://cdc.tencent.com/wp-content/uploads/2013/01/5_amazon.jpg)](http://cdc.tencent.com/?p=6779)
+
+4. 引导用户从最开始最突出的元素着手，帮助他们完成任务，这就是所谓的视觉流。一个好的设计既包含视觉元素，还包含信息结构，内容和功能，以传达品牌形象、引导用户。
+
+5. 设计过程中需考虑纵向和横向的设计。越来越多的设备能支持多个方向，并自动调节以适配到用户的物理方向。当用户改变设备方向时，确保用户的位置位于画面中。如果方向变化后有附加或不同功能，需要明确指示，如下图应用ING所示。
+
+[![6_ing-orientation-hint](http://cdc.tencent.com/wp-content/uploads/2013/01/6_ing-orientation-hint.png)](http://cdc.tencent.com/?p=6779)
+
+ 
+
+### 拓展阅读
+
+ 
+
+“[DESIGNING GLANCEABLE PERIPHERAL DISPLAYS](http://www.eecs.berkeley.edu/Pubs/TechRpts/2006/EECS-2006-113.pdf)“ (6 MB, PDF), MATTHEWS, FORLIZZI AND ROHRBACH, UC BERKELEY
+
+[UNIVERSAL PRINCIPLES OF DESIGN, REVISED AND UPDATED](http://www.amazon.com/gp/product/1592535879/ref=as_li_ss_tl?ie=UTF8&tag=strategistnet): 125种方法来增强易用性，影响认知，增加吸引力，做出更好的设计决策，设计教学，WILLIAM LIDWELL, KRITINA HOLDEN, JILL BUTLER
+
+ 
+
+
+## ｛用户输入｝
+
+ 
+
+这是指用户输入数据的难度。应尽量降低移动设备上输入数据的难度，同时避免双手操作。
+
+### 规范
+
+1. 限制必填部分的输入。正如LUKE WROBLEWSKI在著作《移动为先》（ MOBILE FIRST）中提到的那样，“涉及到移动设备上的表格，需要残忍而有效地减少，减少，再减少。”限制登记表，使其只包含最少的必填部分，可能情况下，替换为更短内容。比如，使用ZIP号码，而不是城市和国家。针对这个规范，我最喜欢举的反例是大众的试驾预约表格，移动版必填的字段居然比桌面版还多（高亮部分显示为多余字段）：
+
+![7_vw-test-drive-mobile-extra-reqd-fields-300x286](http://cdc.tencent.com/wp-content/uploads/2013/01/7_vw-test-drive-mobile-extra-reqd-fields-300x286.png)
+
+2. 尽可能显示默认值。它可能是用户最近所选项（如机场或火车站），或是常选项（如检查飞行状态时选择当天日期）：
+
+[![8_defaults-united-njtransit](http://cdc.tencent.com/wp-content/uploads/2013/01/8_defaults-united-njtransit.png)](http://cdc.tencent.com/?p=6779)
+
+3. 可能的情况下，根据设备特性提供备用输入机制。APP可以利用设备内置的很多输入机制，包括手势，摄像头，陀螺仪和声音，但移动网站才刚刚开始使用这些特性，尤其是地理位置。
+
+4. 使用适当的输入机制，并显示合适的触摸式键盘，以减少用户的切换。请记住，在只有数字键盘上的非智能手机上，数据输入更加繁琐乏味。对于无需过度保密的APP，允许用户保持移动设备上的登录状态，并保存电子邮件地址和用户名等信息，因为手机往往是个人设备，不像平板电脑，往往由多人共同使用。
+
+[![9_ios-developer-guide-keyboard-options](http://cdc.tencent.com/wp-content/uploads/2013/01/9_ios-developer-guide-keyboard-options.png)](http://cdc.tencent.com/?p=6779)
+
+5. 考虑提供自动匹配，拼写检查和预测技术，让数据输入更加容易并减少错误 – 必要时数据可恢复。应禁用一些不恰当的功能，如验证码的输入。
+
+ 
+
+</div></div></div></div>未经允许不得转载：[空洽网](http://kongqia.com) » [移动用户体验要素（上篇）](http://kongqia.com/1917.html)
+
+

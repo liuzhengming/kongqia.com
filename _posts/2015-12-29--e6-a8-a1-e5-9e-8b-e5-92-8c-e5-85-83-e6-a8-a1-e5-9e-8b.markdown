@@ -1,0 +1,32 @@
+---
+layout: post
+title: 模型和元模型
+date: 2015-12-29 18:29:17.000000000 +08:00
+---
+
+模型（model）是对现实的抽象，或者是对这个抽象的描述。元模型（meta-model）当然也是模型，他描述的对象是“模型中的元素、元素间关系以及表示法”，或者说它是一种语言，人们使用这种语言来描述模型。使用同样元模型的人，可以互相理解彼此所建立的模型。我们的每一句话，每篇文章都是一个模型（参看前文：《名可名，非常名》），中文是我们的建模语言。掌握中文的人，可以通过理解对方的句子和文章。中文、英文、德文、法文都是自然语言，也都是元模型。如果你要发明一种新的自然语言，你需要发明哪些要素呢？例如：你是否需要发明相关的词汇和语法？词汇是否需要分成名词、动词、形容词等等？每一个词汇是否都应该有读音和写法？（ps，《指环王》的作者托尔金大叔就发明了一种新的语言，名曰精灵语，而且居然还有个女人把它学会了。）或者，你发明了一种新的“自然语言”，但是它是不是真正意义上的自然语言呢？显然，要回答这个问题，我们需要先搞清楚什么是“自然语言”。怎么才能精确的说清楚？最好是建立一个模型，用这个模型来阐明“自然语言”的要素和结构。使用这个模型，我们可以定义自己的“自然语言”。这个模型对于任何一种自然语言（例如中文），就是元模型；而相对于一个句子或者一篇文章则是元元模型。如此类推，我们还可以建立元元元模型，元元元元模型，等等。但是，陷于人类的思维能力和实际的需要，4层可能就足够了。
+
+我今天看到网上有人写了个说明元模型概念的例子，觉得不错，转录如下：
+
+http://yangsq.javaeye.com/blog/145552
+
+Title：MOF – the Meta-Object Facility
+
+This is probably the least known of the OMG standards, although I personally consider it to be the most important one. MOF is a conceptual framework for describing meta-data. Meta-data is, as the names suggests, data about data. To explain this, consider the following layers:
+
+0. A customer, ACME Corp., has placed an order for 32 boxes of candy on the 23rd of April.  
+ 1. A customer has a name and can place zero to n orders, each order having a date and referencing a specfic item that is being sold.  
+ 2. Classes have attributes which have a type, and classes can be related to each other.  
+ 3. There are things that describe something, and there are connections between those things.
+
+With numbers increasing, we move away from pure information (level 0) to a model layer (1), to a meta-model layer roughly resembling UML (2), to a meta-meta-model layer representing a way to describe meta-models.
+
+MOF is mainly concerned with level 3, for which it contains a hard-coded set of “things”. (If you’re not confused enough already: in fact this layer is a subset of UML. Don’t worry, things will hopefully become clearer soon).
+
+So what is MOF? MOF is way to describe meta-models, which in turn describe a specific way to model something. One example of a well-known meta-model is UML. But the separation allows MOF to be independent of UML and support other meta-models as well. MOF is thus a very generic and very powerful framework for expressing model and meta data information.
+
+Apart from being a conceptual framework, MOF also defines a CORBA IDL mapping that specifies how MOF data can be accessed from CORBA applications. With JMI, the Java Metadata Interface, the JCP has just finalized a mapping of these interfaces for the Java language.
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [模型和元模型](http://kongqia.com/33669.html)
+
+

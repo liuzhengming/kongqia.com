@@ -1,0 +1,31 @@
+---
+layout: post
+title: js判断数组的几种方法
+date: 2016-08-25 05:18:13.000000000 +08:00
+---
+
+> var arr = [1,2,3];
+
+1. arr instanceof Array
+
+2. arr.constructor === “Array”
+
+3. Object.prototype.toString.call(arr) === “[object Array]”
+
+4. Array.isArray(arr)
+
+完美写法如下：
+
+```
+function isArr(arr){
+  if(typeof Array.isArray === "Function"){
+    return Array.isArray(arr)
+  }else{
+    Object.prototype.toString.call(arr) === "[object Array]"
+  }
+}
+```
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [js判断数组的几种方法](http://kongqia.com/33738.html)
+
+

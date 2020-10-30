@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>VPS搭建shadowsocks服务以及配置shadowsocks多用户</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">VPS搭建shadowsocks服务以及配置shadowsocks多用户</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-12-15">15 December 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>介绍在VPS中（虚拟主机）搭建shadowsocks服务，从而实现科学上网，配置多个shadowsocks用户实现多用户共享。</p>
+
+<ol>
+  <li>安装shadowsocks服务端</li>
+</ol>
+
+<p>Ubuntu
+<code class="highlighter-rouge">sudo apt-get install python-pip</code></p>
+
+<p><code class="highlighter-rouge">sudo pip install shadowsocks</code></p>
+
+<p>CentOS</p>
+
+<p><code class="highlighter-rouge">sudo yum install pip</code></p>
+
+<p><code class="highlighter-rouge">sudo pip install shadowsocks</code></p>
+
+<ol>
+  <li>配置shadowsocks服务端配置文件</li>
+</ol>
+
+<p>安装完成之后其实就可以执行命令来启动shadowsocks服务了。</p>
+
+<p><code class="highlighter-rouge">ssserver -p 8000 -k password -m rc4-md5 -d start</code></p>
+
+<p>配置文件内容</p>
+
+<p>更好的意见是把选项写在一个配置文件中，然后通过读取这个配置文件来配置shadowsocks的行为。vi /path/to/your/config-file(注：配置文件放置的位置随意，我一般是放在 /etc/shadowsocks.conf )</p>
+
+<p>单用户配置</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+    <span class="s2">"server"</span><span class="err">:</span><span class="s2">"你的VPS公网ip"</span><span class="p">,</span>
+    <span class="s2">"server_port"</span><span class="err">:</span><span class="s2">"你想shadowsocks监听的端口"</span><span class="p">,</span>
+    <span class="s2">"local_address"</span><span class="err">:</span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+    <span class="s2">"lcoal_port"</span><span class="err">:</span><span class="mi">1080</span><span class="p">,</span>
+    <span class="s2">"password"</span><span class="err">:</span><span class="s2">"你想设置的密码"</span><span class="p">,</span>
+    <span class="s2">"method"</span><span class="err">:</span><span class="s2">"rc4-md5"</span><span class="p">,</span>  <span class="err">#加密算法还有其他的如</span><span class="nx">aes</span><span class="o">-</span><span class="mi">256</span><span class="o">-</span><span class="nx">cfb</span><span class="err">，</span><span class="nx">aes</span><span class="o">-</span><span class="mi">128</span><span class="o">-</span><span class="nx">cfb</span><span class="err">，速度快的话就选择</span><span class="nx">rc4</span><span class="o">-</span><span class="nx">md5</span>
+      <span class="s2">"timeout"</span><span class="err">:</span><span class="mi">300</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>多用户配置</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"server"</span><span class="err">:</span><span class="s2">"你的VPS公网ip"</span><span class="p">,</span>
+    <span class="s2">"local_address"</span><span class="err">:</span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+    <span class="s2">"lcoal_port"</span><span class="err">:</span><span class="mi">1080</span><span class="p">,</span>
+    <span class="s2">"method"</span><span class="err">:</span><span class="s2">"rc4-md5"</span><span class="p">,</span>
+    <span class="s2">"timeout"</span><span class="err">:</span><span class="mi">300</span><span class="p">,</span>
+    <span class="s2">"port_password"</span><span class="err">:</span>
+    <span class="p">{</span>
+      <span class="s2">"port1"</span><span class="err">:</span><span class="s2">"passwd1"</span><span class="p">,</span>
+      <span class="s2">"port2"</span><span class="err">:</span><span class="s2">"passwd2"</span><span class="p">,</span>
+      <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>开启shawosocks服务
+<code class="highlighter-rouge">ssserver -c /etc/shadowsocks.conf --log-file=/tmp/shadowsocks.log -d start</code></p>
+
+<p>转至：
+https://timlentse.github.io/2016/04/04/install-ss-service.html</p>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=VPS%E6%90%AD%E5%BB%BAshadowsocks%E6%9C%8D%E5%8A%A1%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E5%A4%9A%E7%94%A8%E6%88%B7&amp;url=/2017/12/15/vpsda-jian-shadowsocksfu-wu-yi-ji-pei-zhi-shadowsocksduo-yong-hu.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2017/12/15/vpsda-jian-shadowsocksfu-wu-yi-ji-pei-zhi-shadowsocksduo-yong-hu.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2017/12/15/vpsda-jian-shadowsocksfu-wu-yi-ji-pei-zhi-shadowsocksduo-yong-hu.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2018/01/19/warning-spawn-enoent-use-force-to-continue.html">
+        <section class="post">
+            <h2>Warning: spawn ENOENT Use --force to continue</h2>
+            <p>
+  Warning: spawn ENOENT Use –force to continue
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2017/07/04/aliyunvpn.html">
+        <section class="post">
+            <h2>阿里云服务器配置VPN</h2>
+            <p>阿里云服务器配置详解（测试成功） 
+操作环境：阿里云香港节点云服务器，操作系统：CentOS 6.3 64位 
+名词解释：pptp是VPN服务器类型之一，PPP是一种数据链路层协议，iptables是IP信息包过滤系统。
+
+1 服务器端安装软件
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

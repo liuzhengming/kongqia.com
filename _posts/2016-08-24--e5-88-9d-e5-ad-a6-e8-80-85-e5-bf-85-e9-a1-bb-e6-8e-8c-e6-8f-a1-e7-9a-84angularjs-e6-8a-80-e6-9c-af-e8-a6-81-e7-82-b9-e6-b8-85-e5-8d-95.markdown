@@ -1,0 +1,138 @@
+---
+layout: post
+title: 初学者必须掌握的AngularJS技术要点清单
+date: 2016-08-24 22:12:21.000000000 +08:00
+---
+
+<div class="well">这篇文章的主要目标是帮助初学者了解在学习AngularJS过程中，哪些东西是非常重要的，哪些东西学习的优先级较低。
+
+</div><article>Note：本博文不是对AngularJS技术原理与要点的详细阐述，而是从我收集到的资料，以及自己开发的亲身体验出发，给初学者列出的一个学习任务清单。此文处于不断完善与修正过程中，表述的是个人看法与观点，仅供学习者参考，请AngularJS高手指正和补充。
+
+==================================================
+
+
+## 为什么要学习AngularJS?
+
+我不想针对这个问题多费口舌，我只想说：依据我个人这些年来的开发经验，以及我使用AngularJs开发的亲身体验（这个网站就大量使用了AngularJs），是非常值得在AngularJS这一技术上投入时间和精力的。
+
+我相信时间会证明我的上述看法是正确的。
+
+
+## 扫清学习障碍
+
+没有扎实的JavaScript编程基础，不要学AngularJS！
+
+没学过jQuery（并不要求精通，只要求知道其基本原理与使用方法），不要学AngularJS！
+
+没有学过一种服务端开发技术（比如ASP.NET，PHP，Node.js等等），AngularJS的网络部分学习将会遇到困难。
+
+
+## 把握Angular基本原理与基本使用方法
+
+掌握这部分是使用以及深入把握AngularJs开发技术的基础。
+
+需要重点把握以下技术点（仅拉清单，不展开）：
+
+- AngularJS是如何实现MVC设计模式的？
+- $scope是什么对象，干什么用的？
+- 定义Controller，有几种方式？
+- 如何定义一个模块（Module）?
+- 学会使用数据绑定和内置的filter呈现数据
+- Service有什么用？如何定义一个Service？
+- 什么叫做Dependency Inject? AngularJs中大量使用此特性。
+- 怎样组织网站的AngularJs代码与相关文件？我建议按照功能进行分组，每个功能一个文件夹，controller,service,filter分在独立的javaScript文件中，用到的相关HTML模板也可以放到此文件夹中
+
+我项目中按照功能组织的AngularJS文件夹的截图：
+
+![](http://www.jinxuliang.com/blog/Resources//4b5db51b-d11f-4849-82eb-47c0a258e6d7.jpg)
+
+
+## 数据的呈现与数据绑定
+
+重点掌握以下指令的使用：
+
+- <span class="ng-binding">和ng-bind的区别</span>
+- 使用ng-repeat循环显示数据：
+
+ng-repeat可以说是最重要最常用的指令之一了，需要重点把握。
+
+在循环过程中，AngularJs能为特定控件关联上相应的对象。想象一下，你有一个列表，列表中的每一行都有一个“删除”按钮，你如何把每个按钮与特定的数据项关联起来？如果不关联，你怎么知道点击某个按钮，应该删除数据源中的哪个对象？在这点上，AngularJs确实干得漂亮，实现起来不费吹灰之力。
+
+另外，AngularJs还为循环提供了$index这样一个循环变量，这也是非常有用的。类似地，还有$first,$last，$middle……
+
+- 使用filter过滤数据
+
+（1）如何使用内置的filter
+
+（2）如何自定义filter
+
+filter的使用与定义都很简单，但在开发中却很有用。
+
+
+## 页面交互特性
+
+- 页面元素显示与隐藏
+
+ng-show/ng-hide
+
+- 监测数据变化
+
+可以使用
+
+（1）HTML元素的ng-change指令
+
+（2）使用$watch监控特定的数据，当其变化时调用特定的响应函数
+
+- 数据的查找
+
+有两种数据查找的方式：
+
+（1）如果在本地数据中进行查找，使用filter和ng-model足够，实现比较简单，也就几行代码的事
+
+（2）如果需要到服务器上搜索数据，则需要使用$http等发出AJAX请求，然后服务器返回Json数据
+
+这个就比较复杂了，涉及到Angular较多的东西，这是学习过程中的一大难关。
+
+- 响应事件
+
+ng-click, ng-change
+
+
+## 数据的CRUD操作
+
+有两种方式使用AngularJs实现Web应用常见的CRUD操作
+
+（1）单页面应用（SPA:Single Page Application）：服务端就提供一个页面框架，在客户端使用AngularJs发出AJAX请求，从服务端提取数据，然后刷新页面，这种类型的Web应用，AngularJS起着一个核心的作用。
+
+（2）传统模式：这种方式在服务端完成数据的提取、页面生成等工作，AngularJS主要负责客户端的用户交互功能。
+
+就本网站而言，因为服务端使用ASP.NET MVC，这一框架能自动生成标准的CRUD代码，所以，本网站是使用第2种方式开发的，仅在需要在页面上实现比较复杂的用户交互时，才使用AngularJS。
+
+
+## 路由系统
+
+如果你不写“单页面应用（SPA:Single Page Application）”，这块不学也罢。
+
+
+## 网络功能
+
+使用AngularJs开发网络功能，最常用的是$http和$resource。按照官方文档，$resource适合访问REST服务。事实上，如果服务端直接返回json，使用$http同样可以很方便地解析，因此，在实际开发中，我都是使用$http完成访问Server功能，没觉得有使用$resource的必要。
+
+
+## 难啃的骨头
+
+AngularJs中有一些技术很难理解与把握，我这里列出一些，初学者在涉及这一块时，心理上要做好准备
+
+- 自定义指令：这是AngularJs最牛的地方，也是最难的地方，内容相当地多。
+- $q与promise object：这个特性在网络编程中用得很多，但委实不太好理解。
+- 数据交换方式： （1）Controller之间如何交换数据？父子$scope与事件广播
+
+（2）AngularJS与标准的JavaScript代码之间如何交换数据？有两个方向：AngularJs访问标准JavaScript对象和函数，这个比较容易，而原生JavaScript代码访问AngularJs对象的属性和方法，这点比较麻烦
+
+（3）自定义指令与Controller、页面元素属性之间的数据交换
+
+转至：http://www.jinxuliang.com/blog/article/read/fb2f32f9-7718-4f8a-9cff-0ef2429d746f
+
+</article>未经允许不得转载：[空洽网](http://kongqia.com) » [初学者必须掌握的AngularJS技术要点清单](http://kongqia.com/33733.html)
+
+

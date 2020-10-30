@@ -1,0 +1,245 @@
+---
+layout: post
+title: Gmat说明-运用有限燃料升高远地点
+date: 2016-02-23 17:42:32.000000000 +08:00
+---
+
+空间任务设计中，经常出现的一个问题是，运用有限燃料达到指定轨道目标。    在这里，我们将运用GMAT将低轨飞行器升高到指定远地点半径。
+
+步骤如下：
+
+- 创建并配置飞行器及有限推进资源。
+- 创建差分矫正器及目标控制变量。
+- 配置任务序列。包括：创建开始/结束有限推进命令（两者均为默认设置）；创建目标序列以达到12000km远地点轨道。
+- 运行任务并分析结果。
+
+
+# **1 ****创建并配置飞行器及有限推进资源**
+
+为后续工作，需首先打开一个默认的任务，保留飞行器DefaultSC及预报器DefaultProp的默认设置。
+
+
+## **1.1 ****创建一个推进器和一个油箱**
+
+为了模拟有限推进相关的推进器和燃料，需要创建一个Thruster和一个FuelTank，并将FuelTank与Thruster关联起来。
+
+1）在资源树中，右键Hardware文件夹->Add->Thruster，将创建一个名为Thruster1的资源。
+
+2）在资源树中，右键Hardware文件夹->Add->FuelTank，将创建一个名为FuelTank1的资源。
+
+3）双击Thruster1打开属性编辑页。
+
+4）勾选Decrement Mass框，以激活有限推进的燃料设置。
+
+5）在T ank右侧的下拉列表中选择FuelTank1，作为Thruster1的燃料来源。
+
+6）点击OK保存设置。
+
+[![图片1](http://kongqia.com/wp-content/uploads/2016/02/图片1.png)](http://kongqia.com/wp-content/uploads/2016/02/图片1.png)
+
+图1 Thruster1属性设置
+
+
+## **1.2 ****修改Thruster1的推进系数**
+
+1）在资源树中，双击Thruster1打开属性编辑页。
+
+2）点击Edit Thruster Coef.按钮，打开ThrusterCoefficientDialog。
+
+3）将C1的值10替换为1000，点击OK。
+
+[![图片2](http://kongqia.com/wp-content/uploads/2016/02/图片2.png)](http://kongqia.com/wp-content/uploads/2016/02/图片2.png)
+
+图2 Thruster1 Thruster Coefficient设置
+
+
+## **1.3 ****将FuelTank1和Thruster1关联到DefaultSC**
+
+1）在资源树中，双击DefaultSC，打开属性编辑页。
+
+2）选择Tanks标签。在Available Tanks列，选择FuelTank1，然后点击右箭头，将FuelTank1添加到SelectedTanks列表中。点击Apply。
+
+3）选择Actuators标签。在Available Thrusters列中，选择Thruster1，点击右箭头，将其添加到SelectedThrusters列表中。点击OK。
+
+[![图片3](http://kongqia.com/wp-content/uploads/2016/02/图片3.png)](http://kongqia.com/wp-content/uploads/2016/02/图片3.png)
+
+图3 将FuelTank1附给DefaultSC
+
+[![图片4](http://kongqia.com/wp-content/uploads/2016/02/图片4.png)](http://kongqia.com/wp-content/uploads/2016/02/图片4.png)
+
+图4 将Thruster1附给DefaultSC
+
+
+## **1.4****创建有限燃料机动**
+
+1）在资源树中，右键Burns文件夹，添加一个FiniteBurn，将产生一个名为FiniteBurn1的资源。
+
+2）双击FiniteBurn1，打开属性编辑页。
+
+3）在Thruster右侧的下拉列表中选择Thruster1，将两者关联起来，点击OK。
+
+[![图片5](http://kongqia.com/wp-content/uploads/2016/02/图片5.png)](http://kongqia.com/wp-content/uploads/2016/02/图片5.png)
+
+图5 创建FiniteBurn资源FiniteBurn1
+
+
+# **2 ****创建差分校正器和目标控制变量**
+
+后续创建的目标序列需要一个差分校正器，在这里创建一个，并保留其默认设置。
+
+1）在资源树中，展开Solvers文件夹。
+
+2）右键Boundary Value Solvers文件夹->Add->DifferentialCorrector，将创建一个名为DC1的资源。
+
+后续创建的目标序列运用Vary命令调整用户定义的目标控制变量，以达到指定轨道目标，即提升远地点至12000km。首先需要创建该变量，这里将其命名为BurnDuration。
+
+1）在资源树中，右键Variables/Arrays/Strings文件夹->Add->Variable，将打开New Variable,Array,or String窗口，窗口默认选中Variable标签。
+
+2）在左侧的Variable Name中，输入BurnDuration；在Variable Value中，输入0。点击右侧箭头，则创建了BurnDuration变量。点击Close关闭窗口。
+
+[![图片6](http://kongqia.com/wp-content/uploads/2016/02/图片6-595x235.png)](http://kongqia.com/wp-content/uploads/2016/02/图片6.png)
+
+图6 创建变量BurnDuration
+
+3）为了确保正确创建了该变量，双击BurnDuration，查看其属性。
+
+[![图片7](http://kongqia.com/wp-content/uploads/2016/02/图片7.png)](http://kongqia.com/wp-content/uploads/2016/02/图片7.png)
+
+图7 查看BurnDuration属性
+
+
+# **3 ****配置任务序列**
+
+
+## **3.1 ****配置初始预报器命令**
+
+1）选中左侧窗口的任务标签，打开任务树。
+
+2）将Propagate1参数设为DefaultSC.Earth.Periapsis。
+
+3）将Propagate1重命名为Prop To Perigee。
+
+
+## **3.2 ****创建目标序列**
+
+1）在任务列树中，右键Prop To Perigee->Insert After->Target，将产生两个独立命令：Target1和EndTarget1。
+
+2）将Target1重命名为Raise Apogee。
+
+3）右键Raise Apogee->Append->Vary，重命名为Vary Burn Duration。
+
+4）在Vary Burn Duration后面添加BeginFiniteBurn，重命名为Turn Thruster On。
+
+5）在Turn Thruster On后面添加Propagate，重命名为Prop BurnDuration。
+
+6）在Prop BurnDuration后面添加EndFiniteBurn，重命名为Turn Thruster Off。
+
+7）在Turn Thruster Off后面添加Propagate，重命名为Prop To Apogee。
+
+8）在Prop To Apogee后添加Achieve，重命名为Achieve Apogee Radius = 12000。
+
+9）完成上述操作后，任务序列如图8所示。
+
+[![图片8](http://kongqia.com/wp-content/uploads/2016/02/图片8.png)](http://kongqia.com/wp-content/uploads/2016/02/图片8.png)
+
+图8 创建目标序列
+
+
+## **3.3 ****配置目标序列**
+
+### **3.3.1 ****配置Raise Apogee命令**
+
+1）双击Raise Apogee，打开属性编辑页。
+
+2）在ExitMode下拉列表中，选择SaveAndContinue。这个操作会通知GMAT在运行后，保存该问题的最终解决方案。
+
+3）点击OK保存以上修改。
+
+[![图片9](http://kongqia.com/wp-content/uploads/2016/02/图片9.png)](http://kongqia.com/wp-content/uploads/2016/02/图片9.png)
+
+图9 Raise Apogee命令配置
+
+### **3.3.2 ****配置Burn Duration命令**
+
+1）双击Vary Burn Duration，打开属性编辑页。通过该页，调整（或修改）之前创建的代表有限燃料持续时间的的变量——BurnDuration。点击编辑按钮，打开ParameterSelectDialog。运用ObjectType菜单选择Variable对象类型。ObjectList菜单会相应的显示用户定义的变量。双击BurnDuration，BurnDuration会显示在SelectedValue(s)菜单中。点击OK保存设置并返回到Vary Burn Duration属性编辑页。
+
+2）在Initial Value框中，填写200。
+
+3）在Upper框中，填写10000。
+
+4）在Max Step框中，填写100。
+
+5）点击OK保存以上修改。
+
+[![图片10](http://kongqia.com/wp-content/uploads/2016/02/图片10.png)](http://kongqia.com/wp-content/uploads/2016/02/图片10.png)
+
+图10 Vary Burn Duration命令配置
+
+### **3.3.3 ****配置Turn Thruster On命令**
+
+1）双击Turn Thruster On，打开属性编辑页。发现该命令已经设置为将FiniteBurn1应用于DefaultSC飞行器，因此不需要作任何修改。
+
+2）点击OK保存设置。
+
+### **3.3.4 ****配置Prop BurnDuration命令**
+
+1）双击Prop BurnDuration，打开属性编辑页。
+
+2）使用默认Parameter值DefaultSC.ElapsedSecs。
+
+3）在Condition下方，将默认值替换为变量BurnDuration。
+
+4）点击OK保存以上修改。
+
+[![图片11](http://kongqia.com/wp-content/uploads/2016/02/图片11.png)](http://kongqia.com/wp-content/uploads/2016/02/图片11.png)
+
+图11 Prop BurnDuration命令配置
+
+### **3.3.5****配置Turn Thruster Off命令**
+
+1）双击Turn Thruster Off，打开属性编辑页。发现该命令已经设置为将FiniteBurn1应用于DefaultSC飞行器，因此不需要作任何修改。
+
+2）点击OK保存设置。
+
+[![图片12](http://kongqia.com/wp-content/uploads/2016/02/图片12.png)](http://kongqia.com/wp-content/uploads/2016/02/图片12.png)
+
+图12 Turn Thruster Off命令配置
+
+### **3.3.6 ****配置Prop To Apogee命令**
+
+1）双击Prop to Apogee，打开属性编辑页。
+
+2）在Parameter下方，将DefaultSC.ElapsedSecs替换为DefaultSC.Earth.Apoapsis。
+
+3）点击OK保存设置。
+
+[![图片13](http://kongqia.com/wp-content/uploads/2016/02/图片13.png)](http://kongqia.com/wp-content/uploads/2016/02/图片13.png)
+
+图13 Prop To Apogee命令配置
+
+### **3.3.7 ****配置Achieve Apogee Radius = 12000命令**
+
+1）双击Achieve Apogee Radius = 12000，打开属性编辑页。
+
+2）发现Goal已设置为DefaultSC.Earth.RMAG，这正是我们所需要的，因此不作修改。
+
+3）在数值框，键入12000。
+
+4）点击OK保存设置。
+
+[![图片14](http://kongqia.com/wp-content/uploads/2016/02/图片14.png)](http://kongqia.com/wp-content/uploads/2016/02/图片14.png)
+
+图14 Achieve Apogee Radius命令配置
+
+
+# **4 ****运行任务**
+
+运行任务之前，点击保存。任务运行结果如下图所示。
+
+[![图片15](http://kongqia.com/wp-content/uploads/2016/02/图片15-595x325.png)](http://kongqia.com/wp-content/uploads/2016/02/图片15.png)
+
+图15 有限燃料升高远地点3D展示
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [Gmat说明-运用有限燃料升高远地点](http://kongqia.com/33673.html)
+
+

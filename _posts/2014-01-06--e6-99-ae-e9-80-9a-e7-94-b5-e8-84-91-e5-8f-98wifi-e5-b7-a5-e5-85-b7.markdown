@@ -1,0 +1,17 @@
+---
+layout: post
+title: 普通电脑变WiFi工具
+date: 2014-01-06 00:56:54.000000000 +08:00
+---
+
+这个这个小工具可以让普通电脑创建一个免费WiFi；
+
+[![wifi 工具](http://kongqia.com/wp-content/uploads/2014/01/wifisadfasfjk1.jpg)](http://kongqia.com/wp-content/uploads/2014/01/wifisadfasfjk1.jpg)
+
+工具下载地址：
+
+[http://pan.baidu.com/s/1jGG61ZC](http://pan.baidu.com/s/1jGG61ZC "WiFi工具")
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [普通电脑变WiFi工具](http://kongqia.com/33095.html)
+
+

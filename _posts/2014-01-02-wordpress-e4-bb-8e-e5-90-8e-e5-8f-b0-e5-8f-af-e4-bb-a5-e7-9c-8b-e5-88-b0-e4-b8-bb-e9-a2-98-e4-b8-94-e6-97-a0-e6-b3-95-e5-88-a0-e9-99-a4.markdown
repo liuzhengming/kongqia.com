@@ -1,0 +1,33 @@
+---
+layout: post
+title: wordpress从后台可以看到主题但无法删除
+date: 2014-01-02 04:27:57.000000000 +08:00
+---
+
+[![wordpress](http://kongqia.com/wp-content/uploads/2014/01/wordpress.jpg)](http://kongqia.com/wp-content/uploads/2014/01/wordpress.jpg)
+
+最近想换个主题，就在网上搜了一圈，试用了几个；
+
+最后导致有个主题无法删除，通过FTP查看Themes下却看不到该主题文件，很是苦恼；
+
+查了资料也没有找到类似的问题，要不就这么放着吧。
+
+今天新年第一天，起来就不管了，直接出去玩了一趟，回来7点多，心里还是有个坎，必须有解决了他。
+
+就用了一个最笨的方法，把网站所有内容都下载到了本地，查看了下themes下的文件，发现真的有个文件夹，就是之前删除不掉的那个主题；顿时欣喜。
+
+解决办法：
+
+1. 删除服务器上的themes文件夹
+
+2. 删除本地themes下的那个没用的主题
+
+3. 再将themes文件夹上传至wp-content文件夹下
+
+再登陆后台查看，删除不掉的主题没有了。深深的叹了一口气。
+
+嘘 … …
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [wordpress从后台可以看到主题但无法删除](http://kongqia.com/32133.html)
+
+

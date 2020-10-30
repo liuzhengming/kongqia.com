@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>canvas的 width、height 与style中宽高的区别</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">canvas的 width、height 与style中宽高的区别</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2018-03-08">08 March 2018</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>关于HTML5中Canvas的宽、高设置问题</p>
+<h1 id="canvas元素默认宽-300px-高-150px-设置其宽高可以使用如下方法不会被拉伸">Canvas元素默认宽 300px, 高 150px, 设置其宽高可以使用如下方法(不会被拉伸)：</h1>
+<h3 id="方法一">方法一：</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>   &lt;canvas width="500" height="500"&gt;&lt;/canvas&gt; ### 方法二：使用HTML5 Canvas API操作 OK
+   var canvas = document.getElementById('欲操作canvas的id');
+   canvas.width = 500;
+   canvas.width = 500; # 若通过如下方法设置宽高，那么Canvas元素将由原来大小被拉伸到所设置的宽高： ### 方法一：使用CSS 会被拉伸
+ #欲操作canvas的id｛
+      width:1000px;
+      height:1000px;
+ ｝ ### 方法二：使用HTML5 Canvas API操作 会被拉伸
+  var canvas = document.getElementById('欲操作canvas的id');
+  canvas.style.width = "1000px";
+  canvas.style.height = "1000px"; ### 方法三 ：用jquery的$("#id").width(500);会被拉伸 # 其它：canvas的width和height也不能用百分比表示。canvas会将百分值当成数值显示
+</code></pre>
+</div>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=canvas%E7%9A%84%20width%E3%80%81height%20%E4%B8%8Estyle%E4%B8%AD%E5%AE%BD%E9%AB%98%E7%9A%84%E5%8C%BA%E5%88%AB&amp;url=/2018/03/08/canvasde-width-height-yu-stylezhong-kuan-gao-de-qu-bie.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/08/canvasde-width-height-yu-stylezhong-kuan-gao-de-qu-bie.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2018/03/08/canvasde-width-height-yu-stylezhong-kuan-gao-de-qu-bie.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2018/03/16/vuejia-zai-wan-cheng-zhi-qian-ye-mian-shan-shuo.html">
+        <section class="post">
+            <h2>Vue加载完成之前页面闪烁</h2>
+            <p>在需要元素加上：
+&lt;div v-cloak&gt;  
+      
+&lt;/div&gt; 
+
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2018/03/02/yong-chun-cssgai-bian-xia-la-lie-biao-selectkuang-de-mo-ren-yang-shi.html">
+        <section class="post">
+            <h2>纯css改变select的样式</h2>
+            <p>原理是将浏览器默认的下拉框样式清除，然后应用上自己的，再附一张向右对齐小箭头的图片即可。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

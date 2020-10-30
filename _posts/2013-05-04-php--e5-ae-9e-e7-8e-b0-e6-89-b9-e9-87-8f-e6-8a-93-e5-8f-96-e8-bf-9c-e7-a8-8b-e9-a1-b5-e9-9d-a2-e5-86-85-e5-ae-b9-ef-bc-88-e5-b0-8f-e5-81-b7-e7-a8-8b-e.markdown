@@ -1,0 +1,66 @@
+---
+layout: post
+title: PHP 实现批量抓取远程页面内容（小偷程序）
+date: 2013-05-04 19:22:38.000000000 +08:00
+---
+
+> **为什么使用“小偷程序”？**
+> 
+> 远程抓取文章资讯或商品信息是很多企业要求程序员实现的功能，也就是俗说的**小偷程序**。其最主要的优点是：解决了公司网编繁重的工作，大大提高了效率。只需要一运行就能快速的抓取别人网站的信息。**  
+> **
+> 
+> **“小偷程序”在哪里运行？**
+> 
+> “小偷程序” 应该在 Windows 下的 DOS（参考文章：http://blog.csdn.net/liruxing1715/article/detai[ls](http://www.linuxso.com/command/ls.html)/7079488） 或 Linux 下通过 PHP [命令](http://www.linuxso.com/command/)运行为最佳，因为，网页运行会超时。
+> 
+> 比如图（Windows 下 DOS 为例）：
+> 
+> **“小偷程序”****的实现**
+> 
+> 这里主要通过一个实例来讲解，我们来抓取下“华强电子网”的资讯信息，请先看观察这个链接 http://www.hqew.com/info-c10.html，当您打开这个页面的时候发现这个页面会发现一些现象：
+> 
+> 1、资讯列表有 500 页（2012-01-03）；
+> 
+> 2、每页的 url 链接都有规律，比如：第1页为http://www.hqew.com/info-c10-1.html；第2页为http: //www.hqew.com/info-c10-2.html；……第500页为http://www.hqew.com/info- c10-500.html；
+> 
+> 3、由第二点就可以知道，“华强电子网” 的资讯是伪静态或者是生成的静态页面
+> 
+> 其实，基本上大部分的网站都有这样的规律，比如：中关村在线、慧聪网、新浪、淘宝……。
+> 
+> 这样，我们可以通过这样的思路来实现页面内容的抓取：
+> 
+> 1、先获取文章列表页内容；
+> 
+> 2、根据文章列表页内容循环获取文章的 url 地址；
+> 
+> 3、根据文章的 url 地址获取文章的详细内容
+> 
+> 这里，我们主要抓取资讯页里面的：标题（title）、发布如期（[date](http://www.linuxso.com/command/date.html)）、作者（author）、来源（source）、内容（content）
+> 
+> **“华强电子网”****资讯抓取**
+> 
+> 首先，先建数据表结构，如下所示：
+> 
+> > CREATE TABLE `article`.`article` ( `[id](http://www.linuxso.com/command/id.html)` MEDIUMINT( 8 ) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , `title` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `date` VARCHAR( 50 ) NOT NULL , `author` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `source` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `content` TEXT NOT NULL ) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci;
+> 
+> 抓取程序：
+
+> <?php /** * 抓取“华强电子网”资讯程序 * author Lee. * Last modify $Date: 2012-1-3 15:39:35 $ */ header('Content-Type:t[ex](http://www.linuxso.com/command/ex.html)t/html;Char[set](http://www.linuxso.com/command/set.html)=utf-8'); $mysqli = new mysqli('localhost', 'root', '1715544', 'article'); # 数据库连接，请手动修改您自己的数据库信息 $mysqli->set_charset('UTF8'); # 设置数据库编码 fu[nc](http://www.linuxso.com/command/nc.html)tion data($url) { global $mysqli; $re[su](http://www.linuxso.com/command/su.html)lt = [file](http://www.linuxso.com/command/file.html)_get_contents($url); # $result 获取 url 链接内容（注意：这里是文章列表链接） $pattern = '/<li><span>.+</span><a href="([^"]+)" title=".+" >.+</a></li>/Usi'; # 取得文章 url 的匹配[正则](http://www.linuxso.com/book/11723.html) preg_match_all($pattern, $result, $arr); # 把文章列表 url 分配给数组$arr(二维数组) foreach ($arr[1] as $val) { $val = 'http://www.hqew.com' . $val; # 真实文章 url 地址 $re = file_get_contents($val); # $re 为文章 url 的内容 $pa = '/<div id="article">s+<h1>(.+)</h1>s+<p id="article_extinfo">s+发布:s+(.+)s+|s+作者:s+(.+)s+|s+来源:s+(.*?)s+<span style="display:none" >.+<div id="article_body">s*(.+)s+</div>s+</div><!--article end-->/Usi'; # 取得文章内容的正则 preg_match_all($pa, $re, $array); # 把取到的内容分配到数组 $array $content = [tr](http://www.linuxso.com/command/tr.html)im($array[5][0]); $con = array( 'title'=>mysqlString($array[1][0]), 'date'=>mysqlString($array[2][0]), 'author'=>mysqlString(stripAuthorTag($array[3][0])), 'source'=>mysqlString($array[4][0]), 'content'=>mysqlString(stripContentTag($content)) ); $sql = "INSERT INTO article(title,date,author,source,content) VALUES ('{$con['title']}','{$con['date']}','{$con['author']}','{$con['source']}','{$con['content']}')"; $row = $mysqli->query($sql); # 添加到数据库 if ($row) { echo 'a[dd](http://www.linuxso.com/command/dd.html) success!'; } else { echo 'add failed!'; } } } /** * stripOfficeTag($v) 对文章内容进行过滤，比如：去掉文章中的链接，过滤掉没有的 HTML 标签…… * @param string $v * @return string */ function stripContentTag($v){ $v = str_replace('<p> </p>', '', $v); $v = str_replace('<p />', '', $v); $v = preg_replace('/<a href=".+" target="_blank"><strong>(.+)</strong></a>/Usi', '1', $v); $v = preg_replace('%(<spans*[^>]*>(.*)</span>)%Usi', '2', $v); $v = preg_replace('%(s+class="Mso[^"]+")%si', '', $v); $v = preg_replace('%( style="[^"]*mso[^>]*)%si', '', $v); $v = preg_replace('/<b></b>/', '', $v); return $v; } /** * stripTitleTag($title) 对文章标题进行过滤 * @param string $v * @return string */ function stripAuthorTag($v) { $v = preg_replace('/<a href=".+" target="_blank">(.+)</a>/Usi', '1', $v); return $v; } /** * mysqlString($str) 过滤数据 * @param string $str * @return string */ function mysqlString($str) { return addslashes(trim($str)); } /** * init($min, $max) 入口程序方法，从 $min 页开始取，到 $max 页结束 * @param int $min 从 1 开始 * @param int $max * @return string 返回 URL 地址 */ function init($min=1, $max) { for ($i=$min; $i<=$max; $i++) { data("http://www.hqew.com/info-c10-{$i}.html"); } } init(1, 500); #程序入口 ?>
+
+> 通过上面的程序，就可以实现抓取华强电子网的资讯信息。
+> 
+> 入口方法 init($min, $max) 如果想抓取 1-500 页面内容，那么 init(1, 500) 即可！这样，用不了多长时间，华强电子网的资讯就会全部抓取到数据库里面了。^_^
+> 
+> 执行界面：
+> 
+>  
+> 
+> 数据库：
+> 
+>  
+
+http://www.linuxso.com/linuxbiancheng/15807.html
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [PHP 实现批量抓取远程页面内容（小偷程序）](http://kongqia.com/1813.html)
+
+

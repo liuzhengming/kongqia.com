@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Javascript面向对象编程（二）：构造函数的继承</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Javascript面向对象编程（二）：构造函数的继承</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-24">24 August 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>这个系列的<a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html">第一部分</a>，主要介绍了如何”封装”数据和方法，以及如何从原型对象生成实例。</p>
+
+<p>今天要介绍的是，对象之间的”继承”的五种方法。</p>
+
+<p>比如，现在有一个”动物”对象的构造函数。</p>
+
+<blockquote>
+  <p>function Animal(){</p>
+
+  <p>this.species = “动物”;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>还有一个”猫”对象的构造函数。</p>
+
+<blockquote>
+  <p>function Cat(name,color){</p>
+
+  <p>this.name = name;</p>
+
+  <p>this.color = color;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>怎样才能使”猫”继承”动物”呢？</p>
+
+<p>一、 构造函数绑定</p>
+
+<p>第一种方法也是最简单的方法，使用call或apply方法，将父对象的构造函数绑定在子对象上，即在子对象构造函数中加一行：</p>
+
+<blockquote>
+  <p>　　function Cat(name,color){</p>
+
+  <p>Animal.apply(this, arguments);</p>
+
+  <p>this.name = name;</p>
+
+  <p>this.color = color;</p>
+
+  <p>}</p>
+
+  <p>var cat1 = new Cat(“大毛”,”黄色”);</p>
+
+  <p>alert(cat1.species); // 动物</p>
+</blockquote>
+
+<p>二、 prototype模式</p>
+
+<p>第二种方法更常见，使用prototype属性。</p>
+
+<p>如果”猫”的prototype对象，指向一个Animal的实例，那么所有”猫”的实例，就能继承Animal了。</p>
+
+<blockquote>
+  <p>　　Cat.prototype = new Animal();</p>
+
+  <p>Cat.prototype.constructor = Cat;</p>
+
+  <p>var cat1 = new Cat(“大毛”,”黄色”);</p>
+
+  <p>alert(cat1.species); // 动物</p>
+</blockquote>
+
+<p>代码的第一行，我们将Cat的prototype对象指向一个Animal的实例。</p>
+
+<blockquote>
+  <p>　　Cat.prototype = new Animal();</p>
+</blockquote>
+
+<p>它相当于完全删除了prototype 对象原先的值，然后赋予一个新值。但是，第二行又是什么意思呢？</p>
+
+<blockquote>
+  <p>　　Cat.prototype.constructor = Cat;</p>
+</blockquote>
+
+<p>原来，任何一个prototype对象都有一个constructor属性，指向它的构造函数。如果没有”Cat.prototype = new Animal();”这一行，Cat.prototype.constructor是指向Cat的；加了这一行以后，Cat.prototype.constructor指向Animal。</p>
+
+<blockquote>
+  <p>　　alert(Cat.prototype.constructor == Animal); //true</p>
+</blockquote>
+
+<p>更重要的是，每一个实例也有一个constructor属性，默认调用prototype对象的constructor属性。</p>
+
+<blockquote>
+  <p>　　alert(cat1.constructor == Cat.prototype.constructor); // true</p>
+</blockquote>
+
+<p>因此，在运行”Cat.prototype = new Animal();”这一行之后，cat1.constructor也指向Animal！</p>
+
+<blockquote>
+  <p>　　alert(cat1.constructor == Animal); // true</p>
+</blockquote>
+
+<p>这显然会导致继承链的紊乱（cat1明明是用构造函数Cat生成的），因此我们必须手动纠正，将Cat.prototype对象的constructor值改为Cat。这就是第二行的意思。</p>
+
+<p>这是很重要的一点，编程时务必要遵守。下文都遵循这一点，即如果替换了prototype对象，</p>
+
+<blockquote>
+  <p>　　o.prototype = {};</p>
+</blockquote>
+
+<p>那么，下一步必然是为新的prototype对象加上constructor属性，并将这个属性指回原来的构造函数。</p>
+
+<blockquote>
+  <p>　　o.prototype.constructor = o;</p>
+</blockquote>
+
+<p>三、 直接继承prototype</p>
+
+<p>第三种方法是对第二种方法的改进。由于Animal对象中，不变的属性都可以直接写入Animal.prototype。所以，我们也可以让Cat()跳过 Animal()，直接继承Animal.prototype。</p>
+
+<p>现在，我们先将Animal对象改写：</p>
+
+<blockquote>
+  <p>　　function Animal(){ }</p>
+
+  <p>Animal.prototype.species = “动物”;</p>
+</blockquote>
+
+<p>然后，将Cat的prototype对象，然后指向Animal的prototype对象，这样就完成了继承。</p>
+
+<blockquote>
+  <p>　　Cat.prototype = Animal.prototype;</p>
+
+  <p>Cat.prototype.constructor = Cat;</p>
+
+  <p>var cat1 = new Cat(“大毛”,”黄色”);</p>
+
+  <p>alert(cat1.species); // 动物</p>
+</blockquote>
+
+<p>与前一种方法相比，这样做的优点是效率比较高（不用执行和建立Animal的实例了），比较省内存。缺点是 Cat.prototype和Animal.prototype现在指向了同一个对象，那么任何对Cat.prototype的修改，都会反映到Animal.prototype。</p>
+
+<p>所以，上面这一段代码其实是有问题的。请看第二行</p>
+
+<blockquote>
+  <p>　　Cat.prototype.constructor = Cat;</p>
+</blockquote>
+
+<p>这一句实际上把Animal.prototype对象的constructor属性也改掉了！</p>
+
+<blockquote>
+  <p>　　alert(Animal.prototype.constructor); // Cat</p>
+</blockquote>
+
+<p>四、 利用空对象作为中介</p>
+
+<p>由于”直接继承prototype”存在上述的缺点，所以就有第四种方法，利用一个空对象作为中介。</p>
+
+<blockquote>
+  <p>　　var F = function(){};</p>
+
+  <p>F.prototype = Animal.prototype;</p>
+
+  <p>Cat.prototype = new F();</p>
+
+  <p>Cat.prototype.constructor = Cat;</p>
+</blockquote>
+
+<p>F是空对象，所以几乎不占内存。这时，修改Cat的prototype对象，就不会影响到Animal的prototype对象。</p>
+
+<blockquote>
+  <p>　　alert(Animal.prototype.constructor); // Animal</p>
+</blockquote>
+
+<p>我们将上面的方法，封装成一个函数，便于使用。</p>
+
+<blockquote>
+  <p>　　function extend(Child, Parent) {</p>
+
+  <p>var F = function(){};</p>
+
+  <p>F.prototype = Parent.prototype;</p>
+
+  <p>Child.prototype = new F();</p>
+
+  <p>Child.prototype.constructor = Child;</p>
+
+  <p>Child.uber = Parent.prototype;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>使用的时候，方法如下</p>
+
+<blockquote>
+  <p>　　extend(Cat,Animal);</p>
+
+  <p>var cat1 = new Cat(“大毛”,”黄色”);</p>
+
+  <p>alert(cat1.species); // 动物</p>
+</blockquote>
+
+<p>这个extend函数，就是YUI库如何实现继承的方法。</p>
+
+<p>另外，说明一点，函数体最后一行</p>
+
+<blockquote>
+  <p>　　Child.uber = Parent.prototype;</p>
+</blockquote>
+
+<p>意思是为子对象设一个uber属性，这个属性直接指向父对象的prototype属性。（uber是一个德语词，意思是”向上”、”上一层”。）这等于在子对象上打开一条通道，可以直接调用父对象的方法。这一行放在这里，只是为了实现继承的完备性，纯属备用性质。</p>
+
+<p>五、 拷贝继承</p>
+
+<p>上面是采用prototype对象，实现继承。我们也可以换一种思路，纯粹采用”拷贝”方法实现继承。简单说，如果把父对象的所有属性和方法，拷贝进子对象，不也能够实现继承吗？这样我们就有了第五种方法。</p>
+
+<p>首先，还是把Animal的所有不变属性，都放到它的prototype对象上。</p>
+
+<blockquote>
+  <p>　　function Animal(){}</p>
+
+  <p>Animal.prototype.species = “动物”;</p>
+</blockquote>
+
+<p>然后，再写一个函数，实现属性拷贝的目的。</p>
+
+<blockquote>
+  <p>　　function extend2(Child, Parent) {</p>
+
+  <p>var p = Parent.prototype;</p>
+
+  <p>var c = Child.prototype;</p>
+
+  <p>for (var i in p) {</p>
+
+  <p>c[i] = p[i];</p>
+
+  <p>}</p>
+
+  <p>c.uber = p;</p>
+
+  <p>}</p>
+</blockquote>
+
+<p>这个函数的作用，就是将父对象的prototype对象中的属性，一一拷贝给Child对象的prototype对象。</p>
+
+<p>使用的时候，这样写：</p>
+
+<blockquote>
+  <p>　　extend2(Cat, Animal);</p>
+
+  <p>var cat1 = new Cat(“大毛”,”黄色”);</p>
+
+  <p>alert(cat1.species); // 动物</p>
+</blockquote>
+
+<p>（本系列未完，请继续阅读第三部分《非构造函数的继承》。）</p>
+
+<p>转至：http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33726.html">Javascript面向对象编程（二）：构造函数的继承</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B(%E4%BA%8C):%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E7%BB%A7%E6%89%BF&amp;url=/2016/08/24/javascript-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e7-bc-96-e7-a8-8b-ef-bc-88-e4-ba-8c-ef-bc-89-ef-bc-9a-e6-9e-84-e9-80-a0-e5-87-bd-e6-95-b0-e7-9a-84-e7-b.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/24/javascript-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e7-bc-96-e7-a8-8b-ef-bc-88-e4-ba-8c-ef-bc-89-ef-bc-9a-e6-9e-84-e9-80-a0-e5-87-bd-e6-95-b0-e7-9a-84-e7-b.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2016/08/24/javascript-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e7-bc-96-e7-a8-8b-ef-bc-88-e4-ba-8c-ef-bc-89-ef-bc-9a-e6-9e-84-e9-80-a0-e5-87-bd-e6-95-b0-e7-9a-84-e7-b.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2016/08/24/javascript-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e7-bc-96-e7-a8-8b-ef-bc-88-e4-b8-89-ef-bc-89-ef-bc-9a-e9-9d-9e-e6-9e-84-e9-80-a0-e5-87-bd-e6-95-b0-e7-9.html">
+        <section class="post">
+            <h2>Javascript面向对象编程（三）：非构造函数的继承</h2>
+            <p>这个系列的第一部分介绍了”封装”，第二部分介绍了使用构造函数实现”继承”。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2016/08/24/javascript-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e7-bc-96-e7-a8-8b-ef-bc-88-e4-b8-80-ef-bc-89-ef-bc-9a-e5-b0-81-e8-a3-85.html">
+        <section class="post">
+            <h2>Javascript 面向对象编程（一）：封装</h2>
+            <p>作者：阮一峰
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

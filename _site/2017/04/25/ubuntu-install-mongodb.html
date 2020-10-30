@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Ubuntu 上安装 MongoDB</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Ubuntu 上安装 MongoDB</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-04-25">25 April 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>运行下列命令，导入 MongoDB 公开 GPG 键：</p>
+
+<p><code class="highlighter-rouge">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10</code></p>
+
+<p>使用下列命令，创建一个/etc/apt/sources.list.d/mongodb.list 文件。</p>
+
+<p><code class="highlighter-rouge">echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list</code></p>
+
+<p>运行下列命令，更新存储库：</p>
+
+<p><code class="highlighter-rouge">sudo apt-get update</code></p>
+
+<p>然后利用下列命令安装 MongoDB：</p>
+
+<p><code class="highlighter-rouge">apt-get install mongodb-10gen=2.2.3</code></p>
+
+<p>在上面的命令中，安装的 2.2.3 版本正是 MongoDB 的当前版本。记住一定要及时更新至最新的版本。至此，MongoDB 的安装就成功了。</p>
+
+<p>启动 MongoDB：</p>
+
+<p><code class="highlighter-rouge">sudo service mongodb start</code></p>
+
+<p>停止 MongoDB：</p>
+
+<p><code class="highlighter-rouge">sudo service mongodb stop</code></p>
+
+<p>重启 MongoDB：</p>
+
+<p><code class="highlighter-rouge">sudo service mongodb restart</code></p>
+
+<p>使用 mongodb 时，输入下列命令即可：</p>
+
+<p><code class="highlighter-rouge">mongo</code></p>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Ubuntu%20%E4%B8%8A%E5%AE%89%E8%A3%85%20MongoDB&amp;url=/2017/04/25/ubuntu-install-mongodb.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2017/04/25/ubuntu-install-mongodb.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2017/04/25/ubuntu-install-mongodb.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2017/07/04/aliyunvpn.html">
+        <section class="post">
+            <h2>阿里云服务器配置VPN</h2>
+            <p>阿里云服务器配置详解（测试成功） 
+操作环境：阿里云香港节点云服务器，操作系统：CentOS 6.3 64位 
+名词解释：pptp是VPN服务器类型之一，PPP是一种数据链路层协议，iptables是IP信息包过滤系统。
+
+1 服务器端安装软件
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2017/04/20/welcome-to-jekyll.html">
+        <section class="post">
+            <h2>Welcome to Jekyll!</h2>
+            <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see...&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>iOS发布证书申请</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">iOS发布证书申请</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-09-11">11 September 2014</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h2 id="概述">概述</h2>
+
+<p>由于苹果的机制，在非越狱机器上安装应用必须通过官方的Appstore，开发者开发好应用后上传Appstore，也需要通过审核等环节。AppCan不仅能实现跨平台开发，也支持上传ipa包至Appstore。本文从三个流程来介绍如何通过AppCan在线编译出ipa包并上传至苹果Appstore。</p>
+
+<h2 id="一事前准备">一．事前准备</h2>
+
+<h3 id="11-准备苹果帐号">1.1 准备苹果帐号</h3>
+
+<p>首先您需要有一个苹果的开发者帐号，一个mac系统。如果没有帐号可以打开http://developer.apple.com/申请加入苹果的开发者计划。如何申请网上有详细的介绍，在此不多做介绍。</p>
+
+<p>如果您已经有了一个帐号，打开http://developer.apple.com/并登录到苹果，见下图:</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_01.png" alt="" /></p>
+
+<h3 id="12-进入证书申请界面">1.2 进入证书申请界面</h3>
+
+<p>登录以后可以看到下面这个功能界面，列出了您开发需要的一些工具、支持、itunes app管理等内容。选择第二项:Certificates,ldentifiers&amp;Profiles进入，所有证书相关的都在这里进行：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_02.png" alt="" /></p>
+
+<h3 id="13-申请请求文件">1.3 申请请求文件</h3>
+
+<h4 id="131-钥匙串程序申请请求文件">1.3.1 钥匙串程序申请请求文件</h4>
+
+<p>申请发布证书前，您需要先本地创建一个证书请求文件，截图是一个mac系统。首先打开“应用程序”-&gt;“实用工具”-&gt;“钥匙串访问（KEY CHAIN）”,在证书助理中，选择“从证书颁发机构请求证书”：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_03.png" alt="" /></p>
+
+<h4 id="132-保存请求文件设置">1.3.2 保存请求文件设置</h4>
+
+<p>在下图所示的界面，用户电子邮件地址：填您申请帐号的电子邮件地址、常用名称（默认即可），CA空着，选择存储到磁盘，点击“继续”：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_04.png" alt="" /></p>
+
+<h4 id="133-保存请求文件名称和位置">1.3.3 保存请求文件名称和位置</h4>
+
+<p>选择保存的位置，比如选择桌面。下一步点击完成，您就可以看到您的桌面多了一个CertificateSigningRequest.certSigningRequest的证书请求文件。此文件申请推送证书时需要用到，请注意保存。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_05.png" alt="" /></p>
+
+<h2 id="二申请ios发布证书">二．申请iOS发布证书</h2>
+
+<h3 id="21-进入申请页面">2.1 进入申请页面</h3>
+
+<p>继续登录到您的Member Center,选择左边的certificates项，点击All。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_06.png" alt="" /></p>
+
+<h3 id="22-选择申请证书类型">2.2 选择申请证书类型</h3>
+
+<p>点击加号申请新证书，AppCan云端打包需要上传的是发布证书，在这里我们跳过Development开发证书，选择Production发布证书，点击In-House and Ad Hoc进入下一步。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_07.png" alt="" /></p>
+
+<h3 id="23-申请注意事项">2.3 申请注意事项</h3>
+
+<p>进入Request,点击continue。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_08.png" alt="" /></p>
+
+<h3 id="24-添加证书请求文件">2.4 添加证书请求文件</h3>
+
+<p>进入下一步Generate,点击下面的’Choose File’，选择本地创建的证书请求文件,点击Generate。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_09.png" alt="" /></p>
+
+<h3 id="25-下载发布证书">2.5 下载发布证书</h3>
+
+<p>现在您有一个证书可以下载了，如下图。（不能下载请刷新页面）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_10.png" alt="" /></p>
+
+<h2 id="三申请ios应用appid">三．申请iOS应用appid</h2>
+
+<h3 id="31-进入申请界面">3.1 进入申请界面</h3>
+
+<p>在下图的左边选择 App IDs，点击右上角加号按钮，开始申请一个新的AppId。对于要发布到Appstore上的程序，都有一个唯一的AppId。</p>
+
+<p>下面会列出您当前所有的AppId：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_11.png" alt="" /></p>
+
+<h3 id="32-填写appid标签">3.2 填写appid标签</h3>
+
+<p>App ID Description，用来描述您的appid。（注意，必须输入英文）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_12.png" alt="" /></p>
+
+<h3 id="33-生成appid">3.3 生成appid</h3>
+
+<p>输入Bundle ID(App ID Suffix)：这是您appid的后缀，这个需要仔细命名，因为这个内容和您的程序直接相关，后面很多地方要用到，最好是 com.yourcompany.yourappname的格式。当然对于没有公司名的个人开发者，第二项可以用您自己的英文名字或者拼音。</p>
+
+<p>AppCan.cn在线ipa包编译时需要填写的iapp IDs就是您在此输入的内容：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_13.png" alt="" /></p>
+
+<h3 id="34-查看生成appid">3.4 查看生成appid</h3>
+
+<p>下图可以看见已经生成的appid。想要支持推送服务和iCould等也可以在这儿配置：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_14.png" alt="" /></p>
+
+<h2 id="四申请ios应用推送证书">四．申请iOS应用推送证书</h2>
+
+<h3 id="41-进入申请界面">4.1 进入申请界面</h3>
+
+<p>在App IDs选项下，选择已经创建好的App ID，点击下方的Edit按钮。（注意，如果不要推送功能请跳过这一步）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_15.png" alt="" /></p>
+
+<h3 id="42-开始申请">4.2 开始申请</h3>
+
+<p>输入Name，点击iCloud图标右侧的单选按钮，添加云功能。点击Push Notificotions图标右侧单选按钮，申请发布版的推送功能，点击Production SSL Certificate下方的 Create Certificate按钮。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_16.png" alt="" /></p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_17.png" alt="" /></p>
+
+<h3 id="43-申请注意事项">4.3 申请注意事项</h3>
+
+<p>依照提示点击Continue按钮。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_18.png" alt="" /></p>
+
+<h3 id="44-添加请求文件">4.4 添加请求文件</h3>
+
+<p>点击Choose File按钮，选择本地请求文件，点击Generate完成创建推送证书，进行下一步：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_19.png" alt="" /></p>
+
+<h3 id="45-下载推送证书">4.5 下载推送证书</h3>
+
+<p>点击Download按钮，下载生成的推送证书。（注意，证书为.cer扩展名）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_20.png" alt="" /></p>
+
+<h2 id="五申请ios应用的provisioning-profiles文件">五．申请iOS应用的Provisioning Profiles文件</h2>
+
+<h3 id="51-进入申请界面">5.1 进入申请界面</h3>
+
+<p>在下图左边选择provisioningProfiles下的All选项，点击加号按钮，申请Provisioning Profiles文件。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_21.png" alt="" /></p>
+
+<h3 id="52-选择申请类型">5.2 选择申请类型</h3>
+
+<p>Development作为开发使用，Distribution作为发布使用，以下都为发布证书的图例演示；选择In-House点击Continue按钮进入下一步。（注意，和发布证书类型保持一致。）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_22.png" alt="" /></p>
+
+<h3 id="53-选择申请文件对应app-id">5.3 选择申请文件对应App ID</h3>
+
+<p>点击下拉菜单，选择要申请的App ID，点击Continue按钮进入下一步。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_23.png" alt="" /></p>
+
+<h3 id="54-选择申请的发布证书">5.4 选择申请的发布证书</h3>
+
+<p>选择发布证书选项，点击Continue按钮进入下一步。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_24.png" alt="" /></p>
+
+<h3 id="55-保存provisioning-profiles文件标签">5.5 保存Provisioning Profiles文件标签</h3>
+
+<p>Profile Name填入描述文字，只能输入英文，点击Generate按钮创建provisioning文件。等待几秒钟，provisioning就可以下载了，点击download下载。得到了一个xxxxxx.mobileprovision文件，AppCan.cn在线ipa包编译时需要上传的distribution.mobileprovision就是您生成的文件。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_25.png" alt="" /></p>
+
+<h2 id="六ios证书导出">六．iOS证书导出</h2>
+
+<h3 id="61-证书导入到钥匙串程序中">6.1 证书导入到钥匙串程序中</h3>
+
+<p>点击“download”下载您生成的证书。下载完成后双击证书安装，或拖动到钥匙串访问窗口，就可以看到您申请的证书了。推送证书和发布证书都在列表中，在证书上单击右键，在弹出菜单上选择导出选项：</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_26.png" alt="" /></p>
+
+<h3 id="62-证书保存为p12为扩展名的文件">6.2 证书保存为.P12为扩展名的文件</h3>
+
+<p>给导出的证书起个名字，选择存储的位置。（注意，格式为P12的信息交换文件。）</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_27.png" alt="" /></p>
+
+<h3 id="63-p12文件添加密码">6.3 p12文件添加密码</h3>
+
+<p>给导出的P12文件设置密码，此密码在AppCan.cn平台上打包ipa文件时需要用到。</p>
+
+<p><img src="http://kongqia.com/wp-content/uploads/2014/09/ios_28.png" alt="" /></p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33521.html">iOS发布证书申请</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=iOS%E5%8F%91%E5%B8%83%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7&amp;url=/2014/09/11/ios-e5-8f-91-e5-b8-83-e8-af-81-e4-b9-a6-e7-94-b3-e8-af-b7.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2014/09/11/ios-e5-8f-91-e5-b8-83-e8-af-81-e4-b9-a6-e7-94-b3-e8-af-b7.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2014/09/11/ios-e5-8f-91-e5-b8-83-e8-af-81-e4-b9-a6-e7-94-b3-e8-af-b7.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2014/09/21/nodejs-e7-9a-84web-e6-a1-86-e6-9e-b6.html">
+        <section class="post">
+            <h2>NodeJS的Web框架</h2>
+            <p>在几年的时间里，Node.js逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用Node.js进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2014/09/09/e6-8a-ab-e7-9d-80-e8-99-8e-e7-9a-ae-e7-9a-84-e7-be-8a-ef-bc-8c-e9-9a-be-e9-97-ae-e9-a2-98-e7-9a-84-e4-bc-aa-e8-a3-85.html">
+        <section class="post">
+            <h2>披着虎皮的羊，难问题的伪装</h2>
+            <p>提姆．布朗 Tim Brown（全球十大创意公司 IDEO 创办人，《设计思考改变世界》作者）认为，设计思考就是像设计师一样思考，解决社会上的种种困难的问题，而这些问题本身通常不是很明确，而且没有一定的答案 （ill-defined problem），像是「如何把房间整理好？」或是「如何设计一个美好的用餐体验？」，这些问题没有一个标准答案，我们通常只能够试图的找到目前最好、最适合这个环境和用户的方式解决。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

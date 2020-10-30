@@ -1,0 +1,46 @@
+---
+layout: post
+title: 关于用户体验与产品价值
+date: 2013-07-14 08:12:25.000000000 +08:00
+---
+
+解释一下，这里说『<span class="wp_keywordlink_affiliate">[产品价值](http://www.woshipm.com/tag/%E4%BA%A7%E5%93%81%E4%BB%B7%E5%80%BC "查看 产品价值 中的全部文章")</span>』也许不准确，但是我没找到更合适的词，所以，将就一下，我具体会描述清楚。
+
+上午在折腾Mac下的虚拟机，烤了一个别人装好了的Win7系统，做简单的优化，卸载360的时候遇到一个界面。于是，我发了一条微博，并评价到『这是一个很牛逼的设计，值得学习』。看了一下微博的反馈，大家都觉得我是在黑360安全卫士，觉得这个设计很脑残或者体验很糟糕。
+
+实际上，我确实是觉得这是个很值得学习的，很牛逼的设计。
+
+[![](http://www.woshipm.com/wp-content/uploads/2013/07/112.jpg)](http://www.woshipm.com/wp-content/uploads/2013/07/112.jpg)
+
+360安全卫士的这个卸载<span class="wp_keywordlink_affiliate">[界面设计](http://www.woshipm.com/tag/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1 "界面设计")</span>，跟早前新浪微博每次更新新版本之后，提示用户发送一条微博，且把取消分享做的很不起眼是一个类型的设计。
+
+这2个设计，站在<span class="wp_keywordlink_affiliate">[产品经理](http://www.woshipm.com/tag/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86 "产品经理")</span>的角度，我都是支持的，并且认为确实是应该这样做的。但是，可能更多的人会站在『<span class="wp_keywordlink_affiliate">[用户体验](http://www.woshipm.com/tag/ue "查看 用户体验 中的全部文章")</span>』的角度来思考，认为是个『很糟糕的体验』或者有点『强奸用户』。
+
+我一直认为，<span class="wp_keywordlink_affiliate">[产品设计](http://www.woshipm.com/tag/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1 "产品设计")</span>是一个很讲究『平衡』的艺术工作。平衡产品的利益与用户的利益，通过『设计』在两者之间找到平衡点。
+
+也许你会认为，只要跟用户的利益保持一致，自然就可以获得产品的利益，但，实际上，这往往只是个美好的理想罢了。
+
+更多的时候，用户的利益诉求与产品的利益诉求是冲突的，而产品的艺术就是去保持这种平衡，实现共赢。
+
+所以，我常常把构建一个产品循环比喻成『设计鱼池』，用户就是鱼儿，<span class="wp_keywordlink_affiliate">[产品设计](http://www.woshipm.com/tag/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1 "查看 产品设计 中的全部文章")</span>者是在设计一个鱼池，让用户在鱼池中活动。鱼池设计的目标是让鱼儿在其中按照设计者的思路游弋。
+
+实际上，<span class="wp_keywordlink_affiliate">[用户体验](http://www.woshipm.com/tag/ue "查看 用户体验 中的全部文章")</span>并不等于用户的体验，而是服从与产品战略层的一种体验。我这么说，也许很多人觉得有点被颠覆，但是，你仔细想想，一个不符合你产品战略的『优秀的<span class="wp_keywordlink_affiliate">[用户体验](http://www.woshipm.com/tag/ue "查看 用户体验 中的全部文章")</span>』，意义何在？
+
+今天我们也在移动饭醉团中讨论过360安全卫士的这个设计，@oxygen 提到一个观点『用户价值大于用户体验』，我很认同。
+
+对于新浪微博而言，更新之后发送一条微博，是要告诉更多的用户去升级，去体验更新的服务；对于360安全卫士而言，卸载之前再次跟用户对话，是想再能继续的帮助用户去解决一点问题，挽留住这个用户。
+
+虽然，这2个设计，从交互上看，跟用户的预期都不一致，但是，用户价值是有意义的。作为一种平衡，舍弃掉『跟用户预期不一致』这个体验的收益很明显。这，确实是一个好的『设计』，值得学习。
+
+当然，也许在交互的方式上或者界面的表现上确实是有值得提高的地方的。比如，早前有个设计案例是说，当你点击退订某个EDM的时候，界面会出现几个被揍的半死的产品经理的形象，这种卖萌的方式很多用户会乐于传播。
+
+来源：UCD china
+
+ 
+
+<span style="font-weight:bold">声明:</span> 本文采用 [BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/ "署名-非商业性使用-相同方式共享") 协议进行授权 | [人人都是产品经理](http://www.woshipm.com/)  
+转载请注明转自《[关于用户体验与产品价值](http://www.woshipm.com/pd/34276.html "关于用户体验与产品价值")》
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [关于用户体验与产品价值](http://kongqia.com/14455.html)
+
+

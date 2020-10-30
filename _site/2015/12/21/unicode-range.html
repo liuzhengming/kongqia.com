@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>unicode-range</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">unicode-range</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-12-21">21 December 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>The <strong><code class="highlighter-rouge">unicode-range</code></strong> CSS descriptor sets the specific range of characters to be downloaded from a font defined by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers. The @font-face at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule."><code class="highlighter-rouge">@font-face</code></a> and made available for use on the current page.</p>
+
+<p>The purpose of this descriptor is to allow the font resources to be segmented so that a browser only needs to download the font resource needed for the text content of a particular page. For example, a site with many localizations could provide separate font resources for English, Greek and Japanese. For users viewing the English version of a page, the font resources for Greek and Japanese fonts wouldn’t need to be downloaded, saving bandwidth.</p>
+
+<table class="properties"><tbody><tr><th scope="row">Related [at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule)</th><td>[`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face "The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers. The @font-face at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule.")</td></tr><tr><th scope="row">[Initial value](https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value)</th><td>`U+0-10FFFF`</td></tr><tr><th scope="row">Media</th><td>all</td></tr><tr><th scope="row">[Computed value](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)</th><td>as specified</td></tr><tr><th scope="row">Canonical order</th><td>order of appearance in the formal grammar of the values</td></tr></tbody></table>
+<h2 id="syntax">Syntax</h2>
+
+<p><code class="highlighter-rouge">&lt;code class=" language-css"&gt;&lt;span class="token comment" spellcheck="true"&gt;/* &lt;unicode-range&gt; values */&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; U+&lt;span class="token number"&gt;26&lt;/span&gt;&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token comment" spellcheck="true"&gt;/* single codepoint */&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; U+&lt;span class="token number"&gt;0&lt;/span&gt;-&lt;span class="token number"&gt;7&lt;/span&gt;F&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; U+&lt;span class="token number"&gt;0025&lt;/span&gt;-&lt;span class="token number"&gt;00&lt;/span&gt;FF&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token comment" spellcheck="true"&gt;/* codepoint range */&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; U+&lt;span class="token number"&gt;4&lt;/span&gt;??&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token comment" spellcheck="true"&gt;/* wildcard range */&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; U+&lt;span class="token number"&gt;0025&lt;/span&gt;-&lt;span class="token number"&gt;00&lt;/span&gt;FF, U+&lt;span class="token number"&gt;4&lt;/span&gt;??&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token comment" spellcheck="true"&gt;/* multiple values can be separated by commas */&lt;/span&gt;&lt;span class="token comment" spellcheck="true"&gt;/* Global values */&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; inherit&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; initial&lt;span class="token punctuation"&gt;;&lt;/span&gt;&lt;span class="token property"&gt;unicode-range&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt; unset&lt;span class="token punctuation"&gt;;&lt;/span&gt;</code></p>
+
+<h3 id="values">Values</h3>
+
+<dl><dt>*single codepoint*</dt><dd>A single Unicode character code point, for example `U+26`.</dd><dt>*codepoint range*</dt><dd>A range of Unicode code points. So for example, `U+0025-00FF` means *include all characters in the range `U+0025` to `U+00FF`*.</dd><dt>*wildcard range*</dt><dd>A range of Unicode code points containing wildcard characters, that is using the `'?'` character, so for example `U+4??` means *include all characters in the range `U+400` to `U+4FF`*.</dd></dl>
+<h3 id="formal-syntax">Formal syntax</h3>
+
+<p><a href="https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax">How to read CSS syntax.</a></p>
+
+<unicode-range>[#](https://developer.mozilla.org/en-US/docs/CSS/Value_definition_syntax#Hash_mark_(.23) "Hash mark")
+
+
+## Examples
+
+We create a simple HTML containing a single [`<div>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div "The HTML <div> element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as <article> or <nav>) is appropriate.") element, including an ampersand, that we want to style with a different font. To make it obvious, we will use a sans-serif font, *Helvetica*, for the text, and a serif font, *Times New Roman*, for the ampersand.
+
+<div class="example">`<div>Me &amp; You = Us</div>`
+
+</div>In the CSS, you can see that we are in effect defining a completely separate [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face "The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers. The @font-face at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule.") that only includes a single character in it, meaning that we don’t need to download the entire font to get what we want if it is a hosted font, and if it is a local font as in this example, we can at least cut down on extra markup and styles. We could also have done this by wrapping the ampersand in a [`<span>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span "The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element.") and applying a different font just to that, but that is an extra element and rule set.
+
+<div class="example">```
+@font-face {
+  font-family: 'Ampersand';
+  src: local('Times New Roman');
+  unicode-range: U+26;
+}
+
+div {
+  font-size: 4em;
+  font-family: Ampersand, Helvetica, sans-serif;	
+}```
+
+### Reference result
+
+![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
+
+### Live result
+
+<iframe class="live-sample-frame sample-code-frame" frameborder="0" height="104" id="frame_Examples" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/%40font-face/unicode-range$samples/Examples?revision=967331" width="500"></iframe>
+
+<div class="open-in-host-container"><button class="open-in-host">OPEN IN CODEPEN </button><button class="open-in-host">OPEN IN JSFIDDLE </button></div></div>
+## Specifications
+
+<table class="standard-table"><thead><tr><th scope="col">Specification</th><th scope="col">Status</th><th scope="col">Comment</th></tr></thead><tbody><tr><td>[CSS Fonts Module Level 3  
+<small lang="en-US">The definition of ‘unicode-range’ in that specification.</small>](https://drafts.csswg.org/css-fonts-3/#descdef-font-face-unicode-range)</td><td><span class="spec-CR">Candidate Recommendation</span></td><td>Initial definition</td></tr></tbody></table>
+## Browser compatibility
+
+<div class="htab">[]()- [Desktop]()
+- [Mobile]()
+
+<div id="compat-desktop"><table class="compat-table"><tbody><tr><th>Feature</th><th>Firefox (Gecko)</th><th>Chrome</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr><tr><td>Basic support</td><td>[44](https://developer.mozilla.org/en-US/Firefox/Releases/44 "Released on 2016-01-26.") (44) [1]</td><td><span title="Please update this with the earliest version of support.">(Yes)</span>[2]</td><td>9.0</td><td><span title="Please update this with the earliest version of support.">(Yes)</span></td><td><span title="Please update this with the earliest version of support.">(Yes)</span></td></tr></tbody></table></div></div>[1] From Firefox 4 through Firefox 34, the `unicode-range` descriptor in [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face "The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers. The @font-face at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule.") rules was parsed but the codepoint range ignored. From Firefox 35, `unicode-range` can be enabled on non-Linux platforms using the `layout.css.unicode-range.enabled` pref, which was on by default in nightly/developer builds. On Linux, this was possible from Firefox 41 onwards.
+
+[2] Firefox and Chrome respect the `unicode-range` value when deciding which fonts to download (from Chrome 36, [http://crbug.com/247920](http://crbug.com/247920)). Safari and Internet Explorer ignore the unicode-range value when deciding which fonts to download but respect it when deciding which font to use.
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [unicode-range](http://kongqia.com/33665.html)
+
+
+</span></div></div></span></span></span></nav></article></div></div></unicode-range>
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=unicode-range&amp;url=/2015/12/21/unicode-range.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2015/12/21/unicode-range.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2015/12/21/unicode-range.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2015/12/29/e6-a8-a1-e5-9e-8b-e5-92-8c-e5-85-83-e6-a8-a1-e5-9e-8b.html">
+        <section class="post">
+            <h2>模型和元模型</h2>
+            <p>模型（model）是对现实的抽象，或者是对这个抽象的描述。元模型（meta-model）当然也是模型，他描述的对象是“模型中的元素、元素间关系以及表示法”，或者说它是一种语言，人们使用这种语言来描述模型。使用同样元模型的人，可以互相理解彼此所建立的模型。我们的每一句话，每篇文章都是一个模型（参看前文：《名可名，非常名》），中文是我们的建模语言。掌握中文的人，可以通过理解对方的句子和文章。中文、英文、德文、法文都是自然语言，也都是元模型。如果你要发明一种新的自然语言，你需要发明哪些要素呢？例如：你是否需要发明相关的词汇和语法？词汇是否需要分成名词、动词、形容词等等？每一个词汇是否都应该有读音和写法？（ps，《指环王》的作者托尔金大叔就发明了一种新的语言，名曰精灵语，而且居然还有个女人把它学会了。）或者，你发明了一种新的“自然语言”，但是它是不是真正意义上的自然语言呢？显然，要回答这个问题，我们需要先搞清楚什么是“自然语言”。怎么才能精确的说清楚？最好是建立一个模型，用这个模型来阐明“自然语言”的要素和结构。使用这个模型，我们可以定义自己的“自然语言”。这个模型对于任何一种自然语言（例如中文），就是元模型；而相对于一个句子或者一篇文章则是元元模型。如此类推，我们还可以建立元元元模型，元元元元模型，等等。但是，陷于人类的思维能力和实际的需要，4层可能就足够了。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2015/12/14/docker-e7-ac-ac-e4-b8-80-e6-ad-a5.html">
+        <section class="post">
+            <h2>docker 第一步</h2>
+            <p>1、 mkdir -p /opt/gitlab/data /opt/gitlab/log 2、 docker run \ –name=’gitlab’ \ -itd \ -e ‘GITLAB_PORT=10080′ \ -e ‘GITLAB_SSH_PORT=10022′ \...&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

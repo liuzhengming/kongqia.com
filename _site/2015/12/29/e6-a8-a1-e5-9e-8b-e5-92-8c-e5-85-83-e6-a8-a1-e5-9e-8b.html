@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>模型和元模型</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">模型和元模型</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-12-29">29 December 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>模型（model）是对现实的抽象，或者是对这个抽象的描述。元模型（meta-model）当然也是模型，他描述的对象是“模型中的元素、元素间关系以及表示法”，或者说它是一种语言，人们使用这种语言来描述模型。使用同样元模型的人，可以互相理解彼此所建立的模型。我们的每一句话，每篇文章都是一个模型（参看前文：《名可名，非常名》），中文是我们的建模语言。掌握中文的人，可以通过理解对方的句子和文章。中文、英文、德文、法文都是自然语言，也都是元模型。如果你要发明一种新的自然语言，你需要发明哪些要素呢？例如：你是否需要发明相关的词汇和语法？词汇是否需要分成名词、动词、形容词等等？每一个词汇是否都应该有读音和写法？（ps，《指环王》的作者托尔金大叔就发明了一种新的语言，名曰精灵语，而且居然还有个女人把它学会了。）或者，你发明了一种新的“自然语言”，但是它是不是真正意义上的自然语言呢？显然，要回答这个问题，我们需要先搞清楚什么是“自然语言”。怎么才能精确的说清楚？最好是建立一个模型，用这个模型来阐明“自然语言”的要素和结构。使用这个模型，我们可以定义自己的“自然语言”。这个模型对于任何一种自然语言（例如中文），就是元模型；而相对于一个句子或者一篇文章则是元元模型。如此类推，我们还可以建立元元元模型，元元元元模型，等等。但是，陷于人类的思维能力和实际的需要，4层可能就足够了。</p>
+
+<p>我今天看到网上有人写了个说明元模型概念的例子，觉得不错，转录如下：</p>
+
+<p>http://yangsq.javaeye.com/blog/145552</p>
+
+<p>Title：MOF – the Meta-Object Facility</p>
+
+<p>This is probably the least known of the OMG standards, although I personally consider it to be the most important one. MOF is a conceptual framework for describing meta-data. Meta-data is, as the names suggests, data about data. To explain this, consider the following layers:</p>
+
+<ol>
+  <li>A customer, ACME Corp., has placed an order for 32 boxes of candy on the 23rd of April.</li>
+  <li>A customer has a name and can place zero to n orders, each order having a date and referencing a specfic item that is being sold.</li>
+  <li>Classes have attributes which have a type, and classes can be related to each other.</li>
+  <li>There are things that describe something, and there are connections between those things.</li>
+</ol>
+
+<p>With numbers increasing, we move away from pure information (level 0) to a model layer (1), to a meta-model layer roughly resembling UML (2), to a meta-meta-model layer representing a way to describe meta-models.</p>
+
+<p>MOF is mainly concerned with level 3, for which it contains a hard-coded set of “things”. (If you’re not confused enough already: in fact this layer is a subset of UML. Don’t worry, things will hopefully become clearer soon).</p>
+
+<p>So what is MOF? MOF is way to describe meta-models, which in turn describe a specific way to model something. One example of a well-known meta-model is UML. But the separation allows MOF to be independent of UML and support other meta-models as well. MOF is thus a very generic and very powerful framework for expressing model and meta data information.</p>
+
+<p>Apart from being a conceptual framework, MOF also defines a CORBA IDL mapping that specifies how MOF data can be accessed from CORBA applications. With JMI, the Java Metadata Interface, the JCP has just finalized a mapping of these interfaces for the Java language.</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33669.html">模型和元模型</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%85%83%E6%A8%A1%E5%9E%8B&amp;url=/2015/12/29/e6-a8-a1-e5-9e-8b-e5-92-8c-e5-85-83-e6-a8-a1-e5-9e-8b.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2015/12/29/e6-a8-a1-e5-9e-8b-e5-92-8c-e5-85-83-e6-a8-a1-e5-9e-8b.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2015/12/29/e6-a8-a1-e5-9e-8b-e5-92-8c-e5-85-83-e6-a8-a1-e5-9e-8b.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2016/01/15/creating-styling-progress-bar-with-html5.html">
+        <section class="post">
+            <h2>Creating & Styling Progress Bar With HTML5</h2>
+            <p>HTML5 introduced the progress bar element, which allows us to show the progress of certain tasks, like uploads or downloads, basically anything...&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2015/12/21/unicode-range.html">
+        <section class="post">
+            <h2>unicode-range</h2>
+            <p>The unicode-range CSS descriptor sets the specific range of characters to be downloaded from a font defined by @font-face and made available for...&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

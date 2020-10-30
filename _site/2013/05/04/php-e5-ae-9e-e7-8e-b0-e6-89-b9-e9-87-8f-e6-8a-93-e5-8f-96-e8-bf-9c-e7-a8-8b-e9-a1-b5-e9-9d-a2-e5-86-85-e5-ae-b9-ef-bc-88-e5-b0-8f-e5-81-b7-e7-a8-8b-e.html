@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>PHP 实现批量抓取远程页面内容（小偷程序）</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">PHP 实现批量抓取远程页面内容（小偷程序）</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-05-04">04 May 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <p><strong>为什么使用“小偷程序”？</strong></p>
+
+  <p>远程抓取文章资讯或商品信息是很多企业要求程序员实现的功能，也就是俗说的<strong>小偷程序</strong>。其最主要的优点是：解决了公司网编繁重的工作，大大提高了效率。只需要一运行就能快速的抓取别人网站的信息。**<br />
+**</p>
+
+  <p><strong>“小偷程序”在哪里运行？</strong></p>
+
+  <p>“小偷程序” 应该在 Windows 下的 DOS（参考文章：http://blog.csdn.net/liruxing1715/article/detai<a href="http://www.linuxso.com/command/ls.html">ls</a>/7079488） 或 Linux 下通过 PHP <a href="http://www.linuxso.com/command/">命令</a>运行为最佳，因为，网页运行会超时。</p>
+
+  <p>比如图（Windows 下 DOS 为例）：</p>
+
+  <p><strong>“小偷程序”</strong><strong>的实现</strong></p>
+
+  <p>这里主要通过一个实例来讲解，我们来抓取下“华强电子网”的资讯信息，请先看观察这个链接 http://www.hqew.com/info-c10.html，当您打开这个页面的时候发现这个页面会发现一些现象：</p>
+
+  <p>1、资讯列表有 500 页（2012-01-03）；</p>
+
+  <p>2、每页的 url 链接都有规律，比如：第1页为http://www.hqew.com/info-c10-1.html；第2页为http: //www.hqew.com/info-c10-2.html；……第500页为http://www.hqew.com/info- c10-500.html；</p>
+
+  <p>3、由第二点就可以知道，“华强电子网” 的资讯是伪静态或者是生成的静态页面</p>
+
+  <p>其实，基本上大部分的网站都有这样的规律，比如：中关村在线、慧聪网、新浪、淘宝……。</p>
+
+  <p>这样，我们可以通过这样的思路来实现页面内容的抓取：</p>
+
+  <p>1、先获取文章列表页内容；</p>
+
+  <p>2、根据文章列表页内容循环获取文章的 url 地址；</p>
+
+  <p>3、根据文章的 url 地址获取文章的详细内容</p>
+
+  <p>这里，我们主要抓取资讯页里面的：标题（title）、发布如期（<a href="http://www.linuxso.com/command/date.html">date</a>）、作者（author）、来源（source）、内容（content）</p>
+
+  <p><strong>“华强电子网”</strong><strong>资讯抓取</strong></p>
+
+  <p>首先，先建数据表结构，如下所示：</p>
+
+  <blockquote>
+    <p>CREATE TABLE <code class="highlighter-rouge">article</code>.<code class="highlighter-rouge">article</code> ( <code class="highlighter-rouge">[id](http://www.linuxso.com/command/id.html)</code> MEDIUMINT( 8 ) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , <code class="highlighter-rouge">title</code> VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , <code class="highlighter-rouge">date</code> VARCHAR( 50 ) NOT NULL , <code class="highlighter-rouge">author</code> VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , <code class="highlighter-rouge">source</code> VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , <code class="highlighter-rouge">content</code> TEXT NOT NULL ) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci;</p>
+  </blockquote>
+
+  <p>抓取程序：</p>
+</blockquote>
+
+<blockquote>
+  <?php /** * 抓取“华强电子网”资讯程序 * author Lee. * Last modify $Date: 2012-1-3 15:39:35 $ */ header('Content-Type:t[ex](http://www.linuxso.com/command/ex.html)t/html;Char[set](http://www.linuxso.com/command/set.html)=utf-8'); $mysqli = new mysqli('localhost', 'root', '1715544', 'article'); # 数据库连接，请手动修改您自己的数据库信息 $mysqli->set_charset('UTF8'); # 设置数据库编码 fu[nc](http://www.linuxso.com/command/nc.html)tion data($url) { global $mysqli; $re[su](http://www.linuxso.com/command/su.html)lt = [file](http://www.linuxso.com/command/file.html)_get_contents($url); # $result 获取 url 链接内容（注意：这里是文章列表链接） $pattern = '/<li><span>.+</span><a href="([^"]+)" title=".+" >.+</a></li>/Usi'; # 取得文章 url 的匹配[正则](http://www.linuxso.com/book/11723.html) preg_match_all($pattern, $result, $arr); # 把文章列表 url 分配给数组$arr(二维数组) foreach ($arr[1] as $val) { $val = 'http://www.hqew.com' . $val; # 真实文章 url 地址 $re = file_get_contents($val); # $re 为文章 url 的内容 $pa = '/<div id="article">s+<h1>(.+)</h1>s+<p id="article_extinfo">s+发布:s+(.+)s+|s+作者:s+(.+)s+|s+来源:s+(.*?)s+<span style="display:none" >.+<div id="article_body">s*(.+)s+</div>s+</div><!--article end-->/Usi'; # 取得文章内容的正则 preg_match_all($pa, $re, $array); # 把取到的内容分配到数组 $array $content = [tr](http://www.linuxso.com/command/tr.html)im($array[5][0]); $con = array( 'title'=>mysqlString($array[1][0]), 'date'=>mysqlString($array[2][0]), 'author'=>mysqlString(stripAuthorTag($array[3][0])), 'source'=>mysqlString($array[4][0]), 'content'=>mysqlString(stripContentTag($content)) ); $sql = "INSERT INTO article(title,date,author,source,content) VALUES ('{$con['title']}','{$con['date']}','{$con['author']}','{$con['source']}','{$con['content']}')"; $row = $mysqli->query($sql); # 添加到数据库 if ($row) { echo 'a[dd](http://www.linuxso.com/command/dd.html) success!'; } else { echo 'add failed!'; } } } /** * stripOfficeTag($v) 对文章内容进行过滤，比如：去掉文章中的链接，过滤掉没有的 HTML 标签…… * @param string $v * @return string */ function stripContentTag($v){ $v = str_replace('<p> </p>', '', $v); $v = str_replace('<p />', '', $v); $v = preg_replace('/<a href=".+" target="_blank"><strong>(.+)</strong></a>/Usi', '1', $v); $v = preg_replace('%(<spans*[^>]*>(.*)</span>)%Usi', '2', $v); $v = preg_replace('%(s+class="Mso[^"]+")%si', '', $v); $v = preg_replace('%( style="[^"]*mso[^>]*)%si', '', $v); $v = preg_replace('/<b></b>/', '', $v); return $v; } /** * stripTitleTag($title) 对文章标题进行过滤 * @param string $v * @return string */ function stripAuthorTag($v) { $v = preg_replace('/<a href=".+" target="_blank">(.+)</a>/Usi', '1', $v); return $v; } /** * mysqlString($str) 过滤数据 * @param string $str * @return string */ function mysqlString($str) { return addslashes(trim($str)); } /** * init($min, $max) 入口程序方法，从 $min 页开始取，到 $max 页结束 * @param int $min 从 1 开始 * @param int $max * @return string 返回 URL 地址 */ function init($min=1, $max) { for ($i=$min; $i<=$max; $i++) { data("http://www.hqew.com/info-c10-{$i}.html"); } } init(1, 500); #程序入口 ?>
+</blockquote>
+
+<blockquote>
+  <p>通过上面的程序，就可以实现抓取华强电子网的资讯信息。</p>
+
+  <p>入口方法 init($min, $max) 如果想抓取 1-500 页面内容，那么 init(1, 500) 即可！这样，用不了多长时间，华强电子网的资讯就会全部抓取到数据库里面了。^_^</p>
+
+  <p>执行界面：</p>
+
+  <p> </p>
+
+  <p>数据库：</p>
+
+  <p> </p>
+</blockquote>
+
+<p>http://www.linuxso.com/linuxbiancheng/15807.html</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/1813.html">PHP 实现批量抓取远程页面内容（小偷程序）</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=PHP%20%E5%AE%9E%E7%8E%B0%E6%89%B9%E9%87%8F%E6%8A%93%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9(%E5%B0%8F%E5%81%B7%E7%A8%8B%E5%BA%8F)&amp;url=/2013/05/04/php-e5-ae-9e-e7-8e-b0-e6-89-b9-e9-87-8f-e6-8a-93-e5-8f-96-e8-bf-9c-e7-a8-8b-e9-a1-b5-e9-9d-a2-e5-86-85-e5-ae-b9-ef-bc-88-e5-b0-8f-e5-81-b7-e7-a8-8b-e.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/05/04/php-e5-ae-9e-e7-8e-b0-e6-89-b9-e9-87-8f-e6-8a-93-e5-8f-96-e8-bf-9c-e7-a8-8b-e9-a1-b5-e9-9d-a2-e5-86-85-e5-ae-b9-ef-bc-88-e5-b0-8f-e5-81-b7-e7-a8-8b-e.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/05/04/php-e5-ae-9e-e7-8e-b0-e6-89-b9-e9-87-8f-e6-8a-93-e5-8f-96-e8-bf-9c-e7-a8-8b-e9-a1-b5-e9-9d-a2-e5-86-85-e5-ae-b9-ef-bc-88-e5-b0-8f-e5-81-b7-e7-a8-8b-e.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/05/06/e4-b8-ba-e4-bb-80-e4-b9-88-e8-a6-81-e7-94-a8-e6-88-b7-e7-99-bb-e5-bd-95-ef-bc-9f.html">
+        <section class="post">
+            <h2>为什么要用户登录？</h2>
+            <p>在移动端产品设计中，因为移动设备与用户的更亲密的结合的存在，强制让用户进行登录，其实是个很反人类的事情，是在折腾用户。更快的完成任务，更顺畅的操作流程才是最重要的。
+
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/05/03/e4-ba-a4-e4-ba-92-e8-ae-be-e8-ae-a1-e7-9a-84-e9-82-a3-e4-ba-9b-e4-ba-8b-ef-bc-9aandroid-e3-80-81ios-e5-92-8cwp-e5-b9-b3-e5-8f-b0-e7-9a-84-e5-85-ad-e5.html">
+        <section class="post">
+            <h2>交互设计的那些事：Android、iOS和WP平台的六大差异</h2>
+            <p>iPhone、Galaxy S3 以及 Lumia 920是市场上如今最引人注目的三款智能手机，正好对应iOS、Android及Windows Phone三大平台，尽管三大操作系统在市场份额、出货量以及用户认可方面都有着不小的差异。 但更能我们兴趣，更有讨论价值的其实是这三大平台在设计方面的差异，这不仅最终决定着用户的体验，也决定了开发者的参与热情。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

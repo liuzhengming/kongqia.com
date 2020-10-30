@@ -1,0 +1,21 @@
+---
+layout: post
+title: git submodule 添加模块
+date: 2013-11-12 02:50:59.000000000 +08:00
+---
+
+[![Git logo](http://www.kongqia.com/wp-content/uploads/2013/11/18115608_PpfN-300x125.png)](http://www.kongqia.com/wp-content/uploads/2013/11/18115608_PpfN.png)
+
+git submodule 添加模块
+
+> ```
+> $ cd demo_project
+> $ git submodule add https://github.com/twbs/bootstrap.git
+> $ git submodule init
+> $ git submodule update
+> 
+> ```
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [git submodule 添加模块](http://kongqia.com/17948.html)
+
+

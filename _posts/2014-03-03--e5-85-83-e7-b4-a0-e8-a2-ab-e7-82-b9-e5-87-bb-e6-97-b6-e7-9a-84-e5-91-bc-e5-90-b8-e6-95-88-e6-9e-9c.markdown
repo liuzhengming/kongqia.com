@@ -1,0 +1,74 @@
+---
+layout: post
+title: 元素被点击时的呼吸效果
+date: 2014-03-03 04:56:23.000000000 +08:00
+---
+
+[![Snip20140302_1](http://kongqia.com/wp-content/uploads/2014/03/Snip20140302_1.png)](http://kongqia.com/wp-content/uploads/2014/03/click_2014_03_02.html)
+
+windows 8 中点击某处，到处可见呼吸效果。
+
+当然在它的生态系统中提供了这样的支持；现在从网页也模仿这个效果。
+
+CSS如下：
+
+> * {  
+>  padding:0;  
+>  margin:0;  
+>  }  
+>  body {  
+>  height:500px;  
+>  width:500px;  
+>  }  
+>  .a {  
+>  width: 100px;  
+>  height: 100px;  
+>  background: pink;  
+>  color:#fff;  
+>  text-align:center;  
+>  line-height:100px;  
+>  float:left;  
+>  margin:10px;  
+>  cursor:default;  
+>  /*transition: all 0.05s ease-in-out 0s;*/  
+>  }
+> 
+> .a:active {
+> 
+> width: 96px;  
+>  height: 96px;  
+>  margin:12px;  
+>  /*transition: all 0.05s ease-in-out 0s;*/  
+>  }  
+>  .a:not(:hover) {  
+>  width: 100px;  
+>  height: 100px;  
+>  float: left;  
+>  margin: 10px;  
+>  /*transition: all 0.05s ease-in-out 0s;*/  
+>  }
+
+HTML如下：
+
+> <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>  
+>  <div class=”a”>点我</div>
+
+[点我查看演示效果](http://kongqia.com/wp-content/uploads/2014/03/click_2014_03_02.html "呼吸效果")。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [元素被点击时的呼吸效果](http://kongqia.com/33310.html)
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Mac OS终端里使用 Solarized 配色方案</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Mac OS终端里使用 Solarized 配色方案</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-09-12">12 September 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>相信长期浸泡在终端和代码的小伙伴们都有一套自己喜爱的配色方案。以前一直在用简单、适合阅读的 Terminal.app 配色方案，换到 MacBook Pro with Retina display 后发现这个配色时间看长了眼睛有点累。不断有人推荐 Solarized，看了一些截图，感觉还不错，决定试一下。</p>
+
+<p>Solarized 是目前最完整的 Terminal/Editor/IDE 配色项目，几乎覆盖所有主流操作系统（Mac OS X, Linux, Windows）、编辑器和 IDE（Vim, Emacs, Xcode, TextMate, NetBeans, Visual Studio 等），终端（iTerm2, Terminal.app, Putty 等）。类似的项目还有 Tomorrow Theme.</p>
+
+<p>要在 Mac OS X 终端里舒服的使用命令行（至少）需要给3个工具配色，terminal、vim 和 ls. 首先下载 Solarized：</p>
+
+<blockquote>
+  <p>$ git clone git://github.com/altercation/solarized.git</p>
+</blockquote>
+
+<p>Terminal/iTerm2<br />
+ Mac OS X 自带的 Terminal 和免费的 iTerm2 都是很好用的工具，iTerm2 可以切分成多窗口，更方便一些。</p>
+
+<p>如果你使用的是 Terminal 的话，在 solarized/osx-terminal.app-colors-solarized 下双击 Solarized Dark ansi.terminal 和 Solarized Light ansi.terminal 就会自动导入两种配色方案 Dark 和 Light 到 Terminal.app 里。</p>
+
+<p>如果你使用的是 iTerm2 的话，到 solarized/iterm2-colors-solarized 下双击 Solarized Dark.itermcolors 和 Solarized Light.itermcolors 两个文件就可以把配置文件导入到 iTerm 里。</p>
+
+<p>Vim<br />
+ Vim 的配色最好和终端的配色保持一致，不然在 Terminal/iTerm2 里使用命令行 Vim 会很别扭：</p>
+
+<blockquote>
+  <p>$ cd solarized<br />
+ $ cd vim-colors-solarized/colors<br />
+ $ mkdir -p ~/.vim/colors<br />
+ $ cp solarized.vim ~/.vim/colors/</p>
+
+  <p>$ vi ~/.vimrc<br />
+ syntax enable<br />
+ set background=dark<br />
+ colorscheme solarized</p>
+</blockquote>
+
+<p> </p>
+
+<p>ls<br />
+ Mac OS X 是基于 FreeBSD 的，所以一些工具 ls, top 等都是 BSD 那一套，ls 不是 GNU ls，所以即使 Terminal/iTerm2 配置了颜色，但是在 Mac 上敲入 ls 命令也不会显示高亮，可以通过安装 coreutils 来解决（brew install coreutils），不过如果对 ls 颜色不挑剔的话有个简单办法就是在 .bash_profile 里输出 CLICOLOR=1：</p>
+
+<blockquote>
+  <p>$ vi ~/.bash_profile</p>
+
+  <p>添加：<br />
+ export CLICOLOR=1</p>
+</blockquote>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33607.html">Mac OS终端里使用 Solarized 配色方案</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Mac%20OS%E7%BB%88%E7%AB%AF%E9%87%8C%E4%BD%BF%E7%94%A8%20Solarized%20%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88&amp;url=/2015/09/12/mac-os-e7-bb-88-e7-ab-af-e9-87-8c-e4-bd-bf-e7-94-a8-solarized-e9-85-8d-e8-89-b2-e6-96-b9-e6-a1-88.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2015/09/12/mac-os-e7-bb-88-e7-ab-af-e9-87-8c-e4-bd-bf-e7-94-a8-solarized-e9-85-8d-e8-89-b2-e6-96-b9-e6-a1-88.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2015/09/12/mac-os-e7-bb-88-e7-ab-af-e9-87-8c-e4-bd-bf-e7-94-a8-solarized-e9-85-8d-e8-89-b2-e6-96-b9-e6-a1-88.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2015/11/03/e5-9f-ba-e4-ba-8euml-e7-9a-84-e9-9d-a2-e5-90-91-e5-af-b9-e8-b1-a1-e5-bb-ba-e6-a8-a1-e4-b8-8e-e4-bb-bf-e7-9c-9f.html">
+        <section class="post">
+            <h2>基于UML的面向对象建模与仿真</h2>
+            <p>当采用面向对象技术设计仿真系统时，首先要分析仿真的需求，用仿真的术语讲，就是建立“实验框架”；然后，根据需求建立系统的静态模型，以描述系统的结构；最后是建立系统的动态模型，描述系统的行为。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2015/01/31/e6-b5-81-e5-bc-8f-e5-89-8d-e7-ab-af-e6-9e-84-e5-bb-ba-e5-b7-a5-e5-85-b7-gulp-js-e7-ae-80-e4-bb-8b.html">
+        <section class="post">
+            <h2>“流式”前端构建工具—gulp.js 简介</h2>
+            <p> 
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

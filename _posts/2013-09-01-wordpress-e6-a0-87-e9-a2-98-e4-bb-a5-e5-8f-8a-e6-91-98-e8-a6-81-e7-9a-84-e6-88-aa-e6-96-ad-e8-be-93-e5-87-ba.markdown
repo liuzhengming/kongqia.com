@@ -1,0 +1,19 @@
+---
+layout: post
+title: WordPress标题以及摘要的截断输出
+date: 2013-09-01 02:06:20.000000000 +08:00
+---
+
+在制作主题的时候很多时候需要控制输出的字符长度以达到美观的效果，尤其是wp的主题的[摘要](http://themeidea.com/tag/zhaiyao)以及[标题](http://themeidea.com/tag/title)，今天在制作主题的过程中，Themeidea也遇到了相同的问题，于是谷歌了一下，方法有很多，比如说用CSS控制区块的大小，这种方法的弊端显而易见，有时可能某个字符只显示一部分，还有一种方法就是使用[Jquery](http://themeidea.com/category/jquery)，这种方法对于大部分童鞋来说比较麻烦，所以呢在这里Themeidea给大家介绍一种简单的方法：
+
+[标题](http://themeidea.com/tag/title) [截断](http://themeidea.com/tag/jieduan)输出：
+
+> <!--?php echo mb_strimwidth(get_the_title(), 0, 28, '……'); ?-->
+
+[摘要](http://themeidea.com/tag/zhaiyao) [截断](http://themeidea.com/tag/jieduan)输出：
+
+> <!--?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post--->post_content)), 0, 140,"......"); ?>
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [WordPress标题以及摘要的截断输出](http://kongqia.com/17854.html)
+
+

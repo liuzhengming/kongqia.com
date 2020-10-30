@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>wordpress不使用插件添加文章浏览次数</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">wordpress不使用插件添加文章浏览次数</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-12-02">02 December 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>在functions.php文件，加入以下代码；</p>
+
+<blockquote>
+  <p>function getPostViews($postID){<br />
+ $count_key = ‘post_views_count’;<br />
+ $count = get_post_meta($postID, $count_key, true);<br />
+ if($count==”){<br />
+ delete_post_meta($postID, $count_key);<br />
+ add_post_meta($postID, $count_key, ’0′);<br />
+ return “0 View”;<br />
+ }<br />
+ return $count.’ Views’;<br />
+ }<br />
+ function setPostViews($postID) {<br />
+ $count_key = ‘post_views_count’;<br />
+ $count = get_post_meta($postID, $count_key, true);<br />
+ if($count==”){<br />
+ $count = 0;<br />
+ delete_post_meta($postID, $count_key);<br />
+ add_post_meta($postID, $count_key, ’0′);<br />
+ }else{<br />
+ $count++;<br />
+ update_post_meta($postID, $count_key, $count);<br />
+ }<br />
+ }</p>
+</blockquote>
+
+<p>2.  在single.php或index.php或page.php中加入以下代码：</p>
+
+<blockquote>
+  <?php setPostViews(get_the_ID()); ?>
+  <p> <?php echo getPostViews(get_the_ID()); ?></p>
+</blockquote>
+
+<p>好了，现在找篇文章看一下效果吧。</p>
+
+<p>样式就自己调整一下了。</p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/18137.html">wordpress不使用插件添加文章浏览次数</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=wordpress%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E6%B5%8F%E8%A7%88%E6%AC%A1%E6%95%B0&amp;url=/2013/12/02/wordpress-e4-b8-8d-e4-bd-bf-e7-94-a8-e6-8f-92-e4-bb-b6-e6-b7-bb-e5-8a-a0-e6-96-87-e7-ab-a0-e6-b5-8f-e8-a7-88-e6-ac-a1-e6-95-b0.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/12/02/wordpress-e4-b8-8d-e4-bd-bf-e7-94-a8-e6-8f-92-e4-bb-b6-e6-b7-bb-e5-8a-a0-e6-96-87-e7-ab-a0-e6-b5-8f-e8-a7-88-e6-ac-a1-e6-95-b0.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/12/02/wordpress-e4-b8-8d-e4-bd-bf-e7-94-a8-e6-8f-92-e4-bb-b6-e6-b7-bb-e5-8a-a0-e6-96-87-e7-ab-a0-e6-b5-8f-e8-a7-88-e6-ac-a1-e6-95-b0.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/12/02/e5-a6-82-e6-ad-a4-e7-bb-93-e5-a9-9a-e5-8d-8f-e8-ae-ae-ef-bc-8c-e7-8c-ae-e7-bb-99-e5-b7-b2-e5-a9-9a-e3-80-81-e6-9c-aa-e5-a9-9a-e7-9a-84-e4-bd-a0-ef-bc.html">
+        <section class="post">
+            <h2>如此结婚协议，献给已婚、未婚的你！</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/12/02/e6-b0-94-e8-b4-a8-e7-9a-84-e5-9f-b9-e5-85-bb.html">
+        <section class="post">
+            <h2>气质的培养</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

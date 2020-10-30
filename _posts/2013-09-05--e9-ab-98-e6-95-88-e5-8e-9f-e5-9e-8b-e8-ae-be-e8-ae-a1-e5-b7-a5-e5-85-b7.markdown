@@ -1,0 +1,71 @@
+---
+layout: post
+title: 高效原型设计工具
+date: 2013-09-05 04:07:04.000000000 +08:00
+---
+
+免费的工具其实有很多，但是哪款工具可以名副其实地提高你的效率呢？我们会在接下来的时间为大家总结出移动和Web原型设计的工具。**拥有一个原型设计的工具库对于开发者，特别是对那些需要立刻针对客户反馈进行修改的开发者来说，可以提高他们的工作效率。**开发者也可以根据客户的不同需求设计出不同版本的原型设计。
+
+**[Pencil](http://pencil.evolus.vn/Default.html)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258df1b7cd4.jpg)](http://cms.csdnimg.cn/article/201309/03/52258df1b7cd4.jpg)
+
+Pencil是一款开源的手绘风格原型图绘制工具，可以用来绘制各种架构图和流程图。Pencil向开发者提供一个免费、开源的GUI原型工具，具备了多种原型设计模板、多页背景文档、跨页超链接、富文本编辑支持等功能，安装十分简单。
+
+**[Balsamiq Mockups](http://www.balsamiq.com/products/mockups)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258e0a8d701.jpg)](http://cms.csdnimg.cn/article/201309/03/52258e0a8d701.jpg)
+
+使用Balsamiq Mockups有一种画画的感觉，而且由于这一切是数字化的，“画家”们可以简单地进行修改。一个开发团队需要对界面设计进行反复地修改。有了Balsamiq Mockups，产品经理、开发者甚至是客户可以坐在一起，用同一个工具共同修改。达成统一之后，开发者再进行代码的编写。
+
+**[Lumzy](http://www.lumzy.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258e61e9975_middle.jpg)](http://cms.csdnimg.cn/article/201309/03/52258e61e9975.jpg)
+
+作为一款针对Web和应用的原型工具，Lumzy无需注册、无需下载，可以在浏览器上进行原型设计的工具。功能全面但并不复杂，这就是Lumzy最大的特点。
+
+**[Jumpchart](https://www.jumpchart.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258e8c3eec3_middle.jpg?_=56302)](http://cms.csdnimg.cn/article/201309/03/52258e8c3eec3.jpg)
+
+Jumpchart其实不仅仅是一个项目管理软件，它基于Web，用于快速规划和创建原型。除了所需的项目管理功能，还可用它来追踪与Web设计相关的任务。Jumpchart有一个免费版本，不过功能受限。
+
+**[Mockup Builder](http://mockupbuilder.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258edc57524.jpg)](http://cms.csdnimg.cn/article/201309/03/52258edc57524.jpg)
+
+Mockup Builder是一款原型设计工具，支持网页、桌面应用、移动应用。此工具具有UI模型，交互的线框图，页面布局，客户端原型甚至站点地图和屏幕导航等功能。这是一款完全免费的开发工具。
+
+**[UXPin](http://uxpin.com//)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52259fa074ebe_middle.jpg)](http://cms.csdnimg.cn/article/201309/03/52259fa074ebe.jpg)
+
+UXPin是一款大众化的原型设计工具。UXPin公司里面经验丰富的UX设计人员提供了一系列完整实用的设计元素和模式，对新手有极大帮助。UXPin的目标是帮助项目经理为各种方案和设备开发响应式的线框图和UI原型。
+
+**[iPlotz](http://iplotz.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258f14440a9_middle.jpg)](http://cms.csdnimg.cn/article/201309/03/52258f14440a9.jpg)
+
+iPlotz可以帮助你迅速创建一个可以点击的界面和网页原型的布局。iPlotz是基于Flash/Flex平台上的产品原型设计软件，允许你直接将各种元件通过鼠标的拖拽至画布上构建自己的Web项目；另外iPlotz还提供了基于Adobe AIR的客户端软件，从而能够方便用户在Windows、Mac OS X和Linux等不同平台上使用这款软件。
+
+**[MockFlow](http://www.mockflow.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258f5dd6687.jpg)](http://cms.csdnimg.cn/article/201309/03/52258f5dd6687.jpg)
+
+不仅是页面布局，MockFlow为开发者提供了一系列的写作Web创新服务，它是完全基于Web浏览视窗的产品。MockFlow内置了许许多多经常使用到的Widget控件，能够有效地帮助用户提高对传统软件以及富互联网应用软件的快速设计和交互式用户界面实体模型的规划进程。
+
+**[Cacoo](https://cacoo.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52258fc8c3722_middle.jpg)](http://cms.csdnimg.cn/article/201309/03/52258fc8c3722.jpg)
+
+Cacoo是一款用户在线绘图工具，允许你在线创建站点的原型、UML统一建模和框架图等。这款工具基于Flash技术，具有良好的用户体验。与此同时，Cacoo还支持实时的同步协作功能，允许多个用户同时对同一幅电子图表进行在线远程协作编辑等。
+
+**[Creately](http://creately.com/)**
+
+[![](http://cms.csdnimg.cn/article/201309/03/52259064ca155.jpg)](http://cms.csdnimg.cn/article/201309/03/52259064ca155.jpg)
+
+Creately在线图表制作协作平台是一款优秀的绘制产品原型的在线工具。Creately拥有50种图表、上千种样品构成的库和强大的协作功能，因此用起来很方便。
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [高效原型设计工具](http://kongqia.com/17868.html)
+
+

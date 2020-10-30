@@ -1,0 +1,99 @@
+---
+layout: post
+title: NodeJS的Web框架
+date: 2014-09-21 00:29:53.000000000 +08:00
+---
+
+在几年的时间里，Node.js逐渐发展成一个成熟的开发平台，吸引了许多开发者。有许多大型高流量网站都采用Node.js进行开发，像PayPal，此外，开发人员还可以使用它来开发一些快速移动Web框架。
+
+下面就介绍14款基于Node.js的Web应用框架，大家不妨过来看看有没有适合你的那一款。
+
+**1.[Primus](http://primus.io/)**
+
+Primus，是Transformer的创造者，并且也被称为通用包装器实时框架。Primus里包含了大量的用于Node.js的实时框架，并且它们都拥有各种不同的实时功能。此外，Primus还提供了通用的低级别接口用于各个实时框架之间进行通信。Primus开源，并且托管在[Github](https://github.com/primus/primus)上。
+
+![](http://cms.csdnimg.cn/article/201403/25/53312ebb42992.jpg)
+
+**2.[Geddy](http://geddyjs.org/)**
+
+Geddy是一个非常简单的基于Node.js的结构化MVC框架。你可以使用它快速的构建Web应用和JSON API。如果你使用过Ruby on Rails或者PHP的codelgniter，那么Geddy和他们非常类似。它拥有一个RESTful的路由、模板渲染、控制器和模型。
+
+想学Geddy的开发者可以去[Fleegix](http://fleegix.org/)看看，上面有大量关于Geddy的使用[教程](http://fokkezb.nl/2013/11/27/geddy-on-openshift/)和学习资料，并且这个博客就是采用Geddy开发的。
+
+![](http://cms.csdnimg.cn/article/201403/25/5331304b9898d.jpg)
+
+**3.[Locomotive](http://locomotivejs.org/)**
+
+Locomotive是个强大的Node.js的MVC框架，支持RESTfu，可以无缝连接任何数据库和模版引擎。Locomotive是在Express的基础上建立的，保持了Node.js 强大而简单的功能。
+
+![](http://cms.csdnimg.cn/article/201403/25/533130d463008.jpg)
+
+**4.[KeystoneJS ](http://keystonejs.com/)**
+
+KeystoneJS是一个基于Express与Mongoose的Node.js CMS内容管理平台和Web应用平台。使用它可以方便快速建立基于数据库驱动的网站应用，还提供了安全认证和会话管理、动态路由、能够对密码自动加密、表单校验处理、自动产生管理界面、Email邮件发送等。
+
+![](http://cms.csdnimg.cn/article/201403/25/5331334ec7126.jpg)
+
+**5.[Grasshopper ](http://tuxychandru.github.io/grasshopper/)**
+
+Grasshopper是一款功能丰富且非常灵活的Node.js框架，基本上支持所有的Web开发特性。推荐一个学习[示例](http://howtonode.org/grasshopper-shoutbox)给大家。
+
+![](http://cms.csdnimg.cn/article/201403/25/5331413d7e574.jpg)
+
+**6.[DozerJS](http://dozerjs.com/)**
+
+DozerJS是一款旨在开发可扩展的RESTful风格的API和Web服务来支持前端开发。下面推荐两个DozerJS教程给大家，一个是[入门教程](http://www.fluidbyte.net/getting-started-with-dozerjs/)，一个是[DozerJS开发示例](http://www.fluidbyte.net/simple-todo-list-app-with-dozerjs/)。
+
+![](http://cms.csdnimg.cn/article/201403/25/533143cd806ee.jpg)
+
+**7.[Chocolate.js](https://chocolatejs.org/)**
+
+Chocolate.js是一个基于Node.js，使用CoffeeScript构建的简单的Web应用框架（集合）。 想学习该框架的同学可以到[这里](http://blog.nodefly.com/post/48617959144/nodefly-buzz-chocolate-js-with-jean-claude-levy)对其进行全面了解，并且里面有大量的示例。
+
+![](http://cms.csdnimg.cn/article/201403/25/53314537d0885.jpg)
+
+**8.[Datachannel.io](https://datachannel.io/)**
+
+Datachannel.io是一款受socket.io框架启发，使用WebRTC技术实现的实时通信Web应用程序。可以直接进行数据连接，并且无需通过服务器即可进行数据交换操作。
+
+![](http://cms.csdnimg.cn/article/201403/25/533145ae5bbd2.jpg)
+
+**9.[StrongLoop](http://strongloop.com/)**
+
+StrongLoop是一个基于Node.js开发的API服务，它最著名的一款实时性能监测产品叫StrongOps，通常也叫做Nodefly。StrongLoop套件包含了LookBack、StrongOps、StrongNode这三个产品。
+
+![](http://cms.csdnimg.cn/article/201403/25/533148fc6fdba.jpg)
+
+**10.[UglifyJS](http://marijnhaverbeke.nl//uglifyjs)**
+
+UglifyJS是一个服务端Node.js的压缩程序，里面包含了所有必要的工具和可扩展的文档来帮助开发者提高代码效率。
+
+![](http://cms.csdnimg.cn/article/201403/25/533149183ada4.jpg)
+
+**11.[Derby](http://derbyjs.com/)**
+
+Derby是一个MVC框架，帮助编写实时，交互的应用。可以运行在Node.js或者浏览器环境中。还拥有一个数据同步引擎Racer。推荐两个学习资源给大家：[Node.js MVC：Express.js+Derby.js Hello World教程](http://webapplog.com/node-js-mvc-express-js-derby-hello-world-tutorial/)、使用[Derby.js开发教程](http://tech.pro/tutorial/1387/developing-with-derby-js-installation)。
+
+![](http://cms.csdnimg.cn/article/201403/25/53314a7655a0f.jpg)
+
+**12.[Dojo Toolkit](http://dojotoolkit.org/)**
+
+Dojo Tookkit是一款功能非常强大的JavaScript类库，可以实现任何功能。这里提供一个使用Node.js与Dojo开发的[教程](http://dojotoolkit.org/documentation/tutorials/1.9/node/)。
+
+![](http://cms.csdnimg.cn/article/201403/26/53322cc46930c.jpg)
+
+**13.[CompoundJS](http://compoundjs.com/)**
+
+CompoundJS 是一个Node.js的MVC框架，开发者使用它在几分钟内即可构建一款Web应用。快速入门[教程](https://github.com/compoundjs/guides/blob/master/basics/crash-course.md)。
+
+![](http://cms.csdnimg.cn/article/201403/26/53322e36d1f0f.jpg)
+
+**14.[KnockoutJS](http://knockoutjs.com/)**
+
+KnockoutJS是一个轻量级的UI类库，通过应用MVVM模式使JavaScript前端UI简单化。比如列表数据项增减后，不需要重新刷新整个控件片段或自己写JS增删节点，只要预先定义模板和符合其语法定义的属性即可。简单的说，开发者只需要关注数据的存取。
+
+![](http://cms.csdnimg.cn/article/201403/26/53323042b557e.jpg)
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [NodeJS的Web框架](http://kongqia.com/33552.html)
+
+

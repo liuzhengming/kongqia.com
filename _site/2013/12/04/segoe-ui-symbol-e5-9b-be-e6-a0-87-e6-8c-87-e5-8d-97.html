@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>Segoe UI Symbol 图标指南</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Segoe UI Symbol 图标指南</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2013-12-04">04 December 2013</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p> </p>
+
+<h2 id="有关-segoe-ui-symbol-字体"><span style="font-size: small">有关 Segoe UI Symbol 字体</span></h2>
+
+<p>添加到 Segoe UI Symbol 的大部分 UI 控件都会映射到 Unicode 专用区 (PUA)。PUA 允许字体开发人员将专用 Unicode 值分配给未映射到现有代码点的字形。当创建符号字体时这非常有用，但也会带来互操作性问题。如果字体不可用，则字形将不显示。在你可以指定 Segoe UI Symbol 字体时仅使用这些字形。</p>
+
+<p>如果你使用磁贴，则无法使用这些字形，因为你无法指定磁贴字体而 PUA 字形不会通过字体回滚提供。</p>
+
+<p>大部分此类字形在提供时其间距为零。你可以在每个零宽度字形上放置其他零宽度字形。例如，如果你插入零宽度的红色的实心 (U+E00B)，光标不会跑到心形的末尾，因为其宽度为零。然后，如果你插入黑色的心形轮廓 (U+E006)，则心形轮廓会放置在实心之上。</p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC675482.png" alt="使用零宽度字形" title="使用零宽度字形" /></p>
+
+<p>大部分图标还具有镜像样式，以供使用双向文本的语言使用。</p>
+
+<p>如果你使用 C#/VB/C++ 和 XAML 开发应用，则可以选择使用 <a href="http://msdn.microsoft.com/zh-cn/library/windows/apps/windows.ui.xaml.controls.symbol.aspx"><strong>Symbol enumeration</strong></a> 而不是 Unicode ID 从 Segoe UI Symbol 字体指定字形。如果你使用 JavaScript 和 HTML 开发应用，则可以选择使用 <a href="http://msdn.microsoft.com/zh-cn/library/windows/apps/hh770557.aspx"><strong>AppBarIcon enumeration </strong></a>而不是 Unicode ID 从 Segoe UI Symbol 字体指定字形。</p>
+
+<h2 id="红心大战"><span style="color: #333333;font-size: small"><a href=""></a>红心大战</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632253.png" alt="红心大战图标" title="红心大战图标" /></p>
+
+<h2 id="星形评级"><span style="color: #333333;font-size: small"><a href=""></a>星形评级</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632254.png" alt="评级图标" title="评级图标" /></p>
+
+<h2 id="复选框组件"><span style="color: #333333;font-size: small"><a href=""></a>复选框组件</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632255.png" alt="复选框组件" title="复选框组件" /></p>
+
+<h2 id="单选按钮控件"><span style="color: #333333;font-size: small"><a href=""></a>单选按钮控件</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632256.png" alt="单选按钮控件" title="单选按钮控件" /></p>
+
+<h2 id="杂项"><span style="color: #333333;font-size: small"><a href=""></a>杂项</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632257.png" alt="杂项图标" title="杂项图标" /></p>
+
+<h2 id="滚动条箭头"><span style="color: #333333;font-size: small"><a href=""></a>滚动条箭头</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632258.png" alt="滚动条箭头" title="滚动条箭头" /></p>
+
+<h2 id="渐进式公开箭头"><span style="color: #333333;font-size: small"><a href=""></a>渐进式公开箭头</span></h2>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632259.png" alt="渐进式公开箭头" title="渐进式公开箭头" /></p>
+
+<h2 id="后退按钮"><span style="color: #333333;font-size: small"><a href=""></a>后退按钮</span></h2>
+
+<p>后退按钮的字形提供了 3 种不同大小，以便外环的权重等于 16pt、20pt 和 42pt。这些字形设计用于支持分层。</p>
+
+<table><tbody><tr><th><span style="font-size: small">16pt 代码</span></th><th><span style="font-size: small">20pt 代码</span></th><th><span style="font-size: small">42pt 代码</span></th><th><span style="font-size: small">符号</span></th><th><span style="font-size: small">描述</span></th></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A4</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0BA</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E071</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮](http://i.msdn.microsoft.com/dynimg/IC688528.png "后退按钮")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A5</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0BB</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0A6</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮轮廓](http://i.msdn.microsoft.com/dynimg/IC688529.png "后退按钮轮廓")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮轮廓</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A6</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0C4</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0A7</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮箭头](http://i.msdn.microsoft.com/dynimg/IC688530.png "后退按钮箭头")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮箭头</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A7</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0D4</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0A8</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮填充](http://i.msdn.microsoft.com/dynimg/IC688531.png "后退按钮填充")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮填充</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A8</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0B3</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E08E</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮反转](http://i.msdn.microsoft.com/dynimg/IC688532.png "后退按钮反转")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮反转</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2A9</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0AC</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0AA</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮镜像](http://i.msdn.microsoft.com/dynimg/IC688533.png "后退按钮镜像")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮镜像</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2AA</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0AD</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0AB</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮镜像箭头](http://i.msdn.microsoft.com/dynimg/IC688534.png "后退按钮镜像箭头")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮镜像箭头</span></td></tr><tr><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E2AB</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E0AF</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">U+E257</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">![后退按钮镜像反转](http://i.msdn.microsoft.com/dynimg/IC688535.png "后退按钮镜像反转")</span></td><td><span style="color: #333333;font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size: small">后退按钮镜像反转</span></td></tr></tbody></table>
+<p> </p>
+
+<h2 id="-html-的后退箭头"><span style="color: #333333;font-size: small"><a href=""></a> <a href=""></a>HTML 的后退箭头</span></h2>
+
+<p>添加其他代码以创建环绕这些字形的圆环。</p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC675483.png" alt="HTML 的后退箭头" title="HTML 的后退箭头" /></p>
+
+<h2 id="应用栏字形"><span style="color: #333333;font-size: small"><a href=""></a>应用栏字形</span></h2>
+
+<p>在 <a href="http://msdn.microsoft.com/zh-cn/library/windows/apps/br229670.aspx"><strong>AppBar</strong></a> 中使用这些字形。这些字形设计为以 14pt 大小显示。使用其他代码以创建环绕这些字形的圆环。</p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC687219.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632264.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632265.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC632266.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC688536.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p><img src="http://i.msdn.microsoft.com/dynimg/IC687221.png" alt="应用栏图标" title="应用栏图标" /></p>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/18152.html">Segoe UI Symbol 图标指南</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Segoe%20UI%20Symbol%20%E5%9B%BE%E6%A0%87%E6%8C%87%E5%8D%97&amp;url=/2013/12/04/segoe-ui-symbol-e5-9b-be-e6-a0-87-e6-8c-87-e5-8d-97.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2013/12/04/segoe-ui-symbol-e5-9b-be-e6-a0-87-e6-8c-87-e5-8d-97.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2013/12/04/segoe-ui-symbol-e5-9b-be-e6-a0-87-e6-8c-87-e5-8d-97.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2013/12/05/e3-80-90-e5-85-bb-e7-94-9f-e3-80-91-e4-b8-8a-e7-8f-ad-e6-97-8f-e8-bf-9c-e7-a6-bb-e6-85-a2-e6-80-a7-e7-96-b2-e5-8a-b3-e5-a6-99-e6-8b-9b.html">
+        <section class="post">
+            <h2>【养生】上班族远离慢性疲劳妙招</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2013/12/04/e3-80-90-e5-85-bb-e7-94-9f-e3-80-91-e9-a5-ad-e5-89-8d-e5-96-9d-e6-b0-b4-e7-9a-84-e5-a5-bd-e5-a4-84.html">
+        <section class="post">
+            <h2>【养生】饭前喝水的好处</h2>
+            <p>
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

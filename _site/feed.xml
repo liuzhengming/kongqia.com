@@ -1,13 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-30T11:23:50+08:00</updated><id>/feed.xml</id><title type="html">Put your title here</title><subtitle>and site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/2017/04/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-04-20T16:12:36+08:00</published><updated>2017-04-20T16:12:36+08:00</updated><id>/2017/04/20/welcome-to-jekyll</id><content type="html" xml:base="/2017/04/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-10-30T11:39:26+08:00</updated><id>/feed.xml</id><title type="html">空洽网</title><subtitle>人生不是要过的怎样，而是要懂得怎样去过。</subtitle><entry><title type="html">在electron中调用C++动态库的经验总结</title><link href="/2019/09/29/zai-electronzhong-diao-yong-c-dong-tai-ku-de-jing-yan-zong-jie.html" rel="alternate" type="text/html" title="在electron中调用C++动态库的经验总结" /><published>2019-09-29T16:08:36+08:00</published><updated>2019-09-29T16:08:36+08:00</updated><id>/2019/09/29/zai-electronzhong-diao-yong-c-dong-tai-ku-de-jing-yan-zong-jie</id><content type="html" xml:base="/2019/09/29/zai-electronzhong-diao-yong-c-dong-tai-ku-de-jing-yan-zong-jie.html">&lt;p&gt;具体查看链接：&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;https://blog.csdn.net/wang839305939/article/details/83780789&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;https://blog.csdn.net/lhangtk/article/details/82984148&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;关键：&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>editme</name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;node-gyp rebuild –arch=ia32 –dist-url=https://atom.io/download/atom-shell –runtime=electron –target=3.0.3&lt;/p&gt;</content><author><name></name></author><summary type="html">具体查看链接：</summary></entry><entry><title type="html">解决vue在微信中页面跳转，但是url不变的问题</title><link href="/2019/07/30/jie-jue-wei-xin-zhong-ye-mian-tiao-zhuan-dan-shi-urlbu-bian-de-wen-ti.html" rel="alternate" type="text/html" title="解决vue在微信中页面跳转，但是url不变的问题" /><published>2019-07-30T18:06:14+08:00</published><updated>2019-07-30T18:06:14+08:00</updated><id>/2019/07/30/jie-jue-wei-xin-zhong-ye-mian-tiao-zhuan-dan-shi-urlbu-bian-de-wen-ti</id><content type="html" xml:base="/2019/07/30/jie-jue-wei-xin-zhong-ye-mian-tiao-zhuan-dan-shi-urlbu-bian-de-wen-ti.html">&lt;h3 id=&quot;问题描述&quot;&gt;问题描述&lt;/h3&gt;
+
+&lt;p&gt;vue在微信浏览器中做&lt;code class=&quot;highlighter-rouge&quot;&gt;$router.push&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$router.replace&lt;/code&gt;等操作，页面可以正常跳转显示，但是通过复制链接或浏览器打开，都显示为初次进来的链接。&lt;/p&gt;
+
+&lt;h3 id=&quot;原因&quot;&gt;原因&lt;/h3&gt;
+
+&lt;p&gt;微信对history的操作支持不太友好&lt;/p&gt;
+
+&lt;h3 id=&quot;解决办法&quot;&gt;解决办法&lt;/h3&gt;
+
+&lt;p&gt;在公共路由守护中做处理，代码如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;afterEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 这一段是核心代码&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'window.location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">问题描述</summary></entry><entry><title type="html">webstorm注册码</title><link href="/2019/05/06/webstormzhu-ce-ma.html" rel="alternate" type="text/html" title="webstorm注册码" /><published>2019-05-06T11:26:22+08:00</published><updated>2019-05-06T11:26:22+08:00</updated><id>/2019/05/06/webstormzhu-ce-ma</id><content type="html" xml:base="/2019/05/06/webstormzhu-ce-ma.html">&lt;p&gt;注册时生成地址：&lt;/p&gt;
+
+&lt;p&gt;http://idea.lanyus.com&lt;/p&gt;</content><author><name></name></author><summary type="html">注册时生成地址：</summary></entry><entry><title type="html">charles注册码</title><link href="/2018/12/18/charleszhu-ce-ma.html" rel="alternate" type="text/html" title="charles注册码" /><published>2018-12-18T18:24:18+08:00</published><updated>2018-12-18T18:24:18+08:00</updated><id>/2018/12/18/charleszhu-ce-ma</id><content type="html" xml:base="/2018/12/18/charleszhu-ce-ma.html">&lt;p&gt;可适用Charles任意版本的注册码&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Registered Name: https://zhile.io
+License Key: 48891cf209c6d32bf4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">可适用Charles任意版本的注册码 Registered Name: https://zhile.io License Key: 48891cf209c6d32bf4</summary></entry><entry><title type="html">vue项目兼容IE11</title><link href="/2018/12/13/vuexiang-mu-jian-rong-ie11.html" rel="alternate" type="text/html" title="vue项目兼容IE11" /><published>2018-12-13T10:48:01+08:00</published><updated>2018-12-13T10:48:01+08:00</updated><id>/2018/12/13/vuexiang-mu-jian-rong-ie11</id><content type="html" xml:base="/2018/12/13/vuexiang-mu-jian-rong-ie11.html">&lt;p&gt;1、npm安装babel-polyfill&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install babel-polyfill --save-dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;2、在入口文件main.js中引入
+&lt;code class=&quot;highlighter-rouge&quot;&gt;import 'babel-polyfill'&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">1、npm安装babel-polyfill</summary></entry><entry><title type="html">Charles抓包https</title><link href="/2018/12/12/charleszhua-bao-https.html" rel="alternate" type="text/html" title="Charles抓包https" /><published>2018-12-12T17:43:24+08:00</published><updated>2018-12-12T17:43:24+08:00</updated><id>/2018/12/12/charleszhua-bao-https</id><content type="html" xml:base="/2018/12/12/charleszhua-bao-https.html">&lt;p&gt;见地址：
+https://www.jianshu.com/p/ec0a38d9a8cf&lt;/p&gt;</content><author><name></name></author><summary type="html">见地址： https://www.jianshu.com/p/ec0a38d9a8cf</summary></entry><entry><title type="html">微信分享imgUrl无法显示问题</title><link href="/2018/11/12/wei-xin-fen-xiang-imgurlwu-fa-xian-shi-wen-ti.html" rel="alternate" type="text/html" title="微信分享imgUrl无法显示问题" /><published>2018-11-12T17:47:39+08:00</published><updated>2018-11-12T17:47:39+08:00</updated><id>/2018/11/12/wei-xin-fen-xiang-imgurlwu-fa-xian-shi-wen-ti</id><content type="html" xml:base="/2018/11/12/wei-xin-fen-xiang-imgurlwu-fa-xian-shi-wen-ti.html">&lt;p&gt;Q: 微信分享imgUrl无法显示问题，描述如下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;安卓分享给个人或朋友圈都可以显示；&lt;/li&gt;
+  &lt;li&gt;ios分享到朋友圈可以显示，分享给个人无法显示&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A: 经过排查url中需要对特殊字符进行转码，如：&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Q: 微信分享imgUrl无法显示问题，描述如下： 安卓分享给个人或朋友圈都可以显示； ios分享到朋友圈可以显示，分享给个人无法显示</summary></entry><entry><title type="html">vue动画</title><link href="/2018/09/17/vue-animate.html" rel="alternate" type="text/html" title="vue动画" /><published>2018-09-17T19:38:57+08:00</published><updated>2018-09-17T19:38:57+08:00</updated><id>/2018/09/17/vue-animate</id><content type="html" xml:base="/2018/09/17/vue-animate.html">&lt;h3 id=&quot;css-动画&quot;&gt;CSS 动画&lt;/h3&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net/liuzhengming/nfe0b2zw/embedded/&quot; allowfullscreen=&quot;allowfullscreen&quot; allowpaymentrequest=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net/liuzhengming/38hfqzr0/embedded/&quot; allowfullscreen=&quot;allowfullscreen&quot; allowpaymentrequest=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;在进入离开的过渡中会有-6-个-class-切换&quot;&gt;在进入/离开的过渡中，会有 6 个 class 切换。&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;v-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。&lt;/li&gt;
+  &lt;li&gt;v-enter-active：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。&lt;/li&gt;
+  &lt;li&gt;v-enter-to: 2.1.8版及以上 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。&lt;/li&gt;
+  &lt;li&gt;v-leave: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。&lt;/li&gt;
+  &lt;li&gt;v-leave-active：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。&lt;/li&gt;
+  &lt;li&gt;v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;自定义过渡的类名&quot;&gt;自定义过渡的类名&lt;/h3&gt;
+
+&lt;p&gt;我们可以通过以下特性来自定义过渡类名：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;enter-class&lt;/li&gt;
+  &lt;li&gt;enter-active-class&lt;/li&gt;
+  &lt;li&gt;enter-to-class (2.1.8+)&lt;/li&gt;
+  &lt;li&gt;leave-class&lt;/li&gt;
+  &lt;li&gt;leave-active-class&lt;/li&gt;
+  &lt;li&gt;leave-to-class (2.1.8+)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Animate.css 结合&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net/liuzhengming/vLwy9pmr/embedded/&quot; allowfullscreen=&quot;allowfullscreen&quot; allowpaymentrequest=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;可以在属性中声明-javascript-钩子&quot;&gt;可以在属性中声明 JavaScript 钩子&lt;/h3&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;//jsfiddle.net/liuzhengming/msgk52y7/embedded/&quot; allowfullscreen=&quot;allowfullscreen&quot; allowpaymentrequest=&quot;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;https://cn.vuejs.org/v2/guide/transitions.html&lt;/p&gt;</content><author><name></name></author><summary type="html">CSS 动画 例子：</summary></entry><entry><title type="html">禁止微信浏览器网页点击图片，图片会自动放大</title><link href="/2018/04/18/jin-zhi-wei-xin-liu-lan-qi-wang-ye-dian-ji-tu-pian-tu-pian-hui-zi-dong-fang-da.html" rel="alternate" type="text/html" title="禁止微信浏览器网页点击图片，图片会自动放大" /><published>2018-04-18T14:24:48+08:00</published><updated>2018-04-18T14:24:48+08:00</updated><id>/2018/04/18/jin-zhi-wei-xin-liu-lan-qi-wang-ye-dian-ji-tu-pian-tu-pian-hui-zi-dong-fang-da</id><content type="html" xml:base="/2018/04/18/jin-zhi-wei-xin-liu-lan-qi-wang-ye-dian-ji-tu-pian-tu-pian-hui-zi-dong-fang-da.html">&lt;p&gt;禁止微信浏览器网页点击图片，图片会自动放大&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;nl&quot;&gt;pointer-events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">禁止微信浏览器网页点击图片，图片会自动放大</summary></entry><entry><title type="html">Vue加载完成之前页面闪烁</title><link href="/2018/03/16/vuejia-zai-wan-cheng-zhi-qian-ye-mian-shan-shuo.html" rel="alternate" type="text/html" title="Vue加载完成之前页面闪烁" /><published>2018-03-16T18:14:24+08:00</published><updated>2018-03-16T18:14:24+08:00</updated><id>/2018/03/16/vuejia-zai-wan-cheng-zhi-qian-ye-mian-shan-shuo</id><content type="html" xml:base="/2018/03/16/vuejia-zai-wan-cheng-zhi-qian-ye-mian-shan-shuo.html">&lt;p&gt;在需要元素加上：&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-cloak&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
+      
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在css中加入：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;v-cloak&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">在需要元素加上： &amp;lt;div v-cloak&amp;gt; &amp;lt;/div&amp;gt;</summary></entry></feed>

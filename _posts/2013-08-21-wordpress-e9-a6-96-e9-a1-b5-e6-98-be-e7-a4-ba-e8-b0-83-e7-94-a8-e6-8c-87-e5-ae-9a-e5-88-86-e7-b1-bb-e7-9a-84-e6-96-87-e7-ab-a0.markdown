@@ -1,0 +1,17 @@
+---
+layout: post
+title: WordPress首页显示调用指定分类的文章
+date: 2013-08-21 05:04:59.000000000 +08:00
+---
+
+<span style="color: #008080"><?php</span>  <span style="color: #000080">**while**</span> ( <span style="color: #000000">have_posts</span>() ) <span style="color: #000000">:</span><span style="color: #000000">the_post</span>();<span style="color: #000000">update_post_caches</span>(<span style="color: #000000">$posts</span>);<span style="color: #008080">?></span>  
+<span style="color: #008080"><?php</span><span style="color: #000080">**if**</span>(<span style="color: #000000">in_category</span>(<span style="color: #0000ff">‘*’</span>) ) <span style="color: #000000">:</span><span style="color: #008080">?></span>  
+<span style="color: #000000">            <div></span>  
+<span style="color: #000000">                    ……上面*换成分类数值……</span>  
+<span style="color: #000000">             </div></span>  
+<span style="color: #008080"><?php</span><span style="color: #000080">**endif**</span>;<span style="color: #008080">?></span>  
+<span style="color: #008080"><?php</span><span style="color: #000080">**endwhile**</span>;<span style="color: #008080">?></span>
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [WordPress首页显示调用指定分类的文章](http://kongqia.com/17819.html)
+
+

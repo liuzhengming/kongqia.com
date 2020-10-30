@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+    
+
+    
+
+    
+    <title>PHP获取磁盘文件名称并输出</title>
+    <meta name="description" content="人生不是要过的怎样，而是要懂得怎样去过。" />
+
+    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+
+    
+    
+</head>
+<body class="post-template nav-closed">
+
+    
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+            <li class="nav-" role="presentation"><a href="/">Home</a></li>
+        
+            <li class="nav-" role="presentation"><a href="/authors/editme/">Author</a></li>
+        
+    </ul>
+    
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+
+    <div class="site-wrapper">
+
+        
+        <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">PHP获取磁盘文件名称并输出</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-04-09">09 April 2014</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <?php
+
+$dir=dirname(__FILE__).”/abc/”;//这里输入其它路径  
+ //PHP遍历文件夹下所有文件  
+ $handle=opendir($dir.”.”);  
+ //定义用于存储文件名的数组  
+ $array_file = array();  
+ while (false !== ($file = readdir($handle)))  
+ {  
+ if ($file != “.” && $file != “..”) {  
+ $array_file[] = $file; //输出文件名  
+ }  
+ }  
+ closedir($handle);  
+ // print_r($array_file);  
+ // 输出  
+ echo “<ul>”;
+
+foreach ($array_file as $file) {  
+ echo “<li><a href=’/tools/$file/’ target=’_blank’>$file</a></li>”;  
+ }
+
+echo “</ul>”;
+
+?>
+</blockquote>
+
+<p>未经允许不得转载：<a href="http://kongqia.com">空洽网</a> » <a href="http://kongqia.com/33399.html">PHP获取磁盘文件名称并输出</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+        
+        
+        
+        
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=PHP%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0%E5%B9%B6%E8%BE%93%E5%87%BA&amp;url=/2014/04/09/php-e8-8e-b7-e5-8f-96-e6-96-87-e4-bb-b6-e5-90-8d-e7-a7-b0-e5-b9-b6-e8-be-93-e5-87-ba.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2014/04/09/php-e8-8e-b7-e5-8f-96-e6-96-87-e4-bb-b6-e5-90-8d-e7-a7-b0-e5-b9-b6-e8-be-93-e5-87-ba.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=/2014/04/09/php-e8-8e-b7-e5-8f-96-e6-96-87-e4-bb-b6-e5-90-8d-e7-a7-b0-e5-b9-b6-e8-be-93-e5-87-ba.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            
+            
+
+        </footer>
+
+    </article>
+</main>
+
+
+<aside class="read-next">
+    
+    <a class="read-next-story no-cover" href="/2014/04/13/e7-bc-96-e5-86-99-e5-a6-82-e4-b8-80-e3-80-81-e7-ac-a6-e5-90-88-e4-b9-a0-e6-83-af-e7-9a-84css-e7-9a-84-e5-8e-9f-e5-88-99.html">
+        <section class="post">
+            <h2>编写如一、符合习惯的CSS的原则</h2>
+            <p>以下文档将概述一个合理的CSS开发风格指导。本指导文件强烈鼓励开发者使用已经存在了的、常见的、合力的文风。您应该有选择地吸纳一些内容来创造您自己的风格指南。
+
+&hellip;</p>
+        </section>
+    </a>
+    
+    
+    <a class="read-next-story prev no-cover" href="/2014/03/23/windows-8-8-1-e6-bf-80-e6-b4-bb-e6-96-b9-e6-b3-95.html">
+        <section class="post">
+            <h2>windows 8 / 8.1 激活方法</h2>
+            <p>windows 8、windows8.1免费激活工具下载地址：
+
+&hellip;</p>
+        </section>
+    </a>
+    
+</aside>
+
+
+        
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href=""></a> &copy; 2020</section>
+            <section class="poweredby">Casper theme by <a href="https://ghost.org">Ghost</a>, adopted to Jekyll by <a href="https://github.com/Jinmo/jekyll-casper">Jinmo</a></section>
+        </footer>
+
+    </div>
+
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

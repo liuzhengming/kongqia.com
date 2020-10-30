@@ -1,0 +1,197 @@
+---
+layout: post
+title: 字体的性格
+date: 2013-05-03 07:26:04.000000000 +08:00
+---
+
+任何字体都有其独特的风格，有的让人感觉现代、古典;  柔美、刚毅； 迅速、缓慢;  稳重、轻盈…
+
+在设计时，通常为表达某种情感而选择字体。对字体情感的产生是因为对某种字体的内在韵律，而产生的视觉反应。
+
+另外，字体的设计还承载着历史文化、地域民族等信息。下面是我对文字从三个方面的一点浅析：区域、性格、形态，分别在字体中的体现。
+
+**第一节**** ****文字的区域特征**
+
+世界上的语言有7千种，即使同一种英语在各国的字体表象都会有所差异。
+
+举例alibaba两个平台的用户来源为例，用户数量庞大的：美国 俄罗斯 巴西 印，我就从这几个国家的字体特征做个简单的归纳。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/ad4a_image002.jpg "image002")
+
+******1.**美国字体特征——简
+
+简洁直白的等线体 ； 简洁的衬线体，很少修饰；
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/1e1d_image004.jpg "image004")
+
+**2.俄罗斯——强**
+
+粗壮结实的等线体；  棱角尖锐的衬线体；
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/40cb_image006.jpg "image006")
+
+**3. ****巴西——圆、复古**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7b25_image008.jpg "image008")**
+
+******4. ****印度——杂**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/85f1_image010.jpg "image010")**
+
+**小结：文字的区域特征的共性**
+
+- 等线体占绝对优势
+- 衬线体一般处于修饰辅助位置
+- 字体因国家的历史和地理有一定的变化
+
+英国有皇家的奢华， 俄罗斯有集权的厚重与强势， 美国有现代的简洁直白， 巴西有足球似的圆实和南美古文明的古朴， 印度的字体和环境一样繁杂无序， 德国的字体有数学样的曲线和机器般的直线 … …
+
+**第二节**** ****文字的形态特征**
+
+字体的发展和变革已有悠久的历史，按形态特征简单分为旧字体（手写体）、过渡字体（印刷体）、现代字体（机打字体）。特征如下：
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/81a1_image012.jpg "image012")
+
+- **旧字体的特征：**以笔画为特征****
+
+1) 笔画是用毛笔或钢笔来设计的
+
+2) 小写字母的小X高度比较小
+
+3) 小写字母的开口也较小
+
+- **过渡字体的特征**：显示了字体结构的演变
+
+1)   笔画对比加强
+
+2)   小写字母的小X高度叫大
+
+3)   称线更锋利
+
+- **现代字体的特征：**简洁
+
+1) 笔画对比及其强烈
+
+2) 链接衬线和字干的字弧被全部去除
+
+3) 小写字母中的衬线变得非常圆滑。
+
+**第三节 ****文字的性格特征******
+
+字体的形态多种多样，所带来的感觉能体现性格，其实变化也只是在各种细节上，下面整理的三种最显见的细节变化方式。
+
+**1. ****笔画粗细****改变字体的性格**
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/28a3_image0131.png "image013")
+
+带来的感觉：沉稳、强势
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/0ecc_image0151.png "image015")
+
+带来的感觉：跳跃, 在一行内，粗细笔画对比强烈，有一个视觉跳跃
+
+**小结：笔画粗细改变字体的性格******
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/8db9_image0171.png "image017")
+
+**字重对比：**一行字体如果其字母的笔画字重相同，会给人一种均衡、规律并且一致的韵律。 带给人稳定可靠的感觉，常用于金融、安防等行业，和企业logo。
+
+**笔画对比：**笔画的自重发生变化的字体，将带来一种跳跃的感觉，带给人动感、轻松、前卫的感觉。常用于时尚行业。
+
+**代表字体**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/2765_image0192.png "image019")**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/aeb3_image0212.png "image021")**
+
+******2. ****末梢**** ****改变字体的性格**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/6977_image023.png "image023")**
+
+**带来的感觉：末梢的曲线 圆点体现了女性的柔美。**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/9ac9_image025.png "image025")**
+
+带来的感觉：无衬线的 等线体 本来是很稳重的。在末梢变形成尖角之后 ，立刻有了速度感。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/00f8_image028.jpg "image028")
+
+带来的感觉：字体的衬线 和末梢 都变得尖锐，从而带来一种 魔幻的感觉。
+
+**小结：**** ****末梢**** ****改变字体性格**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/8373_image030.jpg "image030")**
+
+末梢的切口有与笔画垂直的，也有与笔干倾斜的，字符末梢的形状将影响字体外观的尖锐程度。
+
+**代表字体**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/3c02_image031.png "image031")**
+
+末梢尖锐的字体，会带来紧迫感。速度或恐怖。 常用于赛车游戏 或 电影海报中。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/42c3_image033.png "image033")
+
+末梢的曲线优美的字体，有优美高雅的感觉。 常用于女性产品和奢侈品。
+
+**第四节**** ****字体特征的运用******
+
+**末梢的圆点，优美的曲线**
+
+这样的字体显得很优雅，带有女性特征，我们再bnr的设计中，可以运用在女性产品。
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/ae36_image035.png "image035")**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/4f52_image037.png "image037")**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/ff23_image039.png "image039")**
+
+**字重笔画完全没有变化**——沉稳。运用的地方非常的广泛了。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/2d44_image042.jpg "image042")
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/c904_image043.png "image043")
+
+男性产品，：比较有沉稳绅士的感觉，如果要有粗细对比来增加一些活跃的元素，可以选择衬线细，字干粗的字体。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7546_image045.jpg "image045")
+
+精致、 稳定：字体精细，笔画的粗细对比较小
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/f292_image047.png "image047")
+
+家居：安稳，宁静的感觉。——停泊的港湾
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/047a_image049.png "image049")
+
+安全、可靠、放心
+
+**字体倾斜 或 末梢有统一方向的倾斜**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/6ff7_image051.png "image051")**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/8ba7_image053.png "image053")**
+
+**![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/8683_image0551.jpg "image055")**
+
+**字体末梢圆滑**** **稚趣、可爱。
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/7d08_image058.jpg "image058")
+
+![](http://alibuybuy-img11.stor.sinaapp.com/2013/04/4485_image059.jpg "image059")
+
+**总结******
+
+**每个民族有其各自的文字审美习俗。**
+
+**文字形态由末梢、自重、笔画弧度等元素来判断，**
+
+**合理运用这些特征更利于信息的表达**
+
+**文字的性格特征在各个场景的运用**
+
+来源：[http://www.aliued.com/2013/03/01/1409/](http://www.aliued.com/2013/03/01/1409/)
+
+未经允许不得转载：[空洽网](http://kongqia.com) » [字体的性格](http://kongqia.com/1623.html)
+
+
