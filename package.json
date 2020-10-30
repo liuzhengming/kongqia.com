@@ -1,0 +1,21 @@
+{
+  "name": "kongqia.com",
+  "version": "1.0.0",
+  "description": "[See a demo in GitHub Pages](https://jinmo.github.io/jekyll-casper)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuzhengming/kongqia.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuzhengming/kongqia.com/issues"
+  },
+  "homepage": "https://github.com/liuzhengming/kongqia.com#readme"
+}
